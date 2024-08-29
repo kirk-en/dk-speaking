@@ -1,9 +1,27 @@
 .top-section {
   background-image: url("../../assets/dk-hero-lrg.jpg");
   min-height: 66vh;
-  width: 100%;
-  height: 100%;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.main {
+  &__headline {
+    text-align: center;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &-text {
+      width: 50%;
+    }
+    &-gallery {
+      background-color: rgb(182, 230, 206);
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
