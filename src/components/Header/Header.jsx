@@ -16,7 +16,7 @@ const Header = () => {
         <nav>
           <Navigation />
         </nav>
-        <div>{/* social media icons */}</div>
+        {/* <div>social media icons</div> */}
       </header>
     </>
   );
