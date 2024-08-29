@@ -6,12 +6,12 @@ const Navigation = () => {
       <ul className="nav nav__list">
         <li className="nav__list-item">
           <a href="" className="nav__link">
-            speaking
+            about
           </a>
         </li>
         <li className="nav__list-item">
           <a href="" className="nav__link">
-            about
+            speaking
           </a>
         </li>
         <li className="nav__list-item">

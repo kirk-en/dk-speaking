@@ -30,6 +30,20 @@ const HomePage = () => {
           </div>
         </section>
       </main>
+      <article className="quote">
+        <div>
+          <h2>Share Your Voice</h2>
+          <h3 className="quote__text">
+            “If story is our currency, do we have enough in our narrative to
+            author future generations?”
+          </h3>
+          <p>— Dennis Kenney</p>
+        </div>
+      </article>
+      <section className="featured">
+        <h2 className="featured__title">Featured In:</h2>
+        <figure className="featured__marquee"></figure>
+      </section>
     </>
   );
 };

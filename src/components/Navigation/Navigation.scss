@@ -2,7 +2,7 @@
 
 .nav {
   &__list {
-    color: $hero-color;
+    color: $text-light;
     list-style: none;
     display: flex;
     gap: 2rem;
@@ -13,7 +13,7 @@
     min-width: 2rem;
   }
   &__link {
-    color: $hero-color;
+    color: $text-light;
     text-decoration: none;
     display: inline-block;
     transition: transform 1s;
