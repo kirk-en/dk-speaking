@@ -5,9 +5,22 @@
     color: $hero-color;
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    justify-content: space-between;
   }
   &__list-item {
     text-transform: capitalize;
+    min-width: 2rem;
+  }
+  &__link {
+    color: $hero-color;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.2);
+      color: rgb(206, 206, 206);
+    }
   }
 }
