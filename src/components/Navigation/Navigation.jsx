@@ -1,11 +1,13 @@
+import "./Navigation.scss";
+
 const Navigation = () => {
   return (
     <>
-      <ul>
-        <li>coaching</li>
-        <li>speaking</li>
-        <li>about</li>
-        <li>contact</li>
+      <ul className="nav nav__list">
+        <li className="nav__list-item">speaking</li>
+        <li className="nav__list-item">about</li>
+        <li className="nav__list-item">coaching</li>
+        <li className="nav__list-item">contact</li>
       </ul>
     </>
   );

@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables.scss" as *;
+
+.nav {
+  &__list {
+    color: $hero-color;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  &__list-item {
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,9 @@
+.hero {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5rem 0 0 0;
+  &__right {
+    width: 34%;
+    color: white;
+  }
+}
