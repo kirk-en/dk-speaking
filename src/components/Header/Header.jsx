@@ -1,4 +1,4 @@
-import { Web, X, LinkedIn } from "@mui/icons-material";
+import { Web, X, LinkedIn, Instagram } from "@mui/icons-material";
 import dkLogo from "../../assets/dk-logo.png";
 import Navigation from "../Navigation/Navigation";
 import "./Header.scss";
@@ -22,7 +22,7 @@ const Header = () => {
             href="https://www.instagram.com/stylewithden/"
             className="header__social-icon"
           >
-            <X />
+            <Instagram />
           </a>
           <a href="" className="header__social-icon">
             <LinkedIn sx={{ fill: "whitesmoke" }} />
