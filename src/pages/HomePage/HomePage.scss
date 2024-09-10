@@ -15,22 +15,24 @@
 }
 .main {
   @include site-margins;
+  padding-bottom: 2rem;
   &__headline {
     text-align: center;
+    font-weight: 100;
+    font-size: 4rem;
+    padding: 2rem 0;
   }
   &__content {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 6rem;
     &-text {
       width: 50%;
+      font-size: 1.25rem;
+      line-height: 2;
     }
     &-gallery {
-      background-color: rgb(182, 230, 206);
       width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 }
@@ -42,16 +44,4 @@
   align-items: center;
   height: 20vh;
   background-color: $primary;
-}
-
-.featured {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  &__title {
-    @include site-margins;
-  }
-  &__marquee {
-  }
 }

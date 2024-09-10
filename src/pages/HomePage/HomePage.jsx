@@ -1,6 +1,8 @@
 import { DisplaySettings } from "@mui/icons-material";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
+import PhotoGrid from "../../components/PhotoGrid/PhotoGrid";
+import Featured from "../../components/Featured/Featured";
 import "./HomePage.scss";
 
 const HomePage = () => {
@@ -21,16 +23,18 @@ const HomePage = () => {
               in any situation. Whether you're aiming to perfect your elevator
               pitch, excel in professional interviews, or command attention on
               stage, my coaching services are tailored to help you achieve your
-              speaking goals with precision and impact. With a background in
-              [relevant field or expertise], I bring a unique blend of expertise
-              and practical insights to my coaching approach. My mission is to
-              empower individuals like you to unlock your full potential and
-              become confident and compelling speakers in any setting.
+              speaking goals with precision and impact. <br />
+              <br />
+              With a background in [relevant field or expertise], I bring a
+              unique blend of expertise and practical insights to my coaching
+              approach. My mission is to empower individuals like you to unlock
+              your full potential and become confident and compelling speakers
+              in any setting.
             </p>
             <a href="/">Contact Dennis</a>
           </article>
           <div className="main__content-gallery">
-            <p>photo gallery goes here</p>
+            <PhotoGrid />
           </div>
         </section>
       </main>
@@ -44,10 +48,7 @@ const HomePage = () => {
           <p>— Dennis Kenney</p>
         </div>
       </article>
-      <section className="featured">
-        <h2 className="featured__title">Featured In:</h2>
-        <figure className="featured__marquee"></figure>
-      </section>
+      <Featured />
     </>
   );
 };
