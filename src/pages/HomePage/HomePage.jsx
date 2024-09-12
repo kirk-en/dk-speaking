@@ -31,7 +31,13 @@ const HomePage = () => {
               your full potential and become confident and compelling speakers
               in any setting.
             </p>
-            <a href="/">Contact Dennis</a>
+            <a
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1dYHLEc_DcrhYJ2Bc03tIcOGDOjIT4xu3xAF51IbiCyhQAvMLPeg61PYIso0gSIOV-rmQzYmJ6"
+              className="main__button"
+              target="_blank"
+            >
+              Book a Free 15-Minute Consultation
+            </a>
           </article>
           <div className="main__content-gallery">
             <PhotoGrid />

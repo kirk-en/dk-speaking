@@ -19,15 +19,24 @@ const Header = () => {
         </nav>
         <section className="header__social">
           <a
-            href="https://www.instagram.com/stylewithden/"
+            href="https://www.instagram.com/ivylevelspeaking/"
+            target="_blank"
             className="header__social-icon"
           >
             <Instagram />
           </a>
-          <a href="" className="header__social-icon">
+          <a
+            href="https://www.linkedin.com/in/denniskenney/"
+            target="_blank"
+            className="header__social-icon"
+          >
             <LinkedIn sx={{ fill: "whitesmoke" }} />
           </a>
-          <a href="" className="header__social-icon">
+          <a
+            href="https://www.arroyastudio.com/"
+            target="_blank"
+            className="header__social-icon"
+          >
             <Web sx={{ fill: "whitesmoke" }} />
           </a>
         </section>

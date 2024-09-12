@@ -33,13 +33,12 @@
   }
   &__marquee {
     display: inline-block;
-    animation: 22s slide infinite linear;
+    animation: 25s slide infinite linear;
     padding: 2rem 0 0 0;
   }
   &__logo {
     margin: 0 2rem;
     height: 6.25rem;
-    // width: auto;
   }
 }
 
