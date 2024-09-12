@@ -2,28 +2,52 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .featured {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2rem 0;
+  position: relative;
+  background-color: $text-light;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), $text-light);
+    content: "";
+    z-index: 2;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), $text-light);
+    content: "";
+    z-index: 2;
+  }
   &__title {
     @include site-margins;
+    text-align: center;
   }
   &__marquee {
-    display: flex;
-    overflow: hidden;
-    animation: scroll 40s linear infinite;
+    display: inline-block;
+    animation: 22s slide infinite linear;
+    padding: 2rem 0 0 0;
   }
   &__logo {
-    padding: 0 2rem;
+    margin: 0 2rem;
+    height: 6.25rem;
+    // width: auto;
   }
 }
 
-@keyframes scroll {
-  0% {
+@keyframes slide {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
 }
