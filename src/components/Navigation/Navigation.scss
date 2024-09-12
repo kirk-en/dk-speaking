@@ -1,0 +1,26 @@
+@use "../../styles/partials/variables.scss" as *;
+
+.nav {
+  &__list {
+    color: $text-light;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  &__list-item {
+    text-transform: capitalize;
+    min-width: 2rem;
+  }
+  &__link {
+    color: $text-light;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.2);
+      color: rgb(206, 206, 206);
+    }
+  }
+}

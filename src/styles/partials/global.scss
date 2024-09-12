@@ -1,0 +1,8 @@
+@use "./typography";
+@use "./resets";
+@use "./variables" as *;
+@use "./mixins" as *;
+
+body {
+  font-family: SUSE, Arial, sans-serif;
+}

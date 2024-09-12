@@ -1,0 +1,18 @@
+.hero {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(0.25 * (66vh - 10rem));
+  &__right {
+    width: 42%;
+    color: white;
+    text-align: right;
+  }
+  &__headline {
+    font-weight: 100;
+    font-size: 3rem;
+    padding: 0 0 1rem;
+  }
+  &__text {
+    font-size: 1.25rem;
+  }
+}
