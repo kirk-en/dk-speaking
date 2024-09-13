@@ -8,3 +8,6 @@
     @content;
   }
 }
+@mixin site-margins {
+  padding: 0 4rem;
+}

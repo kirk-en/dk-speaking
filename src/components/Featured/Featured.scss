@@ -1,0 +1,52 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.featured {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2rem 0;
+  position: relative;
+  background-color: $text-light;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), $text-light);
+    content: "";
+    z-index: 2;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), $text-light);
+    content: "";
+    z-index: 2;
+  }
+  &__title {
+    @include site-margins;
+    text-align: center;
+  }
+  &__marquee {
+    display: inline-block;
+    animation: 25s slide infinite linear;
+    padding: 2rem 0 0 0;
+  }
+  &__logo {
+    margin: 0 2rem;
+    height: 6.25rem;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
