@@ -3,7 +3,7 @@
 
 .social {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 1rem;
   &__icon {
     color: $text-light;

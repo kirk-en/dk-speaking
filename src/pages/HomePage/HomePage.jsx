@@ -3,8 +3,9 @@ import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import PhotoGrid from "../../components/PhotoGrid/PhotoGrid";
 import Featured from "../../components/Featured/Featured";
-import "./HomePage.scss";
 import Video from "../../components/Video/Video";
+import Footer from "../../components/Footer/Footer";
+import "./HomePage.scss";
 
 const HomePage = () => {
   return (
@@ -57,6 +58,7 @@ const HomePage = () => {
       </article>
       <Featured />
       <Video />
+      <Footer />
     </>
   );
 };

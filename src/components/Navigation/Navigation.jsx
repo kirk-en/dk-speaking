@@ -3,7 +3,7 @@ import "./Navigation.scss";
 const Navigation = () => {
   return (
     <>
-      <ul className="nav nav__list">
+      <ul className="nav__list">
         <li className="nav__list-item">
           <a href="" className="nav__link">
             about

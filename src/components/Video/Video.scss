@@ -1,9 +1,13 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
 .video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: $primary-alt;
   &__wrapper {
     width: 100%;
     position: relative;
