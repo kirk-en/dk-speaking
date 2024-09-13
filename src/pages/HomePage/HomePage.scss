@@ -43,14 +43,14 @@
     text-decoration: none;
     color: $text-light;
     border-radius: 0.5rem;
-    background-color: $primary;
+    background-color: $secondary;
     padding: 1rem 2rem;
     margin: 1rem;
     transition: background-color 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
     text-align: center;
     &:hover {
-      background-color: $primary-alt;
+      background-color: $secondary-alt;
       transform: scale(1.05);
     }
   }

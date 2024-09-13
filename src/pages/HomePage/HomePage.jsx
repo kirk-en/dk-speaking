@@ -4,6 +4,7 @@ import Hero from "../../components/Hero/Hero";
 import PhotoGrid from "../../components/PhotoGrid/PhotoGrid";
 import Featured from "../../components/Featured/Featured";
 import "./HomePage.scss";
+import Video from "../../components/Video/Video";
 
 const HomePage = () => {
   return (
@@ -55,6 +56,7 @@ const HomePage = () => {
         </div>
       </article>
       <Featured />
+      <Video />
     </>
   );
 };

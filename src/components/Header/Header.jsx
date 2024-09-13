@@ -2,6 +2,7 @@ import { Web, X, LinkedIn, Instagram } from "@mui/icons-material";
 import dkLogo from "../../assets/dk-logo.png";
 import Navigation from "../Navigation/Navigation";
 import "./Header.scss";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 const Header = () => {
   return (
@@ -17,29 +18,7 @@ const Header = () => {
         <nav>
           <Navigation />
         </nav>
-        <section className="header__social">
-          <a
-            href="https://www.instagram.com/ivylevelspeaking/"
-            target="_blank"
-            className="header__social-icon"
-          >
-            <Instagram />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/denniskenney/"
-            target="_blank"
-            className="header__social-icon"
-          >
-            <LinkedIn sx={{ fill: "whitesmoke" }} />
-          </a>
-          <a
-            href="https://www.arroyastudio.com/"
-            target="_blank"
-            className="header__social-icon"
-          >
-            <Web sx={{ fill: "whitesmoke" }} />
-          </a>
-        </section>
+        <SocialIcons />
       </header>
     </>
   );

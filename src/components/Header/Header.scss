@@ -8,18 +8,4 @@
   &__logo {
     height: 10rem;
   }
-  &__social {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    &-icon {
-      color: $text-light;
-      transition: transform 1s;
-
-      &:hover {
-        transform: scale(1.2);
-        color: rgb(206, 206, 206);
-      }
-    }
-  }
 }
