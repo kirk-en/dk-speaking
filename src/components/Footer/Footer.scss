@@ -1,11 +1,18 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
-.header {
+.footer {
+  background-color: $primary-alt;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include site-margins;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   &__logo {
-    height: 10rem;
+    height: 7.5rem;
+  }
+  &__element {
+    width: 20rem;
   }
 }

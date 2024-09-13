@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  &__icon {
+    color: $text-light;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.2);
+      color: rgb(206, 206, 206);
+    }
+  }
+}
