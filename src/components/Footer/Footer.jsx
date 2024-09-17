@@ -6,7 +6,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__element">
+      <div className="footer__element footer__element--nav">
         <Navigation />
       </div>
       <a href="/">
@@ -17,7 +17,7 @@ const Footer = () => {
         />
       </a>
       <div className="footer__element">
-        <SocialIcons />
+        <SocialIcons className="footer__element--social" />
       </div>
     </footer>
   );
