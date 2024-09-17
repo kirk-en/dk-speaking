@@ -8,7 +8,7 @@ import "./PhotoGrid.scss";
 
 const PhotoGrid = () => {
   return (
-    <ImageList variant="masonry" cols={2} gap={16}>
+    <ImageList variant="masonry" cols={2} gap={16} className="photo-grid">
       <ImageListItem>
         <img
           src={photo1}
