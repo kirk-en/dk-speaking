@@ -6,6 +6,9 @@
   justify-content: space-between;
   align-items: center;
   &__logo {
-    height: 10rem;
+    height: 7.5rem;
+    @include tablet {
+      height: 10rem;
+    }
   }
 }

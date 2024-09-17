@@ -88,5 +88,15 @@
   );
   &__text {
     color: $text-dark;
+    & h2 {
+      font-size: 1rem;
+      @include tablet {
+        font-size: 1.5rem;
+      }
+    }
+    & h3 {
+      font-style: italic;
+      font-weight: 400;
+    }
   }
 }
