@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.photo-grid {
+  &__image {
+    @include desktop {
+      width: 100%;
+      height: auto;
+      max-height: 25rem;
+      object-fit: cover;
+    }
+    &--pos1 {
+      object-position: center top;
+    }
+    &--pos2 {
+      object-position: center 30%;
+    }
+  }
+}

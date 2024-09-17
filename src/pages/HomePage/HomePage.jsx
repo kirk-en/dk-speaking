@@ -5,9 +5,23 @@ import PhotoGrid from "../../components/PhotoGrid/PhotoGrid";
 import Featured from "../../components/Featured/Featured";
 import Video from "../../components/Video/Video";
 import Footer from "../../components/Footer/Footer";
+import { useRef } from "react";
 import "./HomePage.scss";
 
 const HomePage = () => {
+  const gradientRef = useRef(null);
+
+  const handleMouseMove = (event) => {
+    if (gradientRef.current) {
+      const { left, top } = gradientRef.current.getBoundingClientRect(); // Get element's position
+      const x = event.clientX - left; // Adjust X position relative to the element
+      const y = event.clientY - top; // Adjust Y position relative to the element
+
+      gradientRef.current.style.setProperty("--x", `${x}px`);
+      gradientRef.current.style.setProperty("--y", `${y}px`);
+    }
+  };
+
   return (
     <>
       <div className="top-section">
@@ -46,10 +60,14 @@ const HomePage = () => {
           </div>
         </section>
       </main>
-      <article className="quote">
-        <div>
+      <article
+        className="quote"
+        onMouseMove={handleMouseMove}
+        ref={gradientRef}
+      >
+        <div className="quote__text">
           <h2>Share Your Voice</h2>
-          <h3 className="quote__text">
+          <h3>
             “If story is our currency, do we have enough in our narrative to
             author future generations?”
           </h3>
