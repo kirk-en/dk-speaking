@@ -63,4 +63,14 @@
   align-items: center;
   height: 20vh;
   background-color: $primary;
+  background-image: radial-gradient(
+    at var(--x, center) var(--y, center),
+    rgba(184, 222, 241, 0.9) 0,
+    $primary 70%
+  );
+  transition: background-position 5.5s ease;
+
+  &__text {
+    color: $text-dark;
+  }
 }
