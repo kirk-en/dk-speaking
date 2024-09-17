@@ -16,7 +16,7 @@
   &__headline {
     font-weight: 100;
     padding: 0 0 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     @include tablet {
       font-size: 2.5rem;
     }
@@ -25,6 +25,7 @@
     }
   }
   &__text {
+    margin-bottom: 3rem;
     @include tablet {
       font-size: 1.25rem;
     }
