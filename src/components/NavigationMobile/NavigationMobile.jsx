@@ -14,6 +14,7 @@ const NavigationMobile = () => {
         onClick={() => {
           setOpen(true);
         }}
+        sx={{ width: 35, height: 35 }}
       />
       <Drawer
         open={open}
