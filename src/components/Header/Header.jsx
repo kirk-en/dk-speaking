@@ -3,6 +3,8 @@ import dkLogo from "../../assets/dk-logo.png";
 import Navigation from "../Navigation/Navigation";
 import "./Header.scss";
 import SocialIcons from "../SocialIcons/SocialIcons";
+import { colors } from "@mui/material";
+import NavigationMobile from "../NavigationMobile/NavigationMobile";
 
 const Header = () => {
   return (
@@ -16,9 +18,17 @@ const Header = () => {
           />
         </a>
         <nav>
-          <Navigation />
+          <div className="header__nav--standard">
+            <Navigation />
+          </div>
+          <div className="header__nav--mobile">
+            <NavigationMobile />
+          </div>
         </nav>
-        <SocialIcons />
+
+        <div className="header__nav--standard">
+          <SocialIcons />
+        </div>
       </header>
     </>
   );
