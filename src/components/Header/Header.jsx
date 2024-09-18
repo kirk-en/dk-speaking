@@ -21,7 +21,7 @@ const Header = () => {
           <div className="header__nav--standard">
             <Navigation />
           </div>
-          <div>
+          <div className="header__nav--mobile">
             <NavigationMobile />
           </div>
         </nav>
