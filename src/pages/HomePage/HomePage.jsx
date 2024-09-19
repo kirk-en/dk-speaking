@@ -1,6 +1,5 @@
-import { DisplaySettings } from "@mui/icons-material";
 import Header from "../../components/Header/Header";
-import Hero from "../../components/Hero/Hero";
+import Hero from "./HeroHome/HeroHome";
 import PhotoGrid from "../../components/PhotoGrid/PhotoGrid";
 import Featured from "../../components/Featured/Featured";
 import Video from "../../components/Video/Video";
@@ -24,7 +23,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="top-section">
+      <div className="top-section top-section__home">
         <Header />
         <Hero />
       </div>

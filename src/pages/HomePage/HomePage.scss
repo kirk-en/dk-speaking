@@ -7,11 +7,13 @@
 
 .top-section {
   @include site-margins;
-  background-image: url("../../assets/dk-hero-lrg.jpg");
-  min-height: 66vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  &__home {
+    background-image: url("../../assets/dk-hero-lrg.jpg");
+    min-height: 66vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 .main {
   @include site-margins;
