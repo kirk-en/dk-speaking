@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navigation.scss";
 
 const Navigation = () => {
@@ -5,24 +6,24 @@ const Navigation = () => {
     <>
       <ul className="nav__list">
         <li className="nav__list-item">
-          <a href="" className="nav__link">
+          <Link to="/about" className="nav__link">
             about
-          </a>
+          </Link>
         </li>
         <li className="nav__list-item">
-          <a href="" className="nav__link">
-            speaking
-          </a>
-        </li>
-        <li className="nav__list-item">
-          <a href="" className="nav__link">
+          <Link to="/coaching" className="nav__link">
             coaching
-          </a>
+          </Link>
         </li>
         <li className="nav__list-item">
-          <a href="#" className="nav__link">
+          <Link to="" className="nav__link">
+            speaking
+          </Link>
+        </li>
+        <li className="nav__list-item">
+          <Link to="#" className="nav__link">
             contact
-          </a>
+          </Link>
         </li>
       </ul>
     </>

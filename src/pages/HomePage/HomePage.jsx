@@ -1,6 +1,5 @@
-import { DisplaySettings } from "@mui/icons-material";
 import Header from "../../components/Header/Header";
-import Hero from "../../components/Hero/Hero";
+import Hero from "./HeroHome/HeroHome";
 import PhotoGrid from "../../components/PhotoGrid/PhotoGrid";
 import Featured from "../../components/Featured/Featured";
 import Video from "../../components/Video/Video";
@@ -24,7 +23,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="top-section">
+      <div className="top-section top-section__home">
         <Header />
         <Hero />
       </div>
@@ -48,8 +47,8 @@ const HomePage = () => {
               in any setting.
             </p>
             <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1dYHLEc_DcrhYJ2Bc03tIcOGDOjIT4xu3xAF51IbiCyhQAvMLPeg61PYIso0gSIOV-rmQzYmJ6"
-              className="main__button"
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
               target="_blank"
             >
               Book a Free 15-Minute Consultation
@@ -66,10 +65,10 @@ const HomePage = () => {
         ref={gradientRef}
       >
         <div className="quote__text">
-          <h2>Share Your Voice</h2>
+          <h2>Project Your Presence</h2>
           <h3>
-            “If story is our currency, do we have enough in our narrative to
-            author future generations?”
+            “Every word is an opportunity—choose those that move, inspire, and
+            create change.”
           </h3>
           <p>— Dennis Kenney</p>
         </div>

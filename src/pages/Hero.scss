@@ -1,0 +1,45 @@
+@use "../styles/partials/mixins.scss" as *;
+@use "../styles/partials/variables.scss" as *;
+
+.hero {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(0.25 * (66vh - 10rem));
+  &--left {
+    justify-content: flex-start;
+  }
+  &__right {
+    color: white;
+    text-align: right;
+    width: 70%;
+    @include tablet {
+      width: 42%;
+    }
+  }
+  &__left {
+    color: white;
+    text-align: left;
+    width: 70%;
+    @include tablet {
+      width: 42%;
+    }
+  }
+  &__headline {
+    font-weight: 100;
+    padding: 0 0 1rem;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    @include tablet {
+      font-size: 2.5rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+    }
+  }
+  &__text {
+    margin-bottom: 2rem;
+    @include tablet {
+      font-size: 1.25rem;
+    }
+  }
+}

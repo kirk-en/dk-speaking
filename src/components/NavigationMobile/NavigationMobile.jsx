@@ -2,7 +2,7 @@ import { Menu } from "@mui/icons-material";
 import { useState } from "react";
 import "./NavigationMobile.scss";
 import { Drawer } from "@mui/material";
-import Navigation from "../Navigation/Navigation";
+import { Link } from "react-router-dom";
 
 const NavigationMobile = () => {
   const [open, setOpen] = useState(false);
@@ -24,24 +24,24 @@ const NavigationMobile = () => {
       >
         <ul className="mobile-nav__list">
           <li className="mobile-nav__list-item">
-            <a href="#" className="mobile-nav__link">
+            <Link to="/about" className="mobile-nav__link">
               about
-            </a>
+            </Link>
           </li>
           <li className="mobile-nav__list-item">
-            <a href="#" className="mobile-nav__link">
-              speaking
-            </a>
-          </li>
-          <li className="mobile-nav__list-item">
-            <a href="#" className="mobile-nav__link">
+            <Link to="/coaching" className="mobile-nav__link">
               coaching
-            </a>
+            </Link>
           </li>
           <li className="mobile-nav__list-item">
-            <a href="#" className="mobile-nav__link">
+            <Link to="#" className="mobile-nav__link">
+              speaking
+            </Link>
+          </li>
+          <li className="mobile-nav__list-item">
+            <Link to="#" className="mobile-nav__link">
               contact
-            </a>
+            </Link>
           </li>
         </ul>
       </Drawer>
