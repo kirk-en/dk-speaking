@@ -71,7 +71,11 @@ const CoachingPage = () => {
           potential!
         </p>
         <article className="outline__entry">
-          <div className="outline__banner outline__banner--exec"></div>
+          <div
+            className="outline__banner outline__banner--exec"
+            role="img"
+            aria-label="A stylized picture of an executive at a tech conference speaking to a audience"
+          ></div>
           <h2>Executive</h2>
           <p>
             I specialize in executive speaking coaching designed to empower
@@ -95,7 +99,11 @@ const CoachingPage = () => {
         </article>
         <article className="outline__entry">
           {" "}
-          <div className="outline__banner outline__banner--school"></div>
+          <div
+            className="outline__banner outline__banner--school"
+            role="img"
+            aria-label="an outdoor landscape photo looking through the arches of a prestigious ivy league school"
+          ></div>
           <h2>Student</h2>
           <p>
             I specialize in executive speaking coaching designed to empower
@@ -119,7 +127,11 @@ const CoachingPage = () => {
         </article>
         <article className="outline__entry">
           {" "}
-          <div className="outline__banner outline__banner--fashion"></div>
+          <div
+            className="outline__banner outline__banner--fashion"
+            role="img"
+            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+          ></div>
           <h2>Image</h2>
           <p>
             I specialize in executive speaking coaching designed to empower
