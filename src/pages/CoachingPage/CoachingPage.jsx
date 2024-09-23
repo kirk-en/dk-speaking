@@ -70,15 +70,77 @@ const CoachingPage = () => {
           embark on this journey to elevate your speaking skills and unlock your
           potential!
         </p>
-        <article>
-          <img
-            src={execPhoto}
-            alt="an executive speaking at an event with green lighting"
-            className="outline__banner-image"
-          />
+        <article className="outline__entry">
+          <div className="outline__banner outline__banner--exec"></div>
+          <h2>Executive</h2>
+          <p>
+            I specialize in executive speaking coaching designed to empower
+            leaders and professionals to communicate with confidence and impact.
+            My offerings range from personalized one-on-one coaching sessions to
+            tailored workshops that address your specific needs, whether it's
+            enhancing your presentation skills, mastering executive presence, or
+            navigating high-stakes conversations. Together, we'll develop a
+            strategy that hones your unique voice and style, ensuring you
+            connect effectively with your audience.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
         </article>
-        <article></article>
-        <article></article>
+        <article className="outline__entry">
+          {" "}
+          <div className="outline__banner outline__banner--school"></div>
+          <h2>Student</h2>
+          <p>
+            I specialize in executive speaking coaching designed to empower
+            leaders and professionals to communicate with confidence and impact.
+            My offerings range from personalized one-on-one coaching sessions to
+            tailored workshops that address your specific needs, whether it's
+            enhancing your presentation skills, mastering executive presence, or
+            navigating high-stakes conversations. Together, we'll develop a
+            strategy that hones your unique voice and style, ensuring you
+            connect effectively with your audience.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline__entry">
+          {" "}
+          <div className="outline__banner outline__banner--fashion"></div>
+          <h2>Image</h2>
+          <p>
+            I specialize in executive speaking coaching designed to empower
+            leaders and professionals to communicate with confidence and impact.
+            My offerings range from personalized one-on-one coaching sessions to
+            tailored workshops that address your specific needs, whether it's
+            enhancing your presentation skills, mastering executive presence, or
+            navigating high-stakes conversations. Together, we'll develop a
+            strategy that hones your unique voice and style, ensuring you
+            connect effectively with your audience.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
       </section>
       <article
         className="quote"
@@ -86,10 +148,10 @@ const CoachingPage = () => {
         ref={gradientRef}
       >
         <div className="quote__text">
-          <h2>Share Your Voice</h2>
+          <h2>Project Your Presence</h2>
           <h3>
-            “If story is our currency, do we have enough in our narrative to
-            author future generations?”
+            “Every word is an opportunity—choose those that move, inspire, and
+            create change.”
           </h3>
           <p>— Dennis Kenney</p>
         </div>
