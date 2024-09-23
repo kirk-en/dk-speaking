@@ -29,13 +29,13 @@ const NavigationMobile = () => {
             </Link>
           </li>
           <li className="mobile-nav__list-item">
-            <Link to="#" className="mobile-nav__link">
-              speaking
+            <Link to="/coaching" className="mobile-nav__link">
+              coaching
             </Link>
           </li>
           <li className="mobile-nav__list-item">
             <Link to="#" className="mobile-nav__link">
-              coaching
+              speaking
             </Link>
           </li>
           <li className="mobile-nav__list-item">

@@ -1,0 +1,47 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.why {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  padding: 2rem 0;
+  color: $text-light;
+  &__boxes-container {
+    @include site-margins;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: column;
+    position: relative;
+    padding-top: 2rem;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__headline {
+    font-size: 2rem;
+  }
+  &__box {
+    background-color: $primary-light;
+    padding: 1rem;
+    @include tablet {
+      width: 33%;
+    }
+    &-headline {
+      font-size: 1.25rem;
+      padding: 0.25rem 0;
+    }
+    &-text {
+      line-height: 1.5;
+      // font-weight: 300;
+    }
+  }
+  &__number {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+}

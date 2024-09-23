@@ -9,8 +9,10 @@
   }
 }
 @mixin site-margins {
-  padding: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   @include tablet {
-    padding: 0 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

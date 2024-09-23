@@ -3,8 +3,9 @@ import HeroCoaching from "./HeroCoaching/HeroCoaching";
 import Footer from "../../components/Footer/Footer";
 import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
 import { useRef } from "react";
+import Why from "../../components/Why/Why";
+import execPhoto from "../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg";
 import "./CoachingPage.scss";
-import Booking from "../../components/Booking/Booking";
 
 const CoachingPage = () => {
   const gradientRef = useRef(null);
@@ -27,77 +28,146 @@ const CoachingPage = () => {
         <HeroCoaching />
       </div>
       <main className="coaching">
-        <h1 className="coaching__headline">My Story:</h1>
+        <article className="coaching__headline-text">
+          <p>
+            I started Ivy Level Speaking to empower individuals with the skills
+            and confidence to communicate effectively. Our mission is to
+            transform aspiring speakers into impactful communicators, fostering
+            authentic connections. Through personalized coaching and engaging
+            workshops, we help clients refine their messages and captivate
+            audiences.
+          </p>
+        </article>
         <section className="coaching__content">
-          <article className="coaching__content-text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis aut dolorum molestias! Accusantium consectetur sequi
-              doloremque officia iure ipsam error maiores provident eum quo!
-              Inventore molestiae doloribus aut saepe mollitia.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur distinctio quae ducimus obcaecati iste non ipsam
-              maxime ab, quos doloribus aliquid aperiam ad nihil, harum suscipit
-              natus laboriosam eaque sequi! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Ducimus autem, exercitationem libero
-              voluptate inventore possimus veritatis hic? Impedit, aliquid,
-              aperiam reprehenderit incidunt eaque praesentium temporibus
-              eligendi distinctio exercitationem maxime commodi.
-            </p>
-          </article>
-          <div className="coaching__content-gallery">
-            <img
-              src={hbsPhoto}
-              alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
-              className="coaching__single-photo"
-            />
-          </div>
-        </section>
-        <section className="coaching__content">
-          <div className="coaching__content-gallery">
-            <img
-              src={hbsPhoto}
-              alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
-              className="coaching__single-photo"
-            />
-          </div>
-          <article className="coaching__content-text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis aut dolorum molestias! Accusantium consectetur sequi
-              doloremque officia iure ipsam error maiores provident eum quo!
-              Inventore molestiae doloribus aut saepe mollitia.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur distinctio quae ducimus obcaecati iste non ipsam
-              maxime ab, quos doloribus aliquid aperiam ad nihil, harum suscipit
-              natus laboriosam eaque sequi! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Ducimus autem, exercitationem libero
-              voluptate inventore possimus veritatis hic? Impedit, aliquid,
-              aperiam reprehenderit incidunt eaque praesentium temporibus
-              eligendi distinctio exercitationem maxime commodi.
-            </p>
-          </article>
+          <img
+            src={hbsPhoto}
+            alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
+            className="coaching__single-photo"
+          />
+
+          <img
+            src={hbsPhoto}
+            alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
+            className="coaching__single-photo"
+          />
+
+          <img
+            src={hbsPhoto}
+            alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
+            className="coaching__single-photo"
+          />
         </section>
       </main>
+      <Why />
+      <section className="outline">
+        <h1 className="coaching__headline">Coaching:</h1>
+        <p className="outline__text">
+          Every individual has unique goals and challenges when it comes to
+          public speaking and that's why I offer a variety of programs tailored
+          to suit different needs. Together, we can create a custom package that
+          aligns with your objectives and helps you achieve your desired level
+          of confidence and effectiveness in your public engagements. Let’s
+          embark on this journey to elevate your speaking skills and unlock your
+          potential!
+        </p>
+        <article className="outline__entry">
+          <div
+            className="outline__banner outline__banner--exec"
+            role="img"
+            aria-label="A stylized picture of an executive at a tech conference speaking to a audience"
+          ></div>
+          <h2>Executive</h2>
+          <p>
+            I specialize in executive speaking coaching designed to empower
+            leaders and professionals to communicate with confidence and impact.
+            My offerings range from personalized one-on-one coaching sessions to
+            tailored workshops that address your specific needs, whether it's
+            enhancing your presentation skills, mastering executive presence, or
+            navigating high-stakes conversations. Together, we'll develop a
+            strategy that hones your unique voice and style, ensuring you
+            connect effectively with your audience.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline__entry">
+          {" "}
+          <div
+            className="outline__banner outline__banner--school"
+            role="img"
+            aria-label="an outdoor landscape photo looking through the arches of a prestigious ivy league school"
+          ></div>
+          <h2>Student</h2>
+          <p>
+            I specialize in executive speaking coaching designed to empower
+            leaders and professionals to communicate with confidence and impact.
+            My offerings range from personalized one-on-one coaching sessions to
+            tailored workshops that address your specific needs, whether it's
+            enhancing your presentation skills, mastering executive presence, or
+            navigating high-stakes conversations. Together, we'll develop a
+            strategy that hones your unique voice and style, ensuring you
+            connect effectively with your audience.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline__entry">
+          {" "}
+          <div
+            className="outline__banner outline__banner--fashion"
+            role="img"
+            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+          ></div>
+          <h2>Image</h2>
+          <p>
+            I specialize in executive speaking coaching designed to empower
+            leaders and professionals to communicate with confidence and impact.
+            My offerings range from personalized one-on-one coaching sessions to
+            tailored workshops that address your specific needs, whether it's
+            enhancing your presentation skills, mastering executive presence, or
+            navigating high-stakes conversations. Together, we'll develop a
+            strategy that hones your unique voice and style, ensuring you
+            connect effectively with your audience.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+      </section>
       <article
         className="quote"
         onMouseMove={handleMouseMove}
         ref={gradientRef}
       >
         <div className="quote__text">
-          <h2>Share Your Voice</h2>
+          <h2>Project Your Presence</h2>
           <h3>
-            “If story is our currency, do we have enough in our narrative to
-            author future generations?”
+            “Every word is an opportunity—choose those that move, inspire, and
+            create change.”
           </h3>
           <p>— Dennis Kenney</p>
         </div>
       </article>
-      <Booking />
       <Footer />
     </>
   );

@@ -89,10 +89,10 @@ const AboutPage = () => {
         ref={gradientRef}
       >
         <div className="quote__text">
-          <h2>Share Your Voice</h2>
+          <h2>Project Your Presence</h2>
           <h3>
-            “If story is our currency, do we have enough in our narrative to
-            author future generations?”
+            “Every word is an opportunity—choose those that move, inspire, and
+            create change.”
           </h3>
           <p>— Dennis Kenney</p>
         </div>
