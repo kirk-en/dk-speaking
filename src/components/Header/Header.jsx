@@ -1,22 +1,23 @@
 import { Web, X, LinkedIn, Instagram } from "@mui/icons-material";
-import dkLogo from "../../assets/dk-logo.png";
+import dkLogo from "../../assets/ils-logo.png";
 import Navigation from "../Navigation/Navigation";
 import "./Header.scss";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import { colors } from "@mui/material";
 import NavigationMobile from "../NavigationMobile/NavigationMobile";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
       <header className="header">
-        <a href="/">
+        <Link to="/">
           <img
             src={dkLogo}
             alt='The initials "D" "K" inside a circle colored blue and grey'
             className="header__logo"
           />
-        </a>
+        </Link>
         <nav>
           <div className="header__nav--standard">
             <Navigation />
