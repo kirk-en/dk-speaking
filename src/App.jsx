@@ -1,8 +1,7 @@
-import { useState } from "react";
-import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import "./App.scss";
 
 function App() {
   return (

@@ -11,7 +11,7 @@ const HeroAbout = () => {
           </p>
           <a
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1dYHLEc_DcrhYJ2Bc03tIcOGDOjIT4xu3xAF51IbiCyhQAvMLPeg61PYIso0gSIOV-rmQzYmJ6"
-            className="main__button"
+            className="button__main"
             target="_blank"
           >
             Book a Free 15-Minute Consultation

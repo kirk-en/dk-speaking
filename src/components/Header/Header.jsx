@@ -1,5 +1,5 @@
 import { Web, X, LinkedIn, Instagram } from "@mui/icons-material";
-import dkLogo from "../../assets/dk-logo.png";
+import dkLogo from "../../assets/ils-logo.png";
 import Navigation from "../Navigation/Navigation";
 import "./Header.scss";
 import SocialIcons from "../SocialIcons/SocialIcons";

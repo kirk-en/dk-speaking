@@ -48,7 +48,7 @@ const HomePage = () => {
             </p>
             <a
               href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1dYHLEc_DcrhYJ2Bc03tIcOGDOjIT4xu3xAF51IbiCyhQAvMLPeg61PYIso0gSIOV-rmQzYmJ6"
-              className="main__button"
+              className="button__main"
               target="_blank"
             >
               Book a Free 15-Minute Consultation
@@ -65,10 +65,10 @@ const HomePage = () => {
         ref={gradientRef}
       >
         <div className="quote__text">
-          <h2>Share Your Voice</h2>
+          <h2>Project Your Presence</h2>
           <h3>
-            “If story is our currency, do we have enough in our narrative to
-            author future generations?”
+            “Every word is an opportunity—choose those that move, inspire, and
+            create change.”
           </h3>
           <p>— Dennis Kenney</p>
         </div>
