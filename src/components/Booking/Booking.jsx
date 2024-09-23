@@ -11,7 +11,11 @@ const Booking = () => {
         your delivery, and outline a personalized road map towards confident,
         impactful communication.
       </p>
-      <a className="button__main" href="">
+      <a
+        href="https://calendly.com/ivylevelspeaking/30min"
+        className="button__main"
+        target="_blank"
+      >
         book now
       </a>
     </div>

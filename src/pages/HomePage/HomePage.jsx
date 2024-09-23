@@ -47,7 +47,7 @@ const HomePage = () => {
               in any setting.
             </p>
             <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1dYHLEc_DcrhYJ2Bc03tIcOGDOjIT4xu3xAF51IbiCyhQAvMLPeg61PYIso0gSIOV-rmQzYmJ6"
+              href="https://calendly.com/ivylevelspeaking/30min"
               className="button__main"
               target="_blank"
             >

@@ -5,12 +5,13 @@
 
 .button {
   &__main {
+    display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     color: $text-light;
     border-radius: 0.5rem;
     background-color: $secondary;
-    margin: 1rem;
+    // margin: 1rem;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -22,6 +23,10 @@
       background-color: $secondary-alt;
       transform: scale(1.05);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    }
+    &--lr-zero-margin {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }

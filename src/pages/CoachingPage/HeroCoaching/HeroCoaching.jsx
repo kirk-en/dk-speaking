@@ -1,10 +1,10 @@
 import "../../Hero.scss";
 
-const HeroAbout = () => {
+const HeroChoaching = () => {
   return (
     <>
-      <div className="hero">
-        <aside className="hero__right">
+      <div className="hero hero--left">
+        <aside className="hero__left">
           <h2 className="hero__headline">Meet Dennis Kenney</h2>
           <p className="hero__text">
             Public Speaking and Communications Expert.
@@ -22,4 +22,4 @@ const HeroAbout = () => {
   );
 };
 
-export default HeroAbout;
+export default HeroChoaching;

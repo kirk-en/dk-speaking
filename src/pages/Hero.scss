@@ -5,9 +5,20 @@
   display: flex;
   justify-content: flex-end;
   margin-top: calc(0.25 * (66vh - 10rem));
+  &--left {
+    justify-content: flex-start;
+  }
   &__right {
     color: white;
     text-align: right;
+    width: 70%;
+    @include tablet {
+      width: 42%;
+    }
+  }
+  &__left {
+    color: white;
+    text-align: left;
     width: 70%;
     @include tablet {
       width: 42%;
@@ -25,7 +36,7 @@
     }
   }
   &__text {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     @include tablet {
       font-size: 1.25rem;
     }

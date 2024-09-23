@@ -1,12 +1,12 @@
 import Header from "../../components/Header/Header";
-import HeroAbout from "./HeroAbout/HeroAbout";
+import HeroCoaching from "./HeroCoaching/HeroCoaching";
 import Footer from "../../components/Footer/Footer";
 import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
 import { useRef } from "react";
-import "./AboutPage.scss";
+import "./CoachingPage.scss";
 import Booking from "../../components/Booking/Booking";
 
-const AboutPage = () => {
+const CoachingPage = () => {
   const gradientRef = useRef(null);
 
   const handleMouseMove = (event) => {
@@ -22,14 +22,14 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="top-section top-section__about">
+      <div className="top-section top-section__coaching">
         <Header />
-        <HeroAbout />
+        <HeroCoaching />
       </div>
-      <main className="about">
-        <h1 className="about__headline">My Story:</h1>
-        <section className="about__content">
-          <article className="about__content-text">
+      <main className="coaching">
+        <h1 className="coaching__headline">My Story:</h1>
+        <section className="coaching__content">
+          <article className="coaching__content-text">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Blanditiis aut dolorum molestias! Accusantium consectetur sequi
@@ -47,23 +47,23 @@ const AboutPage = () => {
               eligendi distinctio exercitationem maxime commodi.
             </p>
           </article>
-          <div className="about__content-gallery">
+          <div className="coaching__content-gallery">
             <img
               src={hbsPhoto}
-              alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
-              className="about__single-photo"
+              alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
+              className="coaching__single-photo"
             />
           </div>
         </section>
-        <section className="about__content">
-          <div className="about__content-gallery">
+        <section className="coaching__content">
+          <div className="coaching__content-gallery">
             <img
               src={hbsPhoto}
-              alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
-              className="about__single-photo"
+              alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
+              className="coaching__single-photo"
             />
           </div>
-          <article className="about__content-text">
+          <article className="coaching__content-text">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Blanditiis aut dolorum molestias! Accusantium consectetur sequi
@@ -103,4 +103,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default CoachingPage;

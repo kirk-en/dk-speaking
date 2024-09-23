@@ -11,13 +11,13 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="nav__list-item">
-          <Link to="" className="nav__link">
-            speaking
+          <Link to="/coaching" className="nav__link">
+            coaching
           </Link>
         </li>
         <li className="nav__list-item">
           <Link to="" className="nav__link">
-            coaching
+            speaking
           </Link>
         </li>
         <li className="nav__list-item">

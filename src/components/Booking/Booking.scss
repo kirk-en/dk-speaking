@@ -24,9 +24,15 @@
     z-index: -1;
   }
   @include tablet {
-    padding: 4rem 35% 3rem;
+    padding: 4rem 30% 3rem;
   }
   &__title {
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+    }
   }
   &__text {
     line-height: 1.25;
