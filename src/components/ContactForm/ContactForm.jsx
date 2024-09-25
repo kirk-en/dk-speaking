@@ -1,4 +1,9 @@
-import { TextField } from "@mui/material";
+import {
+  TextField,
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
+} from "@mui/material";
 import { useState } from "react";
 
 const ContactForm = () => {
@@ -11,13 +16,14 @@ const ContactForm = () => {
     name: "",
     email: "",
     message: "",
+    services: [],
   });
 
   const handleFormChange = (e) => {
     console.log(e.target);
     const { name, value } = e.target;
     setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
-    e.target.value.length ? setHasError(false) : setHasError(true);
+    // e.target.value.length ? setHasError(false) : setHasError(true);
   };
 
   return (
@@ -33,7 +39,7 @@ const ContactForm = () => {
           value={formValues.name}
           onChange={handleFormChange}
           helperText={hasError.name ? "Name is required." : ""}
-          sx={{ width: "100%" }}
+          fullWidth
         />
         <TextField
           label="Email"
@@ -54,7 +60,56 @@ const ContactForm = () => {
           value={formValues.phone}
           onChange={handleFormChange}
         />
+        <FormGroup>
+          <span>Services You’re interested in:</span>
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Coaching"
+                checked={formValues.services.includes("Coaching")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Coaching"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Speaking"
+                checked={formValues.services.includes("Speaking")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Speaking"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Consultation"
+                checked={formValues.services.includes("Consultation")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Consultation"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Not Sure Yet"
+                checked={formValues.services.includes("Not Sure Yet")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Not Sure Yet"
+          />
+        </FormGroup>
         <TextField
+          multiline
+          rows={4}
           label="Message"
           id="message"
           name="message"
@@ -64,7 +119,7 @@ const ContactForm = () => {
           value={formValues.message}
           onChange={handleFormChange}
           helperText={hasError.email ? "Make sure to include a message!" : ""}
-          sx={{ width: "100%" }}
+          fullWidth
         />
       </form>
     </article>
