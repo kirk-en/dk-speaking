@@ -3,19 +3,18 @@
 
 .top-section {
   @include site-margins;
-  &__coaching {
-    background-image: url("../../assets/dennis-headshot-hero.jpg");
-    min-height: 66vh;
-    background-color: #8e8073;
-    background-size: cover;
+  &__contact {
+    background-image: url("../../assets/dk-hero-lrg.jpg");
+    min-height: 40vh;
     background-repeat: no-repeat;
-    background-position: center;
-    @media (max-width: 768px) {
-      background-position: right -200px center; // Keep the right side visible
-    }
+    background-position: center top;
+    background-size: cover;
+    // @media (max-width: 768px) {
+    //   background-position: right -200px center; // Keep the right side visible
+    // }
   }
 }
-.coaching {
+.contact {
   @include site-margins;
   padding-bottom: 2rem;
   &__headline {

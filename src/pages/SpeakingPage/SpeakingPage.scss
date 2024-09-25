@@ -3,10 +3,10 @@
 
 .top-section {
   @include site-margins;
-  &__coaching {
-    background-image: url("../../assets/dennis-headshot-hero.jpg");
+  &__speaking {
+    background-image: url("../../assets/on-stage.jpg");
     min-height: 66vh;
-    background-color: #8e8073;
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -15,7 +15,7 @@
     }
   }
 }
-.coaching {
+.speaking {
   @include site-margins;
   padding-bottom: 2rem;
   &__headline {
