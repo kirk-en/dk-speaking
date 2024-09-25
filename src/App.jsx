@@ -4,6 +4,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import "./App.scss";
 import CoachingPage from "./pages/CoachingPage/CoachingPage";
 import SpeakingPage from "./pages/SpeakingPage/SpeakingPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/coaching" element={<CoachingPage />} />
           <Route path="/speaking" element={<SpeakingPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </BrowserRouter>
     </>
