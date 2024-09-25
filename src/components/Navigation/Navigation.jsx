@@ -16,12 +16,12 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="nav__list-item">
-          <Link to="" className="nav__link">
+          <Link to="/speaking" className="nav__link">
             speaking
           </Link>
         </li>
         <li className="nav__list-item">
-          <Link to="#" className="nav__link">
+          <Link to="/contact" className="nav__link">
             contact
           </Link>
         </li>

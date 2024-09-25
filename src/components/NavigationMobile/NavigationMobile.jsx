@@ -34,12 +34,12 @@ const NavigationMobile = () => {
             </Link>
           </li>
           <li className="mobile-nav__list-item">
-            <Link to="#" className="mobile-nav__link">
+            <Link to="/speaking" className="mobile-nav__link">
               speaking
             </Link>
           </li>
           <li className="mobile-nav__list-item">
-            <Link to="#" className="mobile-nav__link">
+            <Link to="/contact" className="mobile-nav__link">
               contact
             </Link>
           </li>
