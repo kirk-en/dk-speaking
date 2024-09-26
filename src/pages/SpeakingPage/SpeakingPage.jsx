@@ -27,8 +27,8 @@ const SpeakingPage = () => {
         <Header />
         <HeroSpeaking />
       </div>
-      <main className="speaking">
-        <article className="speaking__headline-text">
+      {/* <main className="speaking"> */}
+      {/* <article className="speaking__headline-text">
           <p>
             I started Ivy Level Speaking to empower individuals with the skills
             and confidence to communicate effectively. Our mission is to
@@ -37,8 +37,8 @@ const SpeakingPage = () => {
             workshops, we help clients refine their messages and captivate
             audiences.
           </p>
-        </article>
-        <section className="speaking__content">
+        </article> */}
+      {/* <section className="speaking__content">
           <img
             src={hbsPhoto}
             alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
@@ -56,9 +56,9 @@ const SpeakingPage = () => {
             alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
             className="speaking__single-photo"
           />
-        </section>
-      </main>
-      <Why />
+        </section> */}
+      {/* </main> */}
+      {/* <Why /> */}
       <section className="outline">
         <h1 className="speaking__headline">Speaking:</h1>
         <p className="outline__text">
@@ -76,7 +76,7 @@ const SpeakingPage = () => {
             role="img"
             aria-label="A stylized picture of an executive at a tech conference speaking to a audience"
           ></div>
-          <h2>Executive</h2>
+          <h2>Keynote</h2>
           <p>
             I specialize in executive speaking speaking designed to empower
             leaders and professionals to communicate with confidence and impact.
@@ -104,7 +104,7 @@ const SpeakingPage = () => {
             role="img"
             aria-label="an outdoor landscape photo looking through the arches of a prestigious ivy league school"
           ></div>
-          <h2>Student</h2>
+          <h2>Workshop</h2>
           <p>
             I specialize in executive speaking coaching designed to empower
             leaders and professionals to communicate with confidence and impact.
@@ -132,7 +132,7 @@ const SpeakingPage = () => {
             role="img"
             aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
           ></div>
-          <h2>Image</h2>
+          <h2>Inspirational</h2>
           <p>
             I specialize in executive speaking coaching designed to empower
             leaders and professionals to communicate with confidence and impact.
