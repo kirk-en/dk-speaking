@@ -38,7 +38,7 @@ const CoachingPage = () => {
             audiences.
           </p>
         </article>
-        <section className="coaching__content">
+        {/* <section className="coaching__content">
           <img
             src={hbsPhoto}
             alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
@@ -56,19 +56,19 @@ const CoachingPage = () => {
             alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
             className="coaching__single-photo"
           />
-        </section>
+        </section> */}
       </main>
       <Why />
       <section className="outline">
         <h1 className="coaching__headline">Coaching:</h1>
         <p className="outline__text">
-          Every individual has unique goals and challenges when it comes to
-          public speaking and that's why I offer a variety of programs tailored
-          to suit different needs. Together, we can create a custom package that
-          aligns with your objectives and helps you achieve your desired level
-          of confidence and effectiveness in your public engagements. Let’s
-          embark on this journey to elevate your speaking skills and unlock your
-          potential!
+          "Whether you’re preparing for a keynote, interview, academic
+          presentation, or looking to stand out in the job market, I’ll guide
+          you to deliver with confidence, clarity, and influence. Together,
+          we’ll uncover your unique voice, helping you communicate authentically
+          and connect powerfully with any audience. Ready to turn your words
+          into opportunities? Let’s craft a story that captivates, inspires, and
+          positions you for success in any setting."
         </p>
         <article className="outline__entry">
           <div
@@ -76,7 +76,7 @@ const CoachingPage = () => {
             role="img"
             aria-label="A stylized picture of an executive at a tech conference speaking to a audience"
           ></div>
-          <h2>Executive</h2>
+          <h2>Executive Presence</h2>
           <p>
             I specialize in executive speaking coaching designed to empower
             leaders and professionals to communicate with confidence and impact.
@@ -104,7 +104,7 @@ const CoachingPage = () => {
             role="img"
             aria-label="an outdoor landscape photo looking through the arches of a prestigious ivy league school"
           ></div>
-          <h2>Student</h2>
+          <h2>Interview & Job Market Preparation</h2>
           <p>
             I specialize in executive speaking coaching designed to empower
             leaders and professionals to communicate with confidence and impact.
