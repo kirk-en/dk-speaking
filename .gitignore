@@ -26,3 +26,4 @@ dist-ssr
 *.psd
 reference
 ils-logo.JPG
+.env
