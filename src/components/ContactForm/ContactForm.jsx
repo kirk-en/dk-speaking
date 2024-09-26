@@ -7,6 +7,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import "./ContactForm.scss";
+import { Resend } from "resend";
+import axios from "axios";
 
 const ContactForm = () => {
   const [hasError, setHasError] = useState({
@@ -22,16 +24,37 @@ const ContactForm = () => {
   });
 
   const handleFormChange = (e) => {
-    // console.log(e.target);
     const { name, value } = e.target;
     setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
     // TBD --- HANDLE ERROR CHECKING ---
     // e.target.value.length ? setHasError(false) : setHasError(true);
   };
 
+  const sendMail = async (formObj) => {
+    try {
+      await axios.post(
+        "https://api.resend.dev/emails",
+        {
+          from: "Contact <onboarding@resend.dev>",
+          to: ["kirk@arroyastudio.com"],
+          subject: `Ivy Level Speaking Inquiry`,
+          html: "email from ivy website",
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${import.meta.env.VITE_RESEND_API_Key}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formValues);
+    sendMail(formValues);
   };
 
   return (
