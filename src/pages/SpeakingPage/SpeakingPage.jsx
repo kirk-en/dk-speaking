@@ -27,8 +27,8 @@ const SpeakingPage = () => {
         <Header />
         <HeroSpeaking />
       </div>
-      <main className="speaking">
-        <article className="speaking__headline-text">
+      {/* <main className="speaking"> */}
+      {/* <article className="speaking__headline-text">
           <p>
             I started Ivy Level Speaking to empower individuals with the skills
             and confidence to communicate effectively. Our mission is to
@@ -37,8 +37,8 @@ const SpeakingPage = () => {
             workshops, we help clients refine their messages and captivate
             audiences.
           </p>
-        </article>
-        <section className="speaking__content">
+        </article> */}
+      {/* <section className="speaking__content">
           <img
             src={hbsPhoto}
             alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
@@ -56,36 +56,31 @@ const SpeakingPage = () => {
             alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
             className="speaking__single-photo"
           />
-        </section>
-      </main>
-      <Why />
-      <section className="outline">
-        <h1 className="speaking__headline">Speaking:</h1>
-        <p className="outline__text">
-          Every individual has unique goals and challenges when it comes to
-          public speaking and that's why I offer a variety of programs tailored
-          to suit different needs. Together, we can create a custom package that
-          aligns with your objectives and helps you achieve your desired level
-          of confidence and effectiveness in your public engagements. Let’s
-          embark on this journey to elevate your speaking skills and unlock your
-          potential!
-        </p>
-        <article className="outline__entry">
+        </section> */}
+      {/* </main> */}
+      {/* <Why /> */}
+      <h1 className="speaking__headline">Speaking Topics:</h1>
+      <section className="outline-sp">
+        {/* <p className="outline-sp__text">
+          Dennis Kenney is an internationally recognized speaker and
+          communication coach, known for helping professionals, academics, and
+          students unlock their full potential on stage and in presentations.
+          With a dynamic background in drama, business, and education, Dennis
+          brings a unique blend of storytelling, strategy, and
+          confidence-building techniques to each engagement.
+        </p> */}
+        <article className="outline-sp__entry">
           <div
-            className="outline__banner outline__banner--exec"
+            className="outline-sp__banner outline-sp__banner--exec"
             role="img"
             aria-label="A stylized picture of an executive at a tech conference speaking to a audience"
           ></div>
-          <h2>Executive</h2>
+          <h2>Authentic Leadership Communication</h2>
           <p>
-            I specialize in executive speaking speaking designed to empower
-            leaders and professionals to communicate with confidence and impact.
-            My offerings range from personalized one-on-one coaching sessions to
-            tailored workshops that address your specific needs, whether it's
-            enhancing your presentation skills, mastering executive presence, or
-            navigating high-stakes conversations. Together, we'll develop a
-            strategy that hones your unique voice and style, ensuring you
-            connect effectively with your audience.
+            Master the art of leading with confidence and authenticity. This
+            keynote focuses on enhancing communication strategies for leaders,
+            helping them inspire and connect with their teams through genuine
+            and impactful speech.
           </p>
           <div>
             <a
@@ -97,23 +92,19 @@ const SpeakingPage = () => {
             </a>
           </div>
         </article>
-        <article className="outline__entry">
+        <article className="outline-sp__entry">
           {" "}
           <div
-            className="outline__banner outline__banner--school"
+            className="outline-sp__banner outline-sp__banner--story"
             role="img"
             aria-label="an outdoor landscape photo looking through the arches of a prestigious ivy league school"
           ></div>
-          <h2>Student</h2>
+          <h2>Storytelling for Impact</h2>
           <p>
-            I specialize in executive speaking coaching designed to empower
-            leaders and professionals to communicate with confidence and impact.
-            My offerings range from personalized one-on-one coaching sessions to
-            tailored workshops that address your specific needs, whether it's
-            enhancing your presentation skills, mastering executive presence, or
-            navigating high-stakes conversations. Together, we'll develop a
-            strategy that hones your unique voice and style, ensuring you
-            connect effectively with your audience.
+            In today’s world, stories move audiences and shape brands. Learn how
+            to craft compelling narratives that captivate listeners and make
+            your message unforgettable, whether you're speaking in the boardroom
+            or on the stage.
           </p>
           <div>
             <a
@@ -125,23 +116,65 @@ const SpeakingPage = () => {
             </a>
           </div>
         </article>
-        <article className="outline__entry">
+        <article className="outline-sp__entry">
           {" "}
           <div
-            className="outline__banner outline__banner--fashion"
+            className="outline-sp__banner outline-sp__banner--fashion"
             role="img"
             aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
           ></div>
-          <h2>Image</h2>
+          <h2>The Confident Presenter</h2>
           <p>
-            I specialize in executive speaking coaching designed to empower
-            leaders and professionals to communicate with confidence and impact.
-            My offerings range from personalized one-on-one coaching sessions to
-            tailored workshops that address your specific needs, whether it's
-            enhancing your presentation skills, mastering executive presence, or
-            navigating high-stakes conversations. Together, we'll develop a
-            strategy that hones your unique voice and style, ensuring you
-            connect effectively with your audience.
+            Conquer presentation anxiety and step into the spotlight with
+            confidence. This keynote offers practical tools and strategies to
+            overcome nerves, command attention, and deliver presentations that
+            leave lasting impressions.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline-sp__entry">
+          <div
+            className="outline-sp__banner outline-sp__banner--diversity"
+            role="img"
+            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+          ></div>
+          <h2>Equity, Diversity, and Inclusion in Communication</h2>
+          <p>
+            Explore how to communicate with sensitivity, respect, and
+            inclusivity in diverse environments. This session helps speakers
+            navigate complex topics and foster open, meaningful dialogue that
+            embraces a wide range of perspectives.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline-sp__entry">
+          <div
+            className="outline-sp__banner outline-sp__banner--interview"
+            role="img"
+            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+          ></div>
+          <h2>Job Market & Interview Mastery</h2>
+          <p>
+            Perfect for students and professionals preparing for job interviews
+            or academic flyouts, this session focuses on refining your pitch,
+            handling tough questions, and delivering a polished, confident
+            performance tailored to your career path. 😎
           </p>
           <div>
             <a

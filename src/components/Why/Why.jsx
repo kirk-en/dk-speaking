@@ -3,39 +3,37 @@ import "./Why.scss";
 const Why = () => {
   return (
     <section className="why">
-      <h2 className="why__headline">Why Book Dennis?</h2>
+      <h2 className="why__headline">How I Can Help You:</h2>
       <article className="why__boxes-container">
         <div className="why__box">
           <h3 className="why__number">#1</h3>
-          <h4 className="why__box-headline">Proven Expertise</h4>
+          <h4 className="why__box-headline">Tailored Coaching</h4>
           <p className="why__box-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            dolores enim quos fugiat neque, quidem tempora quaerat illum
-            asperiores tempore fugit laudantium tenetur optio veritatis
-            reiciendis ex incidunt non nulla.
+            Receive personalized coaching based on your unique goals, industry,
+            and challenges. With a focus on actionable feedback and continuous
+            improvement, you'll experience transformative progress that delivers
+            lasting results.
           </p>
         </div>
         <div className="why__box">
           <h3 className="why__number">#2</h3>
-          <h4 className="why__box-headline">Transformative Coaching</h4>
+          <h4 className="why__box-headline">
+            Public Speaking & Presentation Mastery
+          </h4>
           <p className="why__box-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            voluptatum adipisci dolorum perspiciatis repudiandae suscipit
-            aliquid fuga excepturi enim quia molestias reiciendis amet animi
-            error quis temporibus mollitia eum minus, officia blanditiis,
-            molestiae dolore fugiat quae! Tenetur delectus amet laudantium
-            facilis provident libero ducimus nobis in beatae!
+            Develop the skills to speak with clarity and charisma, ensuring your
+            message is impactful and memorable. Strengthen your leadership
+            presence and influence others through authentic and powerful
+            communication.
           </p>
         </div>
         <div className="why__box">
           <h3 className="why__number">#3</h3>
-          <h4 className="why__box-headline">Industry Recognition</h4>
+          <h4 className="why__box-headline">Storytelling</h4>
           <p className="why__box-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
-            officiis sapiente eaque sunt, minus rerum provident asperiores esse
-            non perspiciatis facere explicabo. Totam perferendis esse blanditiis
-            illum id exercitationem aliquid, dolores ex saepe sint nobis quas
-            ullam impedit amet. Dolorum nesciunt blanditiis dolores!
+            Learn the art of storytelling to captivate your audience and inspire
+            action. Discover Ivy Level techniques to structure your narrative,
+            evoke emotion, and tailor stories for maximum engagement.
           </p>
         </div>
       </article>
