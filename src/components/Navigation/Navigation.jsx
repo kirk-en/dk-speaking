@@ -21,7 +21,11 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="nav__list-item">
-          <Link to="/contact" className="nav__link">
+          <Link
+            to="https://calendly.com/ivylevelspeaking/30min"
+            target="_blank"
+            className="nav__link"
+          >
             contact
           </Link>
         </li>

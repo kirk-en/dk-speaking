@@ -2,6 +2,7 @@ import Header from "../../components/Header/Header";
 import HeroAbout from "./HeroAbout/HeroAbout";
 import Footer from "../../components/Footer/Footer";
 import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
+import dennisPhoto from "../../assets/dennis-side-profile.jpg";
 import { useRef } from "react";
 import "./AboutPage.scss";
 import Booking from "../../components/Booking/Booking";
@@ -60,7 +61,7 @@ const AboutPage = () => {
           </article>
           <div className="about__content-gallery">
             <img
-              src={hbsPhoto}
+              src={dennisPhoto}
               alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
               className="about__single-photo"
             />

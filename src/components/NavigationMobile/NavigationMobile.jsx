@@ -39,7 +39,11 @@ const NavigationMobile = () => {
             </Link>
           </li>
           <li className="mobile-nav__list-item">
-            <Link to="/contact" className="mobile-nav__link">
+            <Link
+              to="https://calendly.com/ivylevelspeaking/30min"
+              target="_blank"
+              className="mobile-nav__link"
+            >
               contact
             </Link>
           </li>

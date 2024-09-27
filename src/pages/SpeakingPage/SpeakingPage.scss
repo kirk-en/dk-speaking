@@ -76,6 +76,7 @@
   &__entry {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
     text-align: center;
     margin: 2rem 0;
