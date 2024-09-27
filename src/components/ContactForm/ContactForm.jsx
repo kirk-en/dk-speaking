@@ -24,29 +24,25 @@ const ContactForm = () => {
   });
 
   const handleFormChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
+    const { name, value, checked } = e.target;
+    if (name === "services") {
+      setFormValues((prevValues) => ({
+        ...prevValues,
+        services: checked
+          ? [...prevValues.services, value]
+          : prevValues.services.filter((service) => service !== value),
+      }));
+    } else {
+      setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
+    }
+
     // TBD --- HANDLE ERROR CHECKING ---
     // e.target.value.length ? setHasError(false) : setHasError(true);
   };
 
   const sendMail = async (formObj) => {
     try {
-      await axios.post(
-        "https://api.resend.dev/emails",
-        {
-          from: "Contact <onboarding@resend.dev>",
-          to: ["kirk@arroyastudio.com"],
-          subject: `Ivy Level Speaking Inquiry`,
-          html: "email from ivy website",
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_RESEND_API_Key}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}mail`, formObj);
     } catch (error) {
       console.log(error);
     }

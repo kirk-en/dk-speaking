@@ -106,14 +106,11 @@ const CoachingPage = () => {
           ></div>
           <h2>Interview & Job Market Preparation</h2>
           <p>
-            I specialize in executive speaking coaching designed to empower
-            leaders and professionals to communicate with confidence and impact.
-            My offerings range from personalized one-on-one coaching sessions to
-            tailored workshops that address your specific needs, whether it's
-            enhancing your presentation skills, mastering executive presence, or
-            navigating high-stakes conversations. Together, we'll develop a
-            strategy that hones your unique voice and style, ensuring you
-            connect effectively with your audience.
+            Stand out in interviews and job market presentations with coaching
+            that’s not cookie-cutter, but rather tailored to your unique
+            personality, strengths, and career goals. I’ll help you refine your
+            story, enhance your communication skills, and present yourself with
+            authenticity and confidence.
           </p>
           <div>
             <a
@@ -134,14 +131,11 @@ const CoachingPage = () => {
           ></div>
           <h2>Image</h2>
           <p>
-            I specialize in executive speaking coaching designed to empower
-            leaders and professionals to communicate with confidence and impact.
-            My offerings range from personalized one-on-one coaching sessions to
-            tailored workshops that address your specific needs, whether it's
-            enhancing your presentation skills, mastering executive presence, or
-            navigating high-stakes conversations. Together, we'll develop a
-            strategy that hones your unique voice and style, ensuring you
-            connect effectively with your audience.
+            Image coaching that’s as unique as you are—no one-size-fits-all
+            approach here. Together, we’ll craft a personal brand that aligns
+            with your goals, ensuring your wardrobe, body language, and presence
+            authentically reflect who you are and leave a lasting, confident
+            impression.
           </p>
           <div>
             <a
