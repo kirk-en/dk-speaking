@@ -59,9 +59,9 @@ const SpeakingPage = () => {
         </section> */}
       {/* </main> */}
       {/* <Why /> */}
-      <section className="outline">
-        <h1 className="speaking__headline">Speaking Topics:</h1>
-        {/* <p className="outline__text">
+      <h1 className="speaking__headline">Speaking Topics:</h1>
+      <section className="outline-sp">
+        {/* <p className="outline-sp__text">
           Dennis Kenney is an internationally recognized speaker and
           communication coach, known for helping professionals, academics, and
           students unlock their full potential on stage and in presentations.
@@ -69,9 +69,9 @@ const SpeakingPage = () => {
           brings a unique blend of storytelling, strategy, and
           confidence-building techniques to each engagement.
         </p> */}
-        <article className="outline__entry">
+        <article className="outline-sp__entry">
           <div
-            className="outline__banner outline__banner--exec"
+            className="outline-sp__banner outline-sp__banner--exec"
             role="img"
             aria-label="A stylized picture of an executive at a tech conference speaking to a audience"
           ></div>
@@ -92,10 +92,10 @@ const SpeakingPage = () => {
             </a>
           </div>
         </article>
-        <article className="outline__entry">
+        <article className="outline-sp__entry">
           {" "}
           <div
-            className="outline__banner outline__banner--school"
+            className="outline-sp__banner outline-sp__banner--story"
             role="img"
             aria-label="an outdoor landscape photo looking through the arches of a prestigious ivy league school"
           ></div>
@@ -116,10 +116,10 @@ const SpeakingPage = () => {
             </a>
           </div>
         </article>
-        <article className="outline__entry">
+        <article className="outline-sp__entry">
           {" "}
           <div
-            className="outline__banner outline__banner--fashion"
+            className="outline-sp__banner outline-sp__banner--fashion"
             role="img"
             aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
           ></div>
@@ -139,8 +139,10 @@ const SpeakingPage = () => {
               Book Consultation
             </a>
           </div>
+        </article>
+        <article className="outline-sp__entry">
           <div
-            className="outline__banner outline__banner--fashion"
+            className="outline-sp__banner outline-sp__banner--diversity"
             role="img"
             aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
           ></div>
@@ -160,8 +162,10 @@ const SpeakingPage = () => {
               Book Consultation
             </a>
           </div>
+        </article>
+        <article className="outline-sp__entry">
           <div
-            className="outline__banner outline__banner--fashion"
+            className="outline-sp__banner outline-sp__banner--interview"
             role="img"
             aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
           ></div>
@@ -170,7 +174,7 @@ const SpeakingPage = () => {
             Perfect for students and professionals preparing for job interviews
             or academic flyouts, this session focuses on refining your pitch,
             handling tough questions, and delivering a polished, confident
-            performance tailored to your career path.
+            performance tailored to your career path. 😎
           </p>
           <div>
             <a
