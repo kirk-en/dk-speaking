@@ -8,6 +8,7 @@
   &--left {
     justify-content: flex-start;
   }
+  //styles for hero text container
   &__right {
     color: white;
     text-align: right;
@@ -24,6 +25,12 @@
       width: 42%;
     }
   }
+  &--container-background {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  // styles for the text elements
   &__headline {
     font-weight: 100;
     padding: 0 0 1rem;

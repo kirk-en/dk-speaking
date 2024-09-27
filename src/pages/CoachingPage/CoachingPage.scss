@@ -6,9 +6,13 @@
   &__coaching {
     background-image: url("../../assets/dennis-headshot-hero.jpg");
     min-height: 66vh;
+    background-color: #8e8073;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    @media (max-width: 768px) {
+      background-position: right -200px center; // Keep the right side visible
+    }
   }
 }
 .coaching {
@@ -83,7 +87,7 @@
     }
     &--exec {
       background-image: url("../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg");
-      background-position-y: -30px;
+      background-position-y: -45px;
     }
     &--school {
       background-image: url("../../assets/hallway-of-holder-hall-on-the-campus.jpg");

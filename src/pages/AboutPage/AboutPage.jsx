@@ -2,6 +2,7 @@ import Header from "../../components/Header/Header";
 import HeroAbout from "./HeroAbout/HeroAbout";
 import Footer from "../../components/Footer/Footer";
 import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
+import dennisPhoto from "../../assets/dennis-side-profile.jpg";
 import { useRef } from "react";
 import "./AboutPage.scss";
 import Booking from "../../components/Booking/Booking";
@@ -31,25 +32,36 @@ const AboutPage = () => {
         <section className="about__content">
           <article className="about__content-text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis aut dolorum molestias! Accusantium consectetur sequi
-              doloremque officia iure ipsam error maiores provident eum quo!
-              Inventore molestiae doloribus aut saepe mollitia.
+              <span className="about__content-text--opening">
+                A Unique Blend of Drama, Communication, and Leadership...
+              </span>
+              <br />
+              With a Drama degree from Carnegie Mellon University, a Master’s in
+              Communication from Northwestern University, and ongoing doctoral
+              studies in Leadership from The Johns Hopkins University, my
+              journey has been anything but ordinary. I have built a career that
+              blends expertise across theater, communication, and leadership,
+              allowing me to offer an unparalleled coaching experience. I’ve
+              worked with top-tier institutions like Harvard, Columbia, and
+              Fortune 500 companies, helping individuals at all levels elevate
+              their communication skills and personal presence.
               <br />
               <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur distinctio quae ducimus obcaecati iste non ipsam
-              maxime ab, quos doloribus aliquid aperiam ad nihil, harum suscipit
-              natus laboriosam eaque sequi! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Ducimus autem, exercitationem libero
-              voluptate inventore possimus veritatis hic? Impedit, aliquid,
-              aperiam reprehenderit incidunt eaque praesentium temporibus
-              eligendi distinctio exercitationem maxime commodi.
+              What sets me apart is the variety and depth of my experiences.
+              I’ve been the head stylist for Good Morning America and a creative
+              director for major fashion brands, transforming how celebrities
+              present themselves on national television. I’ve led public
+              speaking workshops at Harvard Business School, empowering PhD
+              candidates to deliver compelling academic presentations, and I’ve
+              worked with tenured professors to further refine their authority
+              in the classroom. I’ve also helped corporate executives reshape
+              their professional image, guiding them to make lasting impressions
+              in the boardroom.
             </p>
           </article>
           <div className="about__content-gallery">
             <img
-              src={hbsPhoto}
+              src={dennisPhoto}
               alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
               className="about__single-photo"
             />
@@ -65,20 +77,22 @@ const AboutPage = () => {
           </div>
           <article className="about__content-text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis aut dolorum molestias! Accusantium consectetur sequi
-              doloremque officia iure ipsam error maiores provident eum quo!
-              Inventore molestiae doloribus aut saepe mollitia.
+              This breadth of experience means I approach coaching with a unique
+              perspective, combining the discipline of academic rigor, the
+              creative flair of theatrical performance, and the strategic
+              insight of brand development. My goal is not just to teach you how
+              to speak effectively, but to help you own your voice and presence
+              in a way that’s authentically yours.
               <br />
               <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur distinctio quae ducimus obcaecati iste non ipsam
-              maxime ab, quos doloribus aliquid aperiam ad nihil, harum suscipit
-              natus laboriosam eaque sequi! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Ducimus autem, exercitationem libero
-              voluptate inventore possimus veritatis hic? Impedit, aliquid,
-              aperiam reprehenderit incidunt eaque praesentium temporibus
-              eligendi distinctio exercitationem maxime commodi.
+              Whether you're stepping onto a stage, leading a team, or
+              navigating professional challenges, I bring a personalized,
+              strategic approach that will help you shine. With over 20 years of
+              varied experience, I can help you not only deliver with confidence
+              and clarity but also elevate your personal brand and reshape how
+              you are perceived by others. Let’s work together to unlock the
+              power of your story and voice, ensuring you leave a lasting
+              impact.
             </p>
           </article>
         </section>

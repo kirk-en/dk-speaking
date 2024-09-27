@@ -1,0 +1,65 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.top-section {
+  @include site-margins;
+  &__contact {
+    background-image: url("../../assets/dk-hero-lrg.jpg");
+    min-height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    // @media (max-width: 768px) {
+    //   background-position: right -200px center; // Keep the right side visible
+    // }
+  }
+}
+.contact {
+  @include site-margins;
+  padding-bottom: 2rem;
+  &__headline {
+    text-align: center;
+    font-weight: 100;
+    font-size: 3rem;
+    padding: 1rem 0;
+    @include tablet {
+      font-size: 4rem;
+      padding: 2rem 0;
+    }
+    &-text {
+      text-align: center;
+      margin: 2rem 10%;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+  &__content {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      gap: 2rem;
+    }
+    &-text {
+      line-height: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include tablet {
+        font-size: 1.25rem;
+        width: 50%;
+      }
+    }
+    &-gallery {
+      @include tablet {
+        width: 50%;
+      }
+    }
+  }
+  &__single-photo {
+    width: 100%;
+  }
+}

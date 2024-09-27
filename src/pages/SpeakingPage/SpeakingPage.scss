@@ -1,0 +1,121 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.top-section {
+  @include site-margins;
+  &__speaking {
+    background-image: url("../../assets/on-stage.jpg");
+    min-height: 66vh;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media (max-width: 768px) {
+      background-position: right -200px center; // Keep the right side visible
+    }
+  }
+}
+.speaking {
+  @include site-margins;
+  padding-bottom: 2rem;
+  &__headline {
+    text-align: center;
+    font-weight: 100;
+    font-size: 3rem;
+    padding: 1rem 0;
+    @include tablet {
+      font-size: 4rem;
+      padding: 2rem 0;
+    }
+    &-text {
+      text-align: center;
+      margin: 2rem 10%;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+  &__content {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    @include tablet {
+      flex-direction: row;
+      gap: 2rem;
+    }
+    &-text {
+      line-height: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include tablet {
+        font-size: 1.25rem;
+        width: 50%;
+      }
+    }
+    &-gallery {
+      @include tablet {
+        width: 50%;
+      }
+    }
+  }
+  &__single-photo {
+    width: 100%;
+  }
+}
+
+.outline-sp {
+  @include site-margins;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  &__text {
+    text-align: center;
+  }
+  &__entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    width: 100%;
+    @include tablet {
+      width: 45%;
+    }
+    @include desktop {
+      width: 30%;
+    }
+  }
+  &__banner {
+    height: 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: height 1s ease-in-out;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    @include tablet {
+      height: 15rem;
+    }
+    &--exec {
+      background-image: url("../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg");
+      // background-position-y: -300px;
+    }
+    &--story {
+      background-image: url("../../assets/podium.JPG");
+      background-position-y: center;
+    }
+    &--fashion {
+      background-image: url("../../assets/mannequins-in-a-store-in-milan.jpg");
+      // background-position-y: -40px;
+    }
+    &--interview {
+      background-image: url("../../assets/interview.jpg");
+      background-position-y: center;
+    }
+    &--diversity {
+      background-image: url("../../assets/diversity.jpg");
+    }
+  }
+}

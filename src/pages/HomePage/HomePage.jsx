@@ -28,23 +28,29 @@ const HomePage = () => {
         <Hero />
       </div>
       <main className="main">
-        <h1 className="main__headline">Excel with Dennis</h1>
+        <h1 className="main__headline">
+          Your Guide to Mastering Communication
+        </h1>
         <section className="main__content">
           <article className="main__content-text">
             <p>
-              As a seasoned professional with [X years] of experience in
-              communication and public speaking, I understand the importance of
-              being able to articulate your ideas confidently and persuasively
-              in any situation. Whether you're aiming to perfect your elevator
-              pitch, excel in professional interviews, or command attention on
-              stage, my coaching services are tailored to help you achieve your
-              speaking goals with precision and impact. <br />
+              With a career that spans the worlds of business, academia, and
+              media, I’ve had the privilege of coaching individuals and teams to
+              find their voice and communicate with impact. As a public speaking
+              expert, I’ve trained professionals across industries—from Fortune
+              500 corporations to leading universities like Harvard, Columbia,
+              and Northwestern. My approach blends years of experience in
+              theater, brand storytelling, and executive communication, allowing
+              me to offer a unique perspective on how to engage, persuade, and
+              leave a lasting impression. <br />
               <br />
-              With a background in [relevant field or expertise], I bring a
-              unique blend of expertise and practical insights to my coaching
-              approach. My mission is to empower individuals like you to unlock
-              your full potential and become confident and compelling speakers
-              in any setting.
+              I’ve helped leaders prepare for high-stakes presentations,
+              executives refine their presence in the boardroom, and teams
+              sharpen their communication to improve workplace collaboration.
+              Whether you're speaking at a major conference, leading a meeting,
+              or navigating everyday conversations at work, I can help you
+              master public speaking and communication techniques that inspire
+              confidence and command attention.
             </p>
             <a
               href="https://calendly.com/ivylevelspeaking/30min"
@@ -67,8 +73,9 @@ const HomePage = () => {
         <div className="quote__text">
           <h2>Project Your Presence</h2>
           <h3>
-            “Every word is an opportunity—choose those that move, inspire, and
-            create change.”
+            "Your voice is your greatest tool for influence—when you speak with
+            authenticity and purpose, you don’t just tell a story, you create an
+            impact that lasts."
           </h3>
           <p>— Dennis Kenney</p>
         </div>

@@ -6,6 +6,7 @@
 .button {
   &__main {
     display: inline-block;
+    cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
     color: $text-light;
