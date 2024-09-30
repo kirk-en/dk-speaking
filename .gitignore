@@ -27,3 +27,5 @@ dist-ssr
 reference
 ils-logo.JPG
 .env
+# Local Netlify folder
+.netlify
