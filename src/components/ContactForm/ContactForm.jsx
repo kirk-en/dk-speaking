@@ -42,7 +42,11 @@ const ContactForm = () => {
 
   const sendMail = async (formObj) => {
     try {
-      await axios.post(`${import.meta.env.VITE_BACKEND_URL}mail`, formObj);
+      await axios.post(`${import.meta.env.VITE_SEND_MAIL_URL}`, formObj, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
     } catch (error) {
       console.log(error);
     }
