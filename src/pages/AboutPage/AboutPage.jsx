@@ -6,6 +6,7 @@ import dennisPhoto from "../../assets/dennis-side-profile.jpg";
 import { useRef } from "react";
 import "./AboutPage.scss";
 import Booking from "../../components/Booking/Booking";
+import DynamicQuote from "../../components/DynamicQuote/DynamicQuote";
 
 const AboutPage = () => {
   const gradientRef = useRef(null);
@@ -102,14 +103,7 @@ const AboutPage = () => {
         onMouseMove={handleMouseMove}
         ref={gradientRef}
       >
-        <div className="quote__text">
-          <h2>Project Your Presence</h2>
-          <h3>
-            “Every word is an opportunity—choose those that move, inspire, and
-            create change.”
-          </h3>
-          <p>— Dennis Kenney</p>
-        </div>
+        <DynamicQuote />
       </article>
       <Booking />
       <Footer />

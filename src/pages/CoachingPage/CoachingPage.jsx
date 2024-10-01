@@ -5,6 +5,7 @@ import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
 import { useRef } from "react";
 import Why from "../../components/Why/Why";
 import execPhoto from "../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg";
+import DynamicQuote from "../../components/DynamicQuote/DynamicQuote";
 import "./CoachingPage.scss";
 
 const CoachingPage = () => {
@@ -153,14 +154,7 @@ const CoachingPage = () => {
         onMouseMove={handleMouseMove}
         ref={gradientRef}
       >
-        <div className="quote__text">
-          <h2>Project Your Presence</h2>
-          <h3>
-            “Every word is an opportunity—choose those that move, inspire, and
-            create change.”
-          </h3>
-          <p>— Dennis Kenney</p>
-        </div>
+        <DynamicQuote />
       </article>
       <Footer />
     </>

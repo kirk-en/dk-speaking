@@ -4,9 +4,10 @@ import Footer from "../../components/Footer/Footer";
 import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
 import { useRef } from "react";
 import Why from "../../components/Why/Why";
-import "./ContactPage.scss";
 import { Email, Phone } from "@mui/icons-material";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import DynamicQuote from "../../components/DynamicQuote/DynamicQuote";
+import "./ContactPage.scss";
 
 const ContactPage = () => {
   const gradientRef = useRef(null);
@@ -45,14 +46,7 @@ const ContactPage = () => {
         onMouseMove={handleMouseMove}
         ref={gradientRef}
       >
-        <div className="quote__text">
-          <h2>Project Your Presence</h2>
-          <h3>
-            “Every word is an opportunity—choose those that move, inspire, and
-            create change.”
-          </h3>
-          <p>— Dennis Kenney</p>
-        </div>
+        <DynamicQuote />
       </article>
       <Footer />
     </>
