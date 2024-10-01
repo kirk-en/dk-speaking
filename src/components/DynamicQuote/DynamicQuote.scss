@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.quote {
+  &__text {
+    color: $text-dark;
+    @include tablet {
+      padding: 0 15%;
+    }
+    @include desktop {
+      padding: 0 30%;
+    }
+    & h2 {
+      font-size: 1.25rem;
+      @include tablet {
+        font-size: 1.5rem;
+      }
+    }
+    & h3 {
+      font-style: italic;
+      font-weight: 400;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
