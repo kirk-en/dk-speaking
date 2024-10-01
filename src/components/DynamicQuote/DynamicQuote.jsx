@@ -7,11 +7,9 @@ const DynamicQuote = () => {
   return (
     <div className="quote__text">
       <h2>Project Your Presence</h2>
-      <h3>
-        “Every word is an opportunity—choose those that move, inspire, and
-        create change.”
-      </h3>
-      <p>— Dennis Kenney</p>
+      <h3>{`"${quoteData[quoteSeed].quote}"`}</h3>
+      <p>- {quoteData[quoteSeed].name}</p>
+      <p>{`${quoteData[quoteSeed].title}, ${quoteData[quoteSeed].company}`}</p>
     </div>
   );
 };
