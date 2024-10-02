@@ -20,7 +20,11 @@ export async function handler(event, context) {
         <strong>Phone Number:</strong> ${formObj.phone} <br />
         <strong>Email:</strong> <a href="mailto:${
           formObj.email
-        }" style="color: #1a73e8;">${formObj.email}</a>
+        }?subject=Re:%20${encodeURIComponent(
+        "Your Ivy Level Speaking Inquiry"
+      )}&body=${encodeURIComponent(
+        "Hello " + formObj.name + ",\n\nThank you for connecting."
+      )}" style="color: #1a73e8;">${formObj.email}</a>
       </p>
 
       <p style="font-size: 16px; line-height: 1.5;">
@@ -38,17 +42,14 @@ export async function handler(event, context) {
       </p>
 
       <h2 style="color: #333;">
-        You can reply to ${
-          formObj.name
-        } by hitting the reply button or start a new
-        email thread with <a href="mailto:${
-          formObj.email
-        }" style="color: #1a73e8;">${formObj.email}</a>
+        Reply to ${formObj.name} in a new email thread with <a href="mailto:${
+        formObj.email
+      }?subject=Re:%20${encodeURIComponent(
+        "Your Ivy Level Speaking Inquiry"
+      )}&body=${encodeURIComponent(
+        "Hello " + formObj.name + ",\n\nThank you for connecting."
+      )}" style="color: #1a73e8;">${formObj.email}</a>
       </h2>
-
-      <footer style="margin-top: 40px; border-top: 1px solid #ddd; padding-top: 20px; font-size: 14px; color: #777;">
-        <p>Thank you for using Ivy Level Speaking!</p>
-      </footer>
     </div>
   `,
     });
