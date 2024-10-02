@@ -1,5 +1,5 @@
 import Navigation from "../Navigation/Navigation";
-import dkLogo from "../../assets/dk-logo.png";
+import dkLogo from "../../assets/ils-logo.png";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
