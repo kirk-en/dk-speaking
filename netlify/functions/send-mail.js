@@ -7,13 +7,51 @@ export async function handler(event, context) {
     const formObj = JSON.parse(event.body);
     console.log(formObj);
     const forwardEmail = "kirk@arroyastudio.com";
-    // await resend.emails.send({
-    //   from: "Ivy Level Speaking Contact Form <contact@ivylevelspeaking.com>",
-    //   to: [forwardEmail],
-    //   reply_to: req.body.email,
-    //   subject: `${req.body.name} - Ivy Level Speaking Inquiry`,
-    //   html: `<p>New inquiry from ${req.body.name}</p>`,
-    // });
+    await resend.emails.send({
+      from: "Ivy Level Speaking Contact Form <contact@ivylevelspeaking.com>",
+      to: [forwardEmail],
+      reply_to: [formObj.email],
+      subject: `${formObj.name} - Ivy Level Speaking Inquiry`,
+      html: `
+    <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+      <h1 style="color: #7eb1cb;">New inquiry from ${formObj.name}</h1>
+
+      <p style="font-size: 16px; line-height: 1.5;">
+        <strong>Phone Number:</strong> ${formObj.phone} <br />
+        <strong>Email:</strong> <a href="mailto:${
+          formObj.email
+        }" style="color: #1a73e8;">${formObj.email}</a>
+      </p>
+
+      <p style="font-size: 16px; line-height: 1.5;">
+        <strong>Interested in the following services:</strong>
+      </p>
+
+      <ul style="font-size: 16px; line-height: 1.5; padding-left: 20px;">
+        ${formObj.services
+          .map((service) => `<li style="margin-bottom: 10px;">${service}</li>`)
+          .join("")}
+      </ul>
+
+       <p style="font-size: 16px; line-height: 1.5;">
+        <strong>Message:</strong> ${formObj.message.replace(/\n/g, "<br>")}
+      </p>
+
+      <h2 style="color: #333;">
+        You can reply to ${
+          formObj.name
+        } by hitting the reply button or start a new
+        email thread with <a href="mailto:${
+          formObj.email
+        }" style="color: #1a73e8;">${formObj.email}</a>
+      </h2>
+
+      <footer style="margin-top: 40px; border-top: 1px solid #ddd; padding-top: 20px; font-size: 14px; color: #777;">
+        <p>Thank you for using Ivy Level Speaking!</p>
+      </footer>
+    </div>
+  `,
+    });
 
     return {
       statusCode: 200,
