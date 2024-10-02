@@ -21,6 +21,7 @@ const ContactForm = () => {
     email: "",
     message: "",
     services: [],
+    submit: false,
   });
 
   const handleFormChange = (e) => {
@@ -47,6 +48,7 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
       });
+      setFormValues((prevValues) => ({ ...prevValues, submit: true }));
     } catch (error) {
       console.log(error);
     }
@@ -57,7 +59,15 @@ const ContactForm = () => {
     sendMail(formValues);
   };
 
-  return (
+  return formValues.submit ? (
+    <div className="form">
+      <h3>Success!</h3>
+      <p>
+        Your message has been successfully sent, and we'll get back to you as
+        soon as possible.
+      </p>
+    </div>
+  ) : (
     <form onSubmit={handleSubmit} className="form">
       <TextField
         label="Name"
