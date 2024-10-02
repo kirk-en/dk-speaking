@@ -34,8 +34,8 @@ const ContactPage = () => {
         <section className="contact__content">
           <div>
             <h2>Always Connected and Happy to Help with any questions.</h2>
-            <Phone />
-            <Email />
+            {/* <Phone />
+            <Email /> */}
           </div>
           <ContactForm />
         </section>
