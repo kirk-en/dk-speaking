@@ -10,7 +10,7 @@ export async function handler(event, context) {
     await resend.emails.send({
       from: "Ivy Level Speaking Contact Form <contact@ivylevelspeaking.com>",
       to: [forwardEmail],
-      reply_to: [formObj.email],
+      replyTo: [formObj.email],
       subject: `${formObj.name} - Ivy Level Speaking Inquiry`,
       html: `
     <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
@@ -60,7 +60,7 @@ export async function handler(event, context) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: `Inquiry from ${formObj.name} has been forwarded to ${forwardEmail}`,
+        message: `Inquiry from ${formObj.name} has been forwarded to Ivy Level Speaking`,
       }),
     };
   } catch (error) {
