@@ -66,15 +66,27 @@
 
 .outline {
   @include site-margins;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
   &__text {
     text-align: center;
   }
   &__entry {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
     text-align: center;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    @include tablet {
+      width: 45%;
+    }
+    @include desktop {
+      width: 30%;
+    }
   }
   &__banner {
     height: 10rem;
@@ -87,17 +99,33 @@
     }
     &--exec {
       background-image: url("../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg");
-      background-position-y: -45px;
+      // background-position-y: -45px;
     }
     &--school {
       background-image: url("../../assets/hallway-of-holder-hall-on-the-campus.jpg");
       @include tablet {
-        background-position-y: -230px;
+        // background-position-y: -230px;
       }
     }
     &--fashion {
       background-image: url("../../assets/mannequins-in-a-store-in-milan.jpg");
-      background-position-y: -40px;
+    }
+    &--media {
+      background-image: url("../../assets/media.jpg");
+      background-position-y: -30px;
+      @include tablet {
+        background-position-y: 0px;
+      }
+    }
+    &--corporate {
+      background-image: url("../../assets/workshop.jpg");
+    }
+    &--academic {
+      background-image: url("../../assets/academic.jpg");
+      background-position-y: bottom -70px;
+      @include tablet {
+        background-position-y: bottom;
+      }
     }
   }
 }

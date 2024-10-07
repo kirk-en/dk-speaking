@@ -19,6 +19,7 @@ const ContactForm = () => {
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
     services: [],
     submit: false,
@@ -107,50 +108,159 @@ const ContactForm = () => {
       </div>
       <FormGroup>
         <span>Services You’re interested in:</span>
-        <FormControlLabel
-          control={
-            <Checkbox
-              name="services"
-              value="Coaching"
-              checked={formValues.services.includes("Coaching")}
-              onChange={handleFormChange}
-            />
-          }
-          label="Coaching"
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              name="services"
-              value="Speaking"
-              checked={formValues.services.includes("Speaking")}
-              onChange={handleFormChange}
-            />
-          }
-          label="Speaking"
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              name="services"
-              value="Consultation"
-              checked={formValues.services.includes("Consultation")}
-              onChange={handleFormChange}
-            />
-          }
-          label="Consultation"
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              name="services"
-              value="Not Sure Yet"
-              checked={formValues.services.includes("Not Sure Yet")}
-              onChange={handleFormChange}
-            />
-          }
-          label="Not Sure Yet"
-        />
+        <div className="form__services">
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Coaching"
+                checked={formValues.services.includes("Coaching")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Coaching"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Speaking"
+                checked={formValues.services.includes("Speaking")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Speaking"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Consultation"
+                checked={formValues.services.includes("Consultation")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Consultation"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Not Sure Yet"
+                checked={formValues.services.includes("Not Sure Yet")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Not Sure Yet"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Workshop Facilitation"
+                checked={formValues.services.includes("Workshop Facilitation")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Workshop Facilitation"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="One-on-One Coaching"
+                checked={formValues.services.includes("One-on-One Coaching")}
+                onChange={handleFormChange}
+              />
+            }
+            label="One-on-One Coaching"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Panel Moderation"
+                checked={formValues.services.includes("Panel Moderation")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Panel Moderation"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Academic Presentation Prep"
+                checked={formValues.services.includes(
+                  "Academic Presentation Prep"
+                )}
+                onChange={handleFormChange}
+              />
+            }
+            label="Academic Presentation Prep"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Speechwriting Assistance"
+                checked={formValues.services.includes(
+                  "Speechwriting Assistance"
+                )}
+                onChange={handleFormChange}
+              />
+            }
+            label="Speechwriting Assistance"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Virtual Presentation Coaching"
+                checked={formValues.services.includes(
+                  "Virtual Presentation Coaching"
+                )}
+                onChange={handleFormChange}
+              />
+            }
+            label="Virtual Presentation Coaching"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Media Training"
+                checked={formValues.services.includes("Media Training")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Media Training"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Presentation Design"
+                checked={formValues.services.includes("Presentation Design")}
+                onChange={handleFormChange}
+              />
+            }
+            label="Presentation Design"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                name="services"
+                value="Leadership Communication"
+                checked={formValues.services.includes(
+                  "Leadership Communication"
+                )}
+                onChange={handleFormChange}
+              />
+            }
+            label="Leadership Communication"
+          />
+        </div>
       </FormGroup>
       <TextField
         multiline

@@ -39,7 +39,7 @@ const NavigationMobile = () => {
             </Link>
           </li>
           <li className="mobile-nav__list-item">
-            <Link to="/contact" className="nav__link">
+            <Link to="/contact" className="mobile-nav__link">
               contact
             </Link>
           </li>

@@ -28,37 +28,7 @@ const SpeakingPage = () => {
         <Header />
         <HeroSpeaking />
       </div>
-      {/* <main className="speaking"> */}
-      {/* <article className="speaking__headline-text">
-          <p>
-            I started Ivy Level Speaking to empower individuals with the skills
-            and confidence to communicate effectively. Our mission is to
-            transform aspiring speakers into impactful communicators, fostering
-            authentic connections. Through personalized speaking and engaging
-            workshops, we help clients refine their messages and captivate
-            audiences.
-          </p>
-        </article> */}
-      {/* <section className="speaking__content">
-          <img
-            src={hbsPhoto}
-            alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
-            className="speaking__single-photo"
-          />
 
-          <img
-            src={hbsPhoto}
-            alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
-            className="speaking__single-photo"
-          />
-
-          <img
-            src={hbsPhoto}
-            alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
-            className="speaking__single-photo"
-          />
-        </section> */}
-      {/* </main> */}
       {/* <Why /> */}
       <h1 className="speaking__headline">Speaking Topics:</h1>
       <section className="outline-sp">

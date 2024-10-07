@@ -3,7 +3,6 @@ import "./DynamicQuote.scss";
 
 const DynamicQuote = () => {
   let quoteSeed = Math.floor(Math.random() * quoteData.length);
-  console.log("quote seed is:", quoteSeed);
 
   return (
     <div className="quote__text">

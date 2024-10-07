@@ -23,4 +23,9 @@
       width: 50%;
     }
   }
+  &__services {
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+  }
 }
