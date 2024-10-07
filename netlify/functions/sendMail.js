@@ -6,10 +6,10 @@ export async function handler(event, context) {
   try {
     const formObj = JSON.parse(event.body);
     console.log(formObj);
-    const forwardEmail = "kirk@arroyastudio.com";
+    const forwardEmail = "ivylevelspeaking@gmail.com";
     await resend.emails.send({
       from: "Ivy Level Speaking Contact Form <contact@ivylevelspeaking.com>",
-      to: [forwardEmail],
+      to: [forwardEmail, "kirk@arroyastudio.com"],
       replyTo: [formObj.email],
       subject: `${formObj.name} - Ivy Level Speaking Inquiry`,
       html: `
@@ -37,7 +37,7 @@ export async function handler(event, context) {
           .join("")}
       </ul>
 
-       <p style="font-size: 16px; line-height: 1.5;">
+      <p style="font-size: 16px; line-height: 1.5;">
         <strong>Message:</strong> ${formObj.message.replace(/\n/g, "<br>")}
       </p>
 
