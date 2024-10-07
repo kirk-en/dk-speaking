@@ -39,25 +39,6 @@ const CoachingPage = () => {
             audiences.
           </p>
         </article>
-        {/* <section className="coaching__content">
-          <img
-            src={hbsPhoto}
-            alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
-            className="coaching__single-photo"
-          />
-
-          <img
-            src={hbsPhoto}
-            alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
-            className="coaching__single-photo"
-          />
-
-          <img
-            src={hbsPhoto}
-            alt="Dennis Kenney in his coaching class at Harvard Business Schoool"
-            className="coaching__single-photo"
-          />
-        </section> */}
       </main>
       <Why />
       <section className="outline">
@@ -80,13 +61,11 @@ const CoachingPage = () => {
           <h2>Executive Presence</h2>
           <p>
             I specialize in executive speaking coaching designed to empower
-            leaders and professionals to communicate with confidence and impact.
-            My offerings range from personalized one-on-one coaching sessions to
-            tailored workshops that address your specific needs, whether it's
+            leaders to communicate with confidence and impact. Whether it's
             enhancing your presentation skills, mastering executive presence, or
-            navigating high-stakes conversations. Together, we'll develop a
+            navigating high-stakes conversations, together, we'll develop a
             strategy that hones your unique voice and style, ensuring you
-            connect effectively with your audience.
+            connect effectively.
           </p>
           <div>
             <a
@@ -137,6 +116,86 @@ const CoachingPage = () => {
             with your goals, ensuring your wardrobe, body language, and presence
             authentically reflect who you are and leave a lasting, confident
             impression.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline__entry">
+          {" "}
+          <div
+            className="outline__banner outline__banner--media"
+            role="img"
+            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+          ></div>
+          <h2>Media and On-Air Training</h2>
+          <p>
+            Navigate the media landscape with confidence through tailored media
+            and on-air training. Whether you're preparing for a TV interview,
+            podcast appearance, or online panel, I’ll help you develop the
+            skills needed to communicate your message effectively and
+            professionally. From mastering concise sound bites to delivering
+            compelling narratives, you'll learn how to present yourself
+            confidently in high-visibility situations.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline__entry">
+          {" "}
+          <div
+            className="outline__banner outline__banner--corporate"
+            role="img"
+            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+          ></div>
+          <h2>Corporate Workshops</h2>
+          <p>
+            Elevate your team's communication skills with customized corporate
+            workshops. Whether it's for leadership development, enhancing
+            collaboration, or improving presentation techniques, my workshops
+            are designed to engage and empower participants. We’ll focus on
+            practical strategies that can be immediately applied, ensuring your
+            team is equipped to succeed in today’s fast-paced business
+            environment.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/30min"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline__entry">
+          {" "}
+          <div
+            className="outline__banner outline__banner--academic"
+            role="img"
+            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+          ></div>
+          <h2>Academic Presentations</h2>
+          <p>
+            Ace your next academic presentation with coaching designed
+            specifically for scholars and students. Whether you're preparing for
+            a thesis defense, conference presentation, or lecture, I’ll help you
+            refine your content, organize your ideas, and deliver with clarity
+            and authority. My approach will ensure that your message is both
+            engaging and intellectually impactful, no matter your audience.
           </p>
           <div>
             <a

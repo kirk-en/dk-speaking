@@ -12,7 +12,10 @@
     min-height: 66vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 52%;
+    @include tablet {
+      background-position: 58%;
+    }
   }
 }
 .main {

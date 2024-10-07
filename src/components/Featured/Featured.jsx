@@ -3,6 +3,7 @@ import "./Featured.scss";
 const logoFiles = [
   "ABC-News-Logo-2007.png",
   "Columbia-Business-School-Logo-FC-2.png",
+  "cmu-wordmark-stacked-r.svg",
   "forbes-logo-black-transparent.png",
   "Fox_News_Logo.png",
   "fox-29-philadelphia-logo.png",
