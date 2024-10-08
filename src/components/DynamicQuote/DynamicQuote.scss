@@ -22,4 +22,20 @@
       padding-bottom: 0.5rem;
     }
   }
+  &__read-more {
+    padding-top: 1rem;
+    display: inline-block;
+    transition: transform 1s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__link {
+    color: $text-dark;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover {
+      color: $primary-alt;
+    }
+  }
 }

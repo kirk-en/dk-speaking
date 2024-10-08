@@ -5,6 +5,7 @@ import "./App.scss";
 import CoachingPage from "./pages/CoachingPage/CoachingPage";
 import SpeakingPage from "./pages/SpeakingPage/SpeakingPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import TestimonialsPage from "./pages/TestimonialsPage/TestimonialsPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/coaching" element={<CoachingPage />} />
           <Route path="/speaking" element={<SpeakingPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
         </Routes>
       </BrowserRouter>
     </>
