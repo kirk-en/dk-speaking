@@ -8,7 +8,7 @@ const HeroChoaching = () => {
           <h2 className="hero__headline">unlock the power of your voice</h2>
           <p className="hero__text">
             Transform your speaking skills with personalized coaching from an
-            industry expert
+            industry expert.
           </p>
         </aside>
       </div>
