@@ -8,13 +8,16 @@
 .top-section {
   @include site-margins;
   &__home {
-    background-image: url("../../assets/dk-hero-lrg.jpg");
+    background-image: url("../../assets/dennis-headshot-hero-flip.jpg");
     min-height: 66vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 52%;
+    background-position-x: 40%;
     @include tablet {
-      background-position: 58%;
+      background-position-x: 58%;
+    }
+    @include desktop {
+      background-position-y: 10%;
     }
   }
 }

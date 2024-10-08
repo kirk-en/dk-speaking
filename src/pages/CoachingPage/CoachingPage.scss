@@ -4,15 +4,12 @@
 .top-section {
   @include site-margins;
   &__coaching {
-    background-image: url("../../assets/dennis-headshot-hero.jpg");
+    background-image: url("../../assets/dk-hero-lrg-flip.jpg");
     min-height: 66vh;
     background-color: #8e8073;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    @media (max-width: 768px) {
-      background-position: right -200px center; // Keep the right side visible
-    }
   }
 }
 .coaching {

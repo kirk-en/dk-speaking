@@ -4,6 +4,8 @@ import photo2 from "../../assets/photo-grid/dennis-photogrid-2.jpg";
 import photo3 from "../../assets/photo-grid/dennis-photogrid-3.jpg";
 import photo4 from "../../assets/photo-grid/dennis-photogrid-4.jpg";
 import photo5 from "../../assets/photo-grid/dennis-photogrid-5.jpg";
+import photo6 from "../../assets/photo-grid/students.jpg";
+
 import "./PhotoGrid.scss";
 
 const PhotoGrid = () => {
@@ -28,6 +30,13 @@ const PhotoGrid = () => {
           src={photo3}
           className="photo-grid__image "
           alt="Dennis Kenney on the TV show Good Morning America appearing as a guest"
+        />
+      </ImageListItem>
+      <ImageListItem>
+        <img
+          src={photo6}
+          className="photo-grid__image photo-grid__image--pos1"
+          alt="Dennis Kenney at Harvard Business School with his students"
         />
       </ImageListItem>
       <ImageListItem>

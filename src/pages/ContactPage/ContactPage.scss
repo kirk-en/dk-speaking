@@ -7,11 +7,12 @@
     background-image: url("../../assets/dk-hero-lrg.jpg");
     min-height: 40vh;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position-y: top;
+    background-position-x: 40%;
     background-size: cover;
-    // @media (max-width: 768px) {
-    //   background-position: right -200px center; // Keep the right side visible
-    // }
+    @include tablet {
+      background-position-x: right 40%;
+    }
   }
 }
 .contact {
