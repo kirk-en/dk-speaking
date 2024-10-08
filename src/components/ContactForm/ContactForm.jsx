@@ -81,10 +81,11 @@ const ContactForm = () => {
         onChange={handleFormChange}
         helperText={hasError.name ? "Name is required." : ""}
         fullWidth
+        className="form__field"
       />
       <div className="form__dual-field">
         <TextField
-          className="form__small-field"
+          className="form__small-field form__field"
           label="Email"
           id="email"
           name="email"
@@ -97,7 +98,7 @@ const ContactForm = () => {
           helperText={hasError.email ? "Email is required." : ""}
         />
         <TextField
-          className="form__small-field"
+          className="form__small-field form__field"
           label="Phone Number"
           id="phone"
           name="phone"
@@ -131,28 +132,7 @@ const ContactForm = () => {
             }
             label="Speaking"
           />
-          <FormControlLabel
-            control={
-              <Checkbox
-                name="services"
-                value="Consultation"
-                checked={formValues.services.includes("Consultation")}
-                onChange={handleFormChange}
-              />
-            }
-            label="Consultation"
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                name="services"
-                value="Not Sure Yet"
-                checked={formValues.services.includes("Not Sure Yet")}
-                onChange={handleFormChange}
-              />
-            }
-            label="Not Sure Yet"
-          />
+
           <FormControlLabel
             control={
               <Checkbox
@@ -175,17 +155,7 @@ const ContactForm = () => {
             }
             label="One-on-One Coaching"
           />
-          <FormControlLabel
-            control={
-              <Checkbox
-                name="services"
-                value="Panel Moderation"
-                checked={formValues.services.includes("Panel Moderation")}
-                onChange={handleFormChange}
-              />
-            }
-            label="Panel Moderation"
-          />
+
           <FormControlLabel
             control={
               <Checkbox
@@ -236,30 +206,6 @@ const ContactForm = () => {
             }
             label="Media Training"
           />
-          <FormControlLabel
-            control={
-              <Checkbox
-                name="services"
-                value="Presentation Design"
-                checked={formValues.services.includes("Presentation Design")}
-                onChange={handleFormChange}
-              />
-            }
-            label="Presentation Design"
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                name="services"
-                value="Leadership Communication"
-                checked={formValues.services.includes(
-                  "Leadership Communication"
-                )}
-                onChange={handleFormChange}
-              />
-            }
-            label="Leadership Communication"
-          />
         </div>
       </FormGroup>
       <TextField
@@ -275,6 +221,7 @@ const ContactForm = () => {
         onChange={handleFormChange}
         helperText={hasError.email ? "Make sure to include a message!" : ""}
         fullWidth
+        className="form__field"
       />
       <div>
         <button
