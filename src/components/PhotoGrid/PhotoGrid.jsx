@@ -34,6 +34,13 @@ const PhotoGrid = () => {
       </ImageListItem>
       <ImageListItem>
         <img
+          src={photo6}
+          className="photo-grid__image photo-grid__image--pos1"
+          alt="Dennis Kenney at Harvard Business School with his students"
+        />
+      </ImageListItem>
+      <ImageListItem>
+        <img
           src={photo4}
           className="photo-grid__image photo-grid__image--pos1"
           alt="Dennis Kenney doing a Ted Talk at Babson College"
@@ -44,13 +51,6 @@ const PhotoGrid = () => {
           src={photo5}
           className="photo-grid__image photo-grid__image--pos1"
           alt="Dennis Kenney at Columbia Business School as a Speaking Professor"
-        />
-      </ImageListItem>
-      <ImageListItem>
-        <img
-          src={photo6}
-          className="photo-grid__image photo-grid__image--pos1"
-          alt="Dennis Kenney at Harvard Business School with his students"
         />
       </ImageListItem>
     </ImageList>
