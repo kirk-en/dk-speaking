@@ -5,7 +5,7 @@ import {
   Checkbox,
   Box,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ContactForm.scss";
 import { Resend } from "resend";
 import axios from "axios";
@@ -15,12 +15,14 @@ const ContactForm = () => {
     name: false,
     email: false,
     message: false,
+    other: false,
   });
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
+    other: "",
     services: [],
     submit: false,
   });
@@ -37,7 +39,6 @@ const ContactForm = () => {
     } else {
       setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
     }
-
     // TBD --- HANDLE ERROR CHECKING ---
     // e.target.value.length ? setHasError(false) : setHasError(true);
   };
@@ -59,6 +60,10 @@ const ContactForm = () => {
     e.preventDefault();
     sendMail(formValues);
   };
+
+  useEffect(() => {
+    console.log(formValues);
+  }, [formValues]);
 
   return formValues.submit ? (
     <div className="form">
@@ -132,7 +137,6 @@ const ContactForm = () => {
             }
             label="Speaking"
           />
-
           <FormControlLabel
             control={
               <Checkbox
@@ -155,7 +159,6 @@ const ContactForm = () => {
             }
             label="One-on-One Coaching"
           />
-
           <FormControlLabel
             control={
               <Checkbox
@@ -206,6 +209,30 @@ const ContactForm = () => {
             }
             label="Media Training"
           />
+          <div>
+            <FormControlLabel
+              sx={{ mr: 0 }}
+              control={
+                <Checkbox
+                  name="services"
+                  value="Other"
+                  checked={formValues.services.includes("Other")}
+                  onChange={handleFormChange}
+                />
+              }
+              label=""
+            />
+            <TextField
+              className="form__small-field form__field"
+              label="Other"
+              id="other"
+              name="other"
+              error={hasError.other}
+              value={formValues.other}
+              onChange={handleFormChange}
+              sx={{ m: 0 }}
+            />
+          </div>
         </div>
       </FormGroup>
       <TextField

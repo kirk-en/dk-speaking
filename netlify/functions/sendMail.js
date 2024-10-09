@@ -9,7 +9,7 @@ export async function handler(event, context) {
     const forwardEmail = "ivylevelspeaking@gmail.com";
     await resend.emails.send({
       from: "Ivy Level Speaking Contact Form <contact@ivylevelspeaking.com>",
-      to: [forwardEmail, "kirk@arroyastudio.com"],
+      to: ["kirk@arroyastudio.com"],
       replyTo: [formObj.email],
       subject: `${formObj.name} - Ivy Level Speaking Inquiry`,
       html: `
@@ -33,7 +33,11 @@ export async function handler(event, context) {
 
       <ul style="font-size: 16px; line-height: 1.5; padding-left: 20px;">
         ${formObj.services
-          .map((service) => `<li style="margin-bottom: 10px;">${service}</li>`)
+          .map((service) =>
+            service === "Other"
+              ? `<li style="margin-bottom: 10px;">Other: ${formObj.other}</li>`
+              : `<li style="margin-bottom: 10px;">${service}</li>`
+          )
           .join("")}
       </ul>
 
