@@ -4,14 +4,27 @@
 .top-section {
   @include site-margins;
   &__contact {
-    background-image: url("../../assets/dk-hero-lrg.jpg");
+    background-image: url("../../assets/microphone.jpg");
     min-height: 40vh;
     background-repeat: no-repeat;
-    background-position-y: top;
-    background-position-x: 40%;
+    background-position: center;
     background-size: cover;
-    @include tablet {
-      background-position-x: right 40%;
+    opacity: 1;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+      ); // Black overlay with 50% transparency
+      z-index: 1; // Position it behind any content inside the element
     }
   }
 }
