@@ -30,17 +30,44 @@ const ContactForm = () => {
   const handleFormChange = (e) => {
     const { name, value, checked } = e.target;
     if (name === "services") {
-      setFormValues((prevValues) => ({
-        ...prevValues,
-        services: checked
+      setFormValues((prevValues) => {
+        const updatedServices = checked
           ? [...prevValues.services, value]
-          : prevValues.services.filter((service) => service !== value),
-      }));
+          : prevValues.services.filter((service) => service !== value);
+
+        // Error check other checkbox field
+        if (updatedServices.includes("Other") && prevValues.other === "")
+          setHasError((prevErrorValues) => ({
+            ...prevErrorValues,
+            other: true,
+          }));
+        else
+          setHasError((prevErrorValues) => ({
+            ...prevErrorValues,
+            other: false,
+          }));
+
+        // return the updated state
+        return { ...prevValues, services: updatedServices };
+      });
     } else {
-      setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
+      setFormValues((prevValues) => {
+        const updatedValues = { ...prevValues, [name]: value };
+
+        // Error check other checkbox field
+        if (prevValues.services.includes("Other") && updatedValues.other === "")
+          setHasError((prevErrorValues) => ({
+            ...prevErrorValues,
+            other: true,
+          }));
+        else
+          setHasError((prevErrorValues) => ({
+            ...prevErrorValues,
+            other: false,
+          }));
+        return updatedValues;
+      });
     }
-    // TBD --- HANDLE ERROR CHECKING ---
-    // e.target.value.length ? setHasError(false) : setHasError(true);
   };
 
   const sendMail = async (formObj) => {
@@ -58,12 +85,8 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendMail(formValues);
+    !Object.values(hasError).includes(true) && sendMail(formValues);
   };
-
-  useEffect(() => {
-    console.log(formValues);
-  }, [formValues]);
 
   return formValues.submit ? (
     <div className="form">
@@ -228,6 +251,7 @@ const ContactForm = () => {
               id="other"
               name="other"
               error={hasError.other}
+              helperText={hasError.other ? "No other service specified" : ""}
               value={formValues.other}
               onChange={handleFormChange}
               sx={{ m: 0 }}
