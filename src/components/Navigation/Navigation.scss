@@ -1,12 +1,18 @@
 @use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
 
 .nav {
   &__list {
     color: $text-light;
     list-style: none;
     display: flex;
-    gap: 2rem;
     justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    transition: gap 1s;
+    @include desktop {
+      gap: 2rem;
+    }
   }
   &__list-item {
     text-transform: capitalize;

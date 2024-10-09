@@ -39,6 +39,11 @@ const NavigationMobile = () => {
             </Link>
           </li>
           <li className="mobile-nav__list-item">
+            <Link to="/testimonials" className="mobile-nav__link">
+              testimonials
+            </Link>
+          </li>
+          <li className="mobile-nav__list-item">
             <Link to="/contact" className="mobile-nav__link">
               contact
             </Link>
