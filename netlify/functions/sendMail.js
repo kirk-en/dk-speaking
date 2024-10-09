@@ -33,7 +33,11 @@ export async function handler(event, context) {
 
       <ul style="font-size: 16px; line-height: 1.5; padding-left: 20px;">
         ${formObj.services
-          .map((service) => `<li style="margin-bottom: 10px;">${service}</li>`)
+          .map((service) =>
+            service === "Other"
+              ? `<li style="margin-bottom: 10px;">Other: ${formObj.other}</li>`
+              : `<li style="margin-bottom: 10px;">${service}</li>`
+          )
           .join("")}
       </ul>
 
@@ -52,6 +56,16 @@ export async function handler(event, context) {
       </h2>
     </div>
   `,
+      text: `New inquiry from ${formObj.name}
+
+Phone Number: ${formObj.phone}
+Email: ${formObj.email}
+
+Interested in the following services:
+${formObj.services.join(", ")}
+
+Message:
+${formObj.message}`,
     });
 
     return {

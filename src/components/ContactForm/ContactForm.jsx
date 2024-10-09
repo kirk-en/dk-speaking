@@ -5,7 +5,7 @@ import {
   Checkbox,
   Box,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ContactForm.scss";
 import { Resend } from "resend";
 import axios from "axios";
@@ -15,12 +15,14 @@ const ContactForm = () => {
     name: false,
     email: false,
     message: false,
+    other: false,
   });
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
+    other: "",
     services: [],
     submit: false,
   });
@@ -28,18 +30,44 @@ const ContactForm = () => {
   const handleFormChange = (e) => {
     const { name, value, checked } = e.target;
     if (name === "services") {
-      setFormValues((prevValues) => ({
-        ...prevValues,
-        services: checked
+      setFormValues((prevValues) => {
+        const updatedServices = checked
           ? [...prevValues.services, value]
-          : prevValues.services.filter((service) => service !== value),
-      }));
-    } else {
-      setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
-    }
+          : prevValues.services.filter((service) => service !== value);
 
-    // TBD --- HANDLE ERROR CHECKING ---
-    // e.target.value.length ? setHasError(false) : setHasError(true);
+        // Error check other checkbox field
+        if (updatedServices.includes("Other") && prevValues.other === "")
+          setHasError((prevErrorValues) => ({
+            ...prevErrorValues,
+            other: true,
+          }));
+        else
+          setHasError((prevErrorValues) => ({
+            ...prevErrorValues,
+            other: false,
+          }));
+
+        // return the updated state
+        return { ...prevValues, services: updatedServices };
+      });
+    } else {
+      setFormValues((prevValues) => {
+        const updatedValues = { ...prevValues, [name]: value };
+
+        // Error check other checkbox field
+        if (prevValues.services.includes("Other") && updatedValues.other === "")
+          setHasError((prevErrorValues) => ({
+            ...prevErrorValues,
+            other: true,
+          }));
+        else
+          setHasError((prevErrorValues) => ({
+            ...prevErrorValues,
+            other: false,
+          }));
+        return updatedValues;
+      });
+    }
   };
 
   const sendMail = async (formObj) => {
@@ -57,7 +85,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendMail(formValues);
+    !Object.values(hasError).includes(true) && sendMail(formValues);
   };
 
   return formValues.submit ? (
@@ -132,7 +160,6 @@ const ContactForm = () => {
             }
             label="Speaking"
           />
-
           <FormControlLabel
             control={
               <Checkbox
@@ -155,7 +182,6 @@ const ContactForm = () => {
             }
             label="One-on-One Coaching"
           />
-
           <FormControlLabel
             control={
               <Checkbox
@@ -206,6 +232,31 @@ const ContactForm = () => {
             }
             label="Media Training"
           />
+          <div>
+            <FormControlLabel
+              sx={{ mr: 0 }}
+              control={
+                <Checkbox
+                  name="services"
+                  value="Other"
+                  checked={formValues.services.includes("Other")}
+                  onChange={handleFormChange}
+                />
+              }
+              label=""
+            />
+            <TextField
+              className="form__small-field form__field"
+              label="Other"
+              id="other"
+              name="other"
+              error={hasError.other}
+              helperText={hasError.other ? "No other service specified" : ""}
+              value={formValues.other}
+              onChange={handleFormChange}
+              sx={{ m: 0 }}
+            />
+          </div>
         </div>
       </FormGroup>
       <TextField

@@ -4,12 +4,12 @@
 .top-section {
   @include site-margins;
   &__testimonials {
-    background-image: url("../../assets/dennis-35737.jpg");
+    background-image: url("../../assets/dk-hero-lrg-add-bg.jpg");
     min-height: 35vh;
 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 20%;
+    background-position: 50% 0%;
   }
 }
 .testimonials {

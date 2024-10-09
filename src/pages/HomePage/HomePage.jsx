@@ -81,7 +81,10 @@ const HomePage = () => {
         </div>
       </article>
       <Featured />
-      <Video />
+      <Video
+        url={"https://www.youtube.com/embed/hDnxVHoX86s?si=FnvClo3mE02dmIIg"}
+        title={"Dennis Kenney Ted Talk"}
+      />
       <Footer />
     </>
   );

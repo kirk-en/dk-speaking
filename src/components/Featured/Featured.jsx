@@ -5,6 +5,7 @@ const logoFiles = [
   "Columbia-Business-School-Logo-FC-2.png",
   "cmu-wordmark-stacked-r.svg",
   "forbes-logo-black-transparent.png",
+  "london_school_of_economics.svg",
   "Fox_News_Logo.png",
   "fox-29-philadelphia-logo.png",
   "general-electric-logo-png-transparent.png",

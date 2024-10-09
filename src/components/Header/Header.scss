@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
   &__logo {
     padding-top: 1rem;
     height: 5rem;
