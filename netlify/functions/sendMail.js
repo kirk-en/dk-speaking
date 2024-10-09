@@ -52,6 +52,16 @@ export async function handler(event, context) {
       </h2>
     </div>
   `,
+      text: `New inquiry from ${formObj.name}
+
+Phone Number: ${formObj.phone}
+Email: ${formObj.email}
+
+Interested in the following services:
+${formObj.services.join(", ")}
+
+Message:
+${formObj.message}`,
     });
 
     return {
