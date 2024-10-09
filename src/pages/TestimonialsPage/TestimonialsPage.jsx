@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import "./TestimonialsPage.scss";
 import quoteData from "../../assets/testimonials.json";
 import { FormatQuote } from "@mui/icons-material";
+import Video from "../../components/Video/Video";
 const TestimonialsPage = () => {
   return (
     <>
@@ -28,7 +29,10 @@ const TestimonialsPage = () => {
           );
         })}
       </section>
-
+      <Video
+        url={"https://www.youtube.com/embed/zuG3YXpt4PI?si=D8EUEo0OheEyf0LL"}
+        title={"Dennis Kenney | TEDx"}
+      />
       <Footer />
     </>
   );

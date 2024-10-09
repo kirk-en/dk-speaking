@@ -1,13 +1,13 @@
 import "./Video.scss";
 
-const Video = () => {
+const Video = ({ url, title }) => {
   return (
     <div className="video__wrapper">
       {" "}
       <iframe
         className="video"
-        src="https://www.youtube.com/embed/hDnxVHoX86s?si=FnvClo3mE02dmIIg"
-        title="Dennis Kenney Ted Talk"
+        src={url}
+        title={title}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
