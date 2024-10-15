@@ -7,7 +7,6 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import "./ContactForm.scss";
-import { Resend } from "resend";
 import axios from "axios";
 
 const ContactForm = () => {
