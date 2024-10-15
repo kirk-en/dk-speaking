@@ -22,6 +22,7 @@ const ContactForm = () => {
     phone: "",
     message: "",
     other: "",
+    newsletter: true,
     services: [],
     submit: false,
   });
@@ -49,6 +50,10 @@ const ContactForm = () => {
         // return the updated state
         return { ...prevValues, services: updatedServices };
       });
+    } else if (name === "newsletter") {
+      setFormValues((prevValues) => {
+        return { ...prevValues, newsletter: checked };
+      });
     } else {
       setFormValues((prevValues) => {
         const updatedValues = { ...prevValues, [name]: value };
@@ -68,6 +73,10 @@ const ContactForm = () => {
       });
     }
   };
+
+  useEffect(() => {
+    console.log(formValues);
+  }, [formValues]);
 
   const sendMail = async (formObj) => {
     try {
@@ -272,6 +281,17 @@ const ContactForm = () => {
         helperText={hasError.email ? "Make sure to include a message!" : ""}
         fullWidth
         className="form__field"
+      />
+      <FormControlLabel
+        control={
+          <Checkbox
+            name="newsletter"
+            value="newsletter"
+            checked={formValues.newsletter}
+            onChange={handleFormChange}
+          />
+        }
+        label="Subscribe to the Ivy Level Speaking Newsletter"
       />
       <div>
         <button
