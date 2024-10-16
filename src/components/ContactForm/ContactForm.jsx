@@ -7,7 +7,6 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import "./ContactForm.scss";
-import { Resend } from "resend";
 import axios from "axios";
 
 const ContactForm = () => {
@@ -23,6 +22,7 @@ const ContactForm = () => {
     phone: "",
     message: "",
     other: "",
+    newsletter: true,
     services: [],
     submit: false,
   });
@@ -49,6 +49,10 @@ const ContactForm = () => {
 
         // return the updated state
         return { ...prevValues, services: updatedServices };
+      });
+    } else if (name === "newsletter") {
+      setFormValues((prevValues) => {
+        return { ...prevValues, newsletter: checked };
       });
     } else {
       setFormValues((prevValues) => {
@@ -77,7 +81,20 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
       });
+      formObj.newsletter && joinNewsletter(formObj);
       setFormValues((prevValues) => ({ ...prevValues, submit: true }));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const joinNewsletter = async (formObj) => {
+    try {
+      await axios.post(`${import.meta.env.VITE_NEWSLETTER_URL}`, formObj, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
     } catch (error) {
       console.log(error);
     }
@@ -273,6 +290,17 @@ const ContactForm = () => {
         helperText={hasError.email ? "Make sure to include a message!" : ""}
         fullWidth
         className="form__field"
+      />
+      <FormControlLabel
+        control={
+          <Checkbox
+            name="newsletter"
+            value="newsletter"
+            checked={formValues.newsletter}
+            onChange={handleFormChange}
+          />
+        }
+        label="Subscribe to the Ivy Level Speaking Newsletter"
       />
       <div>
         <button

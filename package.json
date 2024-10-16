@@ -16,11 +16,13 @@
     "@mui/material": "^6.0.1",
     "@mui/styled-engine-sc": "^6.0.1",
     "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
     "resend": "^4.0.0",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "sib-api-v3-sdk": "^8.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
