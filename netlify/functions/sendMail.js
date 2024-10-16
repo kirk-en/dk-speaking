@@ -9,7 +9,7 @@ export async function handler(event, context) {
     const forwardEmail = "ivylevelspeaking@gmail.com";
     await resend.emails.send({
       from: "Ivy Level Speaking Contact Form <contact@ivylevelspeaking.com>",
-      to: ["kirk@arroyastudio.com"],
+      to: [forwardEmail, "kirk@arroyastudio.com"],
       replyTo: [formObj.email],
       subject: `${formObj.name} - Ivy Level Speaking Inquiry`,
       html: `

@@ -9,7 +9,7 @@ export async function handler(event, context) {
     // Brevo setup
     let defaultClient = SibApiV3Sdk.ApiClient.instance;
     let apiKey = defaultClient.authentications["api-key"];
-    apiKey.apiKey = process.env.VITE_BREVO_API_KEY;
+    apiKey.apiKey = process.env.BREVO_API_KEY;
     let apiInstance = new SibApiV3Sdk.ContactsApi();
 
     // Create new contact for email list
