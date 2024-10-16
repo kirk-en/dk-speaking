@@ -74,10 +74,6 @@ const ContactForm = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(formValues);
-  }, [formValues]);
-
   const sendMail = async (formObj) => {
     try {
       await axios.post(`${import.meta.env.VITE_SEND_MAIL_URL}`, formObj, {
@@ -85,7 +81,20 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
       });
+      formObj.newsletter && joinNewsletter(formObj);
       setFormValues((prevValues) => ({ ...prevValues, submit: true }));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const joinNewsletter = async (formObj) => {
+    try {
+      await axios.post(`${import.meta.env.VITE_NEWSLETTER_URL}`, formObj, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
     } catch (error) {
       console.log(error);
     }

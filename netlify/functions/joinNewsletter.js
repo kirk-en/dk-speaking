@@ -15,12 +15,14 @@ export async function handler(event, context) {
     // Create new contact for email list
     let newContact = new SibApiV3Sdk.CreateContact();
     newContact.email = formObj.email;
-    if (contactName.length >= 1) {
-      newContact.attributes = {
-        FIRSTNAME: contactName[0],
-        LASTNAME: contactName.length > 1 ? contactName[1] : "",
-      };
-    }
+    contactName.length === 2
+      ? (newContact.attributes = {
+          FIRSTNAME: contactName[0],
+          LASTNAME: contactName[1],
+        })
+      : (newContact.attributes = {
+          FIRSTNAME: formObj.name,
+        });
     newContact.listIds = [5];
 
     const data = await apiInstance.createContact(newContact);
