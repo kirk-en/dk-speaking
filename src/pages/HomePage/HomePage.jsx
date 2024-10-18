@@ -6,6 +6,7 @@ import Video from "../../components/Video/Video";
 import Footer from "../../components/Footer/Footer";
 import { useRef } from "react";
 import "./HomePage.scss";
+import NewsletterModal from "../../components/NewsletterModal/NewsletterModal";
 
 const HomePage = () => {
   const gradientRef = useRef(null);
@@ -86,6 +87,7 @@ const HomePage = () => {
         title={"Dennis Kenney Ted Talk"}
       />
       <Footer />
+      <NewsletterModal />
     </>
   );
 };
