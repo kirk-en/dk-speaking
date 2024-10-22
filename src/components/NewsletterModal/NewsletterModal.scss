@@ -1,0 +1,119 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 110vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1; /* Start with opacity 0 */
+  // transform: translateY(-100px); /* Start slightly above the screen */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition effects */
+  /* Modal content */
+  &__logo {
+    width: 10rem;
+    padding: 2rem;
+    @include tablet {
+      width: 18.75rem;
+    }
+  }
+}
+// @media (max-width: 750px) {
+//   .modal {
+//     top: 10%;
+//   }
+// }
+.modal__content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  border: 0.4rem solid white;
+  width: 80%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Optional for background color transitions */
+  max-width: 1000px;
+}
+.modal__content--alert {
+  border: solid 0.4rem $primary;
+  animation: pulse 1.5s infinite;
+}
+.modal__main {
+  display: flex;
+  justify-content: center;
+}
+.modal__main--title {
+  padding: 0 1.25rem;
+  color: $primary;
+}
+@media (max-width: 750px) {
+  .modal__main--title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+.modal__form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+.modal__close {
+  color: $primary;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: $text-light;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: $primary;
+  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+  &:hover,
+  :focus {
+    color: $text-light;
+    background-color: $primary;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 750px) {
+  .modal__button {
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  .modal__button {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .modal__button {
+    font-size: 0.75rem;
+  }
+}
+.modal__terms {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0 1.25rem;
+  color: rgb(51, 51, 51);
+  &--red {
+    color: $secondary;
+  }
+}
+
+.show {
+  display: block; /* Show the modal */
+  opacity: 1; /* Full opacity */
+  transform: translateY(0); /* Slide into place */
+}
