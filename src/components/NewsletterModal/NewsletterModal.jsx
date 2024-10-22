@@ -46,6 +46,7 @@ const NewsletterModal = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     joinNewsletter(formValues);
+    closeModal();
   };
 
   const closeModal = () => {
