@@ -12,22 +12,25 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 1; /* Start with opacity 0 */
-  transform: translateY(-100px); /* Start slightly above the screen */
+  // transform: translateY(-100px); /* Start slightly above the screen */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition effects */
   /* Modal content */
   &__logo {
-    width: 18.75rem;
+    width: 10rem;
     padding: 2rem;
+    @include tablet {
+      width: 18.75rem;
+    }
   }
 }
-@media (max-width: 750px) {
-  .modal {
-    top: 10%;
-  }
-}
+// @media (max-width: 750px) {
+//   .modal {
+//     top: 10%;
+//   }
+// }
 .modal__content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% auto;
   border: 0.4rem solid white;
   width: 80%;
   border-radius: 1rem;
@@ -113,16 +116,4 @@
   display: block; /* Show the modal */
   opacity: 1; /* Full opacity */
   transform: translateY(0); /* Slide into place */
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 #c7450e;
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(245, 86, 86, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(245, 86, 86, 0);
-  }
 }
