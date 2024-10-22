@@ -6,6 +6,9 @@ import Video from "../../components/Video/Video";
 import Footer from "../../components/Footer/Footer";
 import { useRef } from "react";
 import "./HomePage.scss";
+import NewsletterModal from "../../components/NewsletterModal/NewsletterModal";
+
+const newsletterToken = localStorage.getItem("newsletterToken");
 
 const HomePage = () => {
   const gradientRef = useRef(null);
@@ -85,6 +88,7 @@ const HomePage = () => {
         url={"https://www.youtube.com/embed/hDnxVHoX86s?si=FnvClo3mE02dmIIg"}
         title={"Dennis Kenney Ted Talk"}
       />
+      <NewsletterModal />
       <Footer />
     </>
   );
