@@ -1,11 +1,11 @@
 import "./NewsletterModal.scss";
-import ilsLogo from "../../assets/ils-logo.png";
+import ilsLogo from "../../assets/ils-logo-bl.png";
 import { TextField } from "@mui/material";
 import { useState } from "react";
 import axios from "axios";
 
 const newsletterToken = localStorage.getItem("newsletterToken");
-
+console.log(newsletterToken);
 const NewsletterModal = () => {
   const [hasError, setHasError] = useState({
     name: false,
@@ -18,6 +18,15 @@ const NewsletterModal = () => {
     newsletter: true,
     submit: false,
   });
+
+  const [showModal, setShowModal] = useState(() => {
+    return newsletterToken ? false : true;
+  });
+
+  // check local storage to see if visitor has seen newsletter modal previously
+  if (newsletterToken) {
+    setShowModal(false);
+  }
 
   const joinNewsletter = async (formObj) => {
     try {
@@ -47,7 +56,9 @@ const NewsletterModal = () => {
     joinNewsletter(formValues);
   };
 
-  return (
+  const closeModal = () => {};
+
+  return showModal ? (
     <article className="modal">
       <div className="modal__content">
         <img
@@ -70,8 +81,8 @@ const NewsletterModal = () => {
               updates to help you enhance your public speaking skills. 📫
             </p>
           )}
-          <div className="modal__form-container">
-            <form onSubmit={handleSubmit}>
+          <div>
+            <form onSubmit={handleSubmit} className="modal__form-container">
               <div className="form__dual-field">
                 <TextField
                   className="form__small-field form__field"
@@ -101,13 +112,11 @@ const NewsletterModal = () => {
               </button>
             </form>
           </div>
-          {/* <p className="modal__terms">
-            By entering this website you are agreeing to our terms of use and
-            privacy policy.
-          </p> */}
         </div>
       </div>
     </article>
+  ) : (
+    <></>
   );
 };
 

@@ -8,6 +8,8 @@ import { useRef } from "react";
 import "./HomePage.scss";
 import NewsletterModal from "../../components/NewsletterModal/NewsletterModal";
 
+const newsletterToken = localStorage.getItem("newsletterToken");
+
 const HomePage = () => {
   const gradientRef = useRef(null);
 
