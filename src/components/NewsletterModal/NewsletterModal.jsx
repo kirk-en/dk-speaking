@@ -3,6 +3,7 @@ import ilsLogo from "../../assets/ils-logo-bl.png";
 import { TextField } from "@mui/material";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import { Cancel } from "@mui/icons-material";
 
 const NewsletterModal = () => {
   const [hasError, setHasError] = useState({
@@ -90,6 +91,9 @@ const NewsletterModal = () => {
     !formValues.submit && (
       <article className="modal">
         <div className="modal__content" ref={modalRef}>
+          <div className="modal__exit">
+            <Cancel className="modal__exit-btn" onClick={closeModal} />
+          </div>
           <img
             src={ilsLogo}
             alt="a crest with student, brain, and speaking podium icons"
