@@ -82,7 +82,10 @@ const NewsletterModal = () => {
     console.log(newsletterToken);
     // check local storage to see if visitor has seen newsletter modal previously
     if (!newsletterToken) {
-      setShowModal(true);
+      const timer = setTimeout(() => {
+        setShowModal(true);
+      }, 3000);
+      return () => clearTimeout(timer);
     }
   }, []);
 
