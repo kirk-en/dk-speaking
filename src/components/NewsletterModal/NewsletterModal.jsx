@@ -1,6 +1,6 @@
 import "./NewsletterModal.scss";
 import ilsLogo from "../../assets/ils-logo-bl.png";
-import { TextField } from "@mui/material";
+import { CircularProgress, TextField } from "@mui/material";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import { Cancel } from "@mui/icons-material";
@@ -15,6 +15,7 @@ const NewsletterModal = () => {
     name: "",
     email: "",
     newsletter: true,
+    sending: false,
     submit: false,
   });
 
@@ -46,6 +47,7 @@ const NewsletterModal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormValues((prevValues) => ({ ...prevValues, sending: true }));
     joinNewsletter(formValues);
     closeModal();
   };
@@ -102,6 +104,7 @@ const NewsletterModal = () => {
             alt="a crest with student, brain, and speaking podium icons"
             className="modal__logo"
           />
+          {formValues.sending && <CircularProgress />}
           <div>
             <h2 className="modal__main modal__main--title">
               Subscribe to the Ivy Level Speaking newsletter.
