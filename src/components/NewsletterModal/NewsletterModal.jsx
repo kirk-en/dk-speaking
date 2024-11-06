@@ -113,6 +113,7 @@ const NewsletterModal = () => {
             className="modal__logo"
           />
           {formValues.sending && <CircularProgress />}
+          {formValues.submit && <p>submit success!</p>}
           <div>
             <h2 className="modal__main modal__main--title">
               Subscribe to the Ivy Level Speaking newsletter.
