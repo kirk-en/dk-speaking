@@ -1,7 +1,7 @@
 import "./NewsletterModal.scss";
 import ilsLogo from "../../assets/ils-logo-bl.png";
 import { CircularProgress, TextField } from "@mui/material";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { Cancel } from "@mui/icons-material";
 
@@ -52,13 +52,13 @@ const NewsletterModal = () => {
     closeModal();
   };
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     localStorage.setItem(
       "newsletterToken",
       JSON.stringify(new Date().toISOString().split("T")[0])
     );
     setShowModal(false);
-  };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -77,11 +77,10 @@ const NewsletterModal = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [showModal, closeModal]);
+  }, [showModal]);
 
   useEffect(() => {
     const newsletterToken = localStorage.getItem("newsletterToken");
-    console.log(newsletterToken);
     // check local storage to see if visitor has seen newsletter modal previously
     if (!newsletterToken) {
       const timer = setTimeout(() => {
