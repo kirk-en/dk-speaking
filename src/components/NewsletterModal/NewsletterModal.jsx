@@ -29,11 +29,14 @@ const NewsletterModal = () => {
           "Content-Type": "application/json",
         },
       });
+      // if form previously had an error, change errors values to false
       if (hasError.submit === true)
         setHasError((prevValues) => ({ ...prevValues, submit: false }));
+
       setFormValues((prevValues) => ({ ...prevValues, submit: true }));
     } catch (error) {
       console.log(error);
+      // set submit error to true
       setHasError((prevValues) => ({ ...prevValues, submit: true }));
     }
   };
@@ -45,11 +48,16 @@ const NewsletterModal = () => {
     });
   };
 
+  const displayProgress = () => {
+    setFormValues((prevValues) => ({ ...prevValues, sending: true }));
+    return;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormValues((prevValues) => ({ ...prevValues, sending: true }));
+    displayProgress();
     joinNewsletter(formValues);
-    closeModal();
+    if (!hasError.submit) closeModal();
   };
 
   const closeModal = useCallback(() => {
@@ -57,7 +65,9 @@ const NewsletterModal = () => {
       "newsletterToken",
       JSON.stringify(new Date().toISOString().split("T")[0])
     );
-    setShowModal(false);
+    setTimeout(() => {
+      setShowModal(false);
+    }, 3000);
   }, []);
 
   useEffect(() => {
@@ -91,8 +101,7 @@ const NewsletterModal = () => {
   }, []);
 
   return (
-    showModal &&
-    !formValues.submit && (
+    showModal && (
       <article className="modal">
         <div className="modal__content" ref={modalRef}>
           <div className="modal__exit">
@@ -130,6 +139,7 @@ const NewsletterModal = () => {
                     error={hasError.name}
                     value={formValues.name}
                     onChange={handleFormChange}
+                    required
                   />
                   <TextField
                     className="form__small-field form__field"
