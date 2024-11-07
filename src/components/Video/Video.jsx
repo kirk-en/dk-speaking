@@ -7,7 +7,7 @@ const Video = ({ url, title, videoThumbnail }) => {
   const playerRef = useRef(null);
   const playerInstanceRef = useRef(null);
 
-  // Load the YouTube IFrame API script if it hasn't been loaded
+  // Load the YouTube IFrame API script
   useEffect(() => {
     if (!window.YT) {
       const tag = document.createElement("script");
@@ -22,7 +22,7 @@ const Video = ({ url, title, videoThumbnail }) => {
     }
   }, []);
 
-  // Initialize the player when the script is loaded and isPlaying becomes true
+  // Initialize the player
   useEffect(() => {
     if (scriptLoaded && isPlaying && !playerInstanceRef.current) {
       playerInstanceRef.current = new window.YT.Player(playerRef.current, {
@@ -57,17 +57,28 @@ const Video = ({ url, title, videoThumbnail }) => {
       className="video__wrapper"
       onClick={!isPlaying ? () => setIsPlaying(true) : null}
     >
-      {isPlaying ? (
-        <div ref={playerRef} className="video"></div>
+      {videoThumbnail ? (
+        isPlaying ? (
+          <div ref={playerRef} className="video"></div>
+        ) : (
+          <img
+            className="video__thumbnail"
+            src={videoThumbnail}
+            alt={`A thumbnail image for the video ${title}`}
+          />
+        )
       ) : (
-        <img
-          className="video__thumbnail"
-          src={videoThumbnail}
-          alt="The TED speaking stage with a play button icon overlayed on top on the image"
-        />
+        <iframe
+          className="video"
+          src={url}
+          title={title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
       )}
     </div>
   );
 };
-
 export default Video;
