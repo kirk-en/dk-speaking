@@ -5,6 +5,7 @@ import "./TestimonialsPage.scss";
 import quoteData from "../../assets/testimonials.json";
 import { FormatQuote } from "@mui/icons-material";
 import Video from "../../components/Video/Video";
+import videoThumbnail from "../../assets/ted-stage.jpg";
 const TestimonialsPage = () => {
   return (
     <>
@@ -32,6 +33,7 @@ const TestimonialsPage = () => {
       <Video
         url={"https://www.youtube.com/embed/zuG3YXpt4PI?si=D8EUEo0OheEyf0LL"}
         title={"Dennis Kenney | TEDx"}
+        videoThumbnail={videoThumbnail}
       />
       <Footer />
     </>
