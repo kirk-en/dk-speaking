@@ -1,7 +1,7 @@
 import "./NewsletterModal.scss";
 import ilsLogo from "../../assets/ils-logo-bl.png";
-import { TextField } from "@mui/material";
-import { useRef, useState, useEffect } from "react";
+import { CircularProgress, TextField } from "@mui/material";
+import { useRef, useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { Cancel } from "@mui/icons-material";
 
@@ -15,6 +15,7 @@ const NewsletterModal = () => {
     name: "",
     email: "",
     newsletter: true,
+    sending: false,
     submit: false,
   });
 
@@ -28,12 +29,18 @@ const NewsletterModal = () => {
           "Content-Type": "application/json",
         },
       });
+      // if form previously had an error, change errors values to false
       if (hasError.submit === true)
         setHasError((prevValues) => ({ ...prevValues, submit: false }));
       setFormValues((prevValues) => ({ ...prevValues, submit: true }));
+      setTimeout(() => {
+        closeModal();
+      }, 3000);
     } catch (error) {
       console.log(error);
+      // set submit error to true
       setHasError((prevValues) => ({ ...prevValues, submit: true }));
+      setFormValues((prevValues) => ({ ...prevValues, sending: false }));
     }
   };
 
@@ -44,19 +51,25 @@ const NewsletterModal = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    joinNewsletter(formValues);
-    closeModal();
+  const displayProgress = () => {
+    setFormValues((prevValues) => ({ ...prevValues, sending: true }));
+    return;
   };
 
-  const closeModal = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    displayProgress();
+    joinNewsletter(formValues);
+  };
+
+  const closeModal = useCallback(() => {
     localStorage.setItem(
       "newsletterToken",
       JSON.stringify(new Date().toISOString().split("T")[0])
     );
+
     setShowModal(false);
-  };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -75,11 +88,10 @@ const NewsletterModal = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [showModal, closeModal]);
+  }, [showModal]);
 
   useEffect(() => {
     const newsletterToken = localStorage.getItem("newsletterToken");
-    console.log(newsletterToken);
     // check local storage to see if visitor has seen newsletter modal previously
     if (!newsletterToken) {
       const timer = setTimeout(() => {
@@ -90,8 +102,7 @@ const NewsletterModal = () => {
   }, []);
 
   return (
-    showModal &&
-    !formValues.submit && (
+    showModal && (
       <article className="modal">
         <div className="modal__content" ref={modalRef}>
           <div className="modal__exit">
@@ -102,53 +113,65 @@ const NewsletterModal = () => {
             alt="a crest with student, brain, and speaking podium icons"
             className="modal__logo"
           />
-          <div>
-            <h2 className="modal__main modal__main--title">
-              Subscribe to the Ivy Level Speaking newsletter.
-            </h2>
-            {hasError.submit ? (
-              <p className="modal__main modal__terms modal__terms--red">
-                Our apologies! There was an error submitting, please try again
-                later.
-              </p>
-            ) : (
-              <p className="modal__main modal__terms">
-                Join now for expert tips, exclusive content, and the latest
-                updates to help you enhance your public speaking skills. 📫
-              </p>
-            )}
+          {formValues.sending && !formValues.submit && <CircularProgress />}
+
+          {formValues.submit ? (
+            <>
+              <h2 className="modal__main modal__main--title">
+                Submission Received, Thank you!
+              </h2>
+              <p>This window will close shortly</p>
+            </>
+          ) : (
             <div>
-              <form onSubmit={handleSubmit} className="modal__form-container">
-                <div className="form__dual-field">
-                  <TextField
-                    className="form__small-field form__field"
-                    label="Name"
-                    id="name"
-                    name="name"
-                    error={hasError.name}
-                    value={formValues.name}
-                    onChange={handleFormChange}
-                  />
-                  <TextField
-                    className="form__small-field form__field"
-                    label="Email"
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    aria-required="true"
-                    error={hasError.email}
-                    value={formValues.email}
-                    onChange={handleFormChange}
-                    helperText={hasError.email ? "Email is required." : ""}
-                  />
-                </div>
-                <button className="modal__button modal__close" type="submit">
-                  Submit
-                </button>
-              </form>
+              <h2 className="modal__main modal__main--title">
+                Subscribe to the Ivy Level Speaking newsletter.
+              </h2>
+              {hasError.submit ? (
+                <p className="modal__main modal__terms modal__terms--red">
+                  Our apologies! There was an error submitting, please try again
+                  later.
+                </p>
+              ) : (
+                <p className="modal__main modal__terms">
+                  Join now for expert tips, exclusive content, and the latest
+                  updates to help you enhance your public speaking skills. 📫
+                </p>
+              )}
+              <div>
+                <form onSubmit={handleSubmit} className="modal__form-container">
+                  <div className="form__dual-field">
+                    <TextField
+                      className="form__small-field form__field"
+                      label="Name"
+                      id="name"
+                      name="name"
+                      error={hasError.name}
+                      value={formValues.name}
+                      onChange={handleFormChange}
+                      required
+                    />
+                    <TextField
+                      className="form__small-field form__field"
+                      label="Email"
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      aria-required="true"
+                      error={hasError.email}
+                      value={formValues.email}
+                      onChange={handleFormChange}
+                      helperText={hasError.email ? "Email is required." : ""}
+                    />
+                  </div>
+                  <button className="modal__button modal__close" type="submit">
+                    Submit
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </article>
     )
