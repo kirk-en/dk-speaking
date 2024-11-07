@@ -33,4 +33,15 @@
       z-index: -1;
     }
   }
+  &__thumbnail {
+    height: 300px;
+    transition: opacity 0.5s ease;
+    @include tablet {
+      height: 600px;
+    }
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
 }
