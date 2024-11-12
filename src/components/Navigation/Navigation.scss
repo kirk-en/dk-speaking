@@ -13,6 +13,7 @@
     @include desktop {
       gap: 2rem;
     }
+    // Fix for the footer menu on mobile
     @media (max-width: 450px) {
       flex-wrap: wrap;
       justify-content: space-around;
