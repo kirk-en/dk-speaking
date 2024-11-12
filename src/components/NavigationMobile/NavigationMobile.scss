@@ -38,4 +38,10 @@
       color: $primary-alt;
     }
   }
+  &__social {
+    display: flex;
+    justify-content: center;
+    background-color: $text-light;
+    padding-bottom: 1.5rem;
+  }
 }

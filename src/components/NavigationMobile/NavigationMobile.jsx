@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./NavigationMobile.scss";
 import { Drawer } from "@mui/material";
 import { Link } from "react-router-dom";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 const NavigationMobile = () => {
   const [open, setOpen] = useState(false);
@@ -14,7 +15,7 @@ const NavigationMobile = () => {
         onClick={() => {
           setOpen(true);
         }}
-        sx={{ width: 35, height: 35 }}
+        sx={{ width: 35, height: 45 }}
       />
       <Drawer
         open={open}
@@ -49,6 +50,9 @@ const NavigationMobile = () => {
             </Link>
           </li>
         </ul>
+        <div className="mobile-nav__social">
+          <SocialIcons altColor={"rgb(51, 51, 51)"} />
+        </div>
       </Drawer>
     </>
   );
