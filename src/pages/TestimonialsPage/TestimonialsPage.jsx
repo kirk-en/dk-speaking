@@ -3,9 +3,9 @@ import HeroTestimonials from "./HeroTestimonials/HeroTestimonials";
 import Footer from "../../components/Footer/Footer";
 import "./TestimonialsPage.scss";
 import quoteData from "../../assets/testimonials.json";
-import { FormatQuote } from "@mui/icons-material";
 import Video from "../../components/Video/Video";
 import videoThumbnail from "../../assets/ted-stage.jpg";
+import TestimonialCard from "../../components/TestimonialCard/TestimonialCard";
 const TestimonialsPage = () => {
   return (
     <>
@@ -17,17 +17,7 @@ const TestimonialsPage = () => {
       <h1 className="testimonials__headline">Testimonials:</h1>
       <section className="testimonials__list">
         {quoteData.map((quote, index) => {
-          return (
-            <article className="testimonials__card" key={index}>
-              <p>{quote.quote}</p>
-              <p className="testimonials__attribution">
-                - {quote.name}
-                <br />
-                {quote.title}, {quote.company}
-              </p>
-              <FormatQuote className="testimonials__icon" />
-            </article>
-          );
+          return <TestimonialCard quote={quote} key={index} />;
         })}
       </section>
       <Video
