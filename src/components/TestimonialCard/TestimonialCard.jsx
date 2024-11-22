@@ -1,4 +1,5 @@
 import { FormatQuote } from "@mui/icons-material";
+import "./TestimonialCard.scss";
 
 const TestimonialCard = ({ quote }) => {
   return (
