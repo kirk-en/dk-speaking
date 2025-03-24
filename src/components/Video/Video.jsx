@@ -1,5 +1,5 @@
-import { useRef, useState, useEffect } from "react";
-import "./Video.scss";
+import { useRef, useState, useEffect } from 'react';
+import './Video.scss';
 
 const Video = ({ url, title, videoThumbnail }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -10,9 +10,9 @@ const Video = ({ url, title, videoThumbnail }) => {
   // Load the YouTube IFrame API script
   useEffect(() => {
     if (!window.YT) {
-      const tag = document.createElement("script");
-      tag.src = "https://www.youtube.com/iframe_api";
-      const firstScriptTag = document.getElementsByTagName("script")[0];
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
       // When the script loads, set scriptLoaded to true
@@ -55,7 +55,7 @@ const Video = ({ url, title, videoThumbnail }) => {
   return (
     <div
       className="video__wrapper"
-      onClick={!isPlaying ? () => setIsPlaying(true) : null}
+      onClick={!isPlaying && videoThumbnail ? () => setIsPlaying(true) : null}
     >
       {videoThumbnail ? (
         isPlaying ? (
