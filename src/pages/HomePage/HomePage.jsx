@@ -1,14 +1,14 @@
-import Header from "../../components/Header/Header";
-import Hero from "./HeroHome/HeroHome";
-import PhotoGrid from "../../components/PhotoGrid/PhotoGrid";
-import Featured from "../../components/Featured/Featured";
-import Video from "../../components/Video/Video";
-import Footer from "../../components/Footer/Footer";
-import { useRef } from "react";
-import "./HomePage.scss";
-import NewsletterModal from "../../components/NewsletterModal/NewsletterModal";
+import Header from '../../components/Header/Header';
+import Hero from './HeroHome/HeroHome';
+import PhotoGrid from '../../components/PhotoGrid/PhotoGrid';
+import Featured from '../../components/Featured/Featured';
+import Video from '../../components/Video/Video';
+import Footer from '../../components/Footer/Footer';
+import { useRef } from 'react';
+import './HomePage.scss';
+import NewsletterModal from '../../components/NewsletterModal/NewsletterModal';
 
-const newsletterToken = localStorage.getItem("newsletterToken");
+const newsletterToken = localStorage.getItem('newsletterToken');
 
 const HomePage = () => {
   const gradientRef = useRef(null);
@@ -19,8 +19,8 @@ const HomePage = () => {
       const x = event.clientX - left; // Adjust X position relative to the element
       const y = event.clientY - top; // Adjust Y position relative to the element
 
-      gradientRef.current.style.setProperty("--x", `${x}px`);
-      gradientRef.current.style.setProperty("--y", `${y}px`);
+      gradientRef.current.style.setProperty('--x', `${x}px`);
+      gradientRef.current.style.setProperty('--y', `${y}px`);
     }
   };
 
@@ -85,8 +85,8 @@ const HomePage = () => {
       </article>
       <Featured />
       <Video
-        url={"https://www.youtube.com/embed/hDnxVHoX86s?si=FnvClo3mE02dmIIg"}
-        title={"Dennis Kenney Ted Talk"}
+        url={'https://www.youtube.com/embed/rvU8HPB6paQ'}
+        title={'Dennis Kenney Ted Talk'}
       />
       <NewsletterModal />
       <Footer />
