@@ -1,14 +1,14 @@
-import SibApiV3Sdk from "sib-api-v3-sdk";
+import SibApiV3Sdk from 'sib-api-v3-sdk';
 
 export async function handler(event, context) {
   try {
     // Parse incoming data from form
     const formObj = JSON.parse(event.body);
-    let contactName = formObj.name.split(" ");
+    let contactName = formObj.name.split(' ');
 
     // Brevo setup
     let defaultClient = SibApiV3Sdk.ApiClient.instance;
-    let apiKey = defaultClient.authentications["api-key"];
+    let apiKey = defaultClient.authentications['api-key'];
     apiKey.apiKey = process.env.BREVO_API_KEY;
     let apiInstance = new SibApiV3Sdk.ContactsApi();
 
@@ -27,13 +27,13 @@ export async function handler(event, context) {
 
     const data = await apiInstance.createContact(newContact);
 
-    console.log("Sucessfully hit Brevo API. Data: " + JSON.stringify(data));
+    // console.log("Sucessfully hit Brevo API. Data: " + JSON.stringify(data));
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Contact added successfully", data }),
+      body: JSON.stringify({ message: 'Contact added successfully', data }),
     };
   } catch (error) {
-    console.error("Error occurred: ", error);
+    console.error('Error occurred: ', error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message }),

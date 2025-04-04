@@ -1,4 +1,4 @@
-import "../../Hero.scss";
+import '../../Hero.scss';
 
 const HeroAbout = () => {
   return (
@@ -10,7 +10,7 @@ const HeroAbout = () => {
             Public Speaking and Communications Expert.
           </p>
           <a
-            href="https://calendly.com/ivylevelspeaking/30min"
+            href="https://calendly.com/ivylevelspeaking/coaching-consultation"
             className="button__main button__main--lr-zero-margin"
             target="_blank"
           >

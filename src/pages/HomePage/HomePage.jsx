@@ -56,7 +56,7 @@ const HomePage = () => {
               confidence and command attention.
             </p>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >

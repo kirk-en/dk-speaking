@@ -1,12 +1,12 @@
-import Header from "../../components/Header/Header";
-import HeroCoaching from "./HeroCoaching/HeroCoaching";
-import Footer from "../../components/Footer/Footer";
-import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
-import { useRef } from "react";
-import Why from "../../components/Why/Why";
-import execPhoto from "../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg";
-import DynamicQuote from "../../components/DynamicQuote/DynamicQuote";
-import "./CoachingPage.scss";
+import Header from '../../components/Header/Header';
+import HeroCoaching from './HeroCoaching/HeroCoaching';
+import Footer from '../../components/Footer/Footer';
+import hbsPhoto from '../../assets/photo-grid/harvard.jpg';
+import { useRef } from 'react';
+import Why from '../../components/Why/Why';
+import execPhoto from '../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg';
+import DynamicQuote from '../../components/DynamicQuote/DynamicQuote';
+import './CoachingPage.scss';
 
 const CoachingPage = () => {
   const gradientRef = useRef(null);
@@ -17,8 +17,8 @@ const CoachingPage = () => {
       const x = event.clientX - left; // Adjust X position relative to the element
       const y = event.clientY - top; // Adjust Y position relative to the element
 
-      gradientRef.current.style.setProperty("--x", `${x}px`);
-      gradientRef.current.style.setProperty("--y", `${y}px`);
+      gradientRef.current.style.setProperty('--x', `${x}px`);
+      gradientRef.current.style.setProperty('--y', `${y}px`);
     }
   };
 
@@ -69,7 +69,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -78,7 +78,7 @@ const CoachingPage = () => {
           </div>
         </article>
         <article className="outline__entry">
-          {" "}
+          {' '}
           <div
             className="outline__banner outline__banner--school"
             role="img"
@@ -94,7 +94,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -103,7 +103,7 @@ const CoachingPage = () => {
           </div>
         </article>
         <article className="outline__entry">
-          {" "}
+          {' '}
           <div
             className="outline__banner outline__banner--fashion"
             role="img"
@@ -119,7 +119,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -128,7 +128,7 @@ const CoachingPage = () => {
           </div>
         </article>
         <article className="outline__entry">
-          {" "}
+          {' '}
           <div
             className="outline__banner outline__banner--media"
             role="img"
@@ -146,7 +146,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -155,7 +155,7 @@ const CoachingPage = () => {
           </div>
         </article>
         <article className="outline__entry">
-          {" "}
+          {' '}
           <div
             className="outline__banner outline__banner--corporate"
             role="img"
@@ -173,7 +173,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -182,7 +182,7 @@ const CoachingPage = () => {
           </div>
         </article>
         <article className="outline__entry">
-          {" "}
+          {' '}
           <div
             className="outline__banner outline__banner--academic"
             role="img"
@@ -199,7 +199,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
