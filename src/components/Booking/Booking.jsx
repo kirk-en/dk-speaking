@@ -1,4 +1,4 @@
-import "./Booking.scss";
+import './Booking.scss';
 
 const Booking = () => {
   return (
@@ -12,7 +12,7 @@ const Booking = () => {
         impactful communication.
       </p>
       <a
-        href="https://calendly.com/ivylevelspeaking/30min"
+        href="https://calendly.com/ivylevelspeaking/coaching-consultation"
         className="button__main"
         target="_blank"
       >
