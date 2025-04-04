@@ -1,12 +1,12 @@
-import Header from "../../components/Header/Header";
-import HeroSpeaking from "./HeroSpeaking/HeroSpeaking";
-import Footer from "../../components/Footer/Footer";
-import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
-import { useRef } from "react";
-import Why from "../../components/Why/Why";
-import execPhoto from "../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg";
-import DynamicQuote from "../../components/DynamicQuote/DynamicQuote";
-import "./SpeakingPage.scss";
+import Header from '../../components/Header/Header';
+import HeroSpeaking from './HeroSpeaking/HeroSpeaking';
+import Footer from '../../components/Footer/Footer';
+import hbsPhoto from '../../assets/photo-grid/harvard.jpg';
+import { useRef } from 'react';
+import Why from '../../components/Why/Why';
+import execPhoto from '../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg';
+import DynamicQuote from '../../components/DynamicQuote/DynamicQuote';
+import './SpeakingPage.scss';
 
 const SpeakingPage = () => {
   const gradientRef = useRef(null);
@@ -17,8 +17,8 @@ const SpeakingPage = () => {
       const x = event.clientX - left; // Adjust X position relative to the element
       const y = event.clientY - top; // Adjust Y position relative to the element
 
-      gradientRef.current.style.setProperty("--x", `${x}px`);
-      gradientRef.current.style.setProperty("--y", `${y}px`);
+      gradientRef.current.style.setProperty('--x', `${x}px`);
+      gradientRef.current.style.setProperty('--y', `${y}px`);
     }
   };
 
@@ -55,7 +55,7 @@ const SpeakingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -64,7 +64,7 @@ const SpeakingPage = () => {
           </div>
         </article>
         <article className="outline-sp__entry">
-          {" "}
+          {' '}
           <div
             className="outline-sp__banner outline-sp__banner--story"
             role="img"
@@ -79,7 +79,7 @@ const SpeakingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -88,7 +88,7 @@ const SpeakingPage = () => {
           </div>
         </article>
         <article className="outline-sp__entry">
-          {" "}
+          {' '}
           <div
             className="outline-sp__banner outline-sp__banner--fashion"
             role="img"
@@ -103,7 +103,7 @@ const SpeakingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -126,7 +126,7 @@ const SpeakingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
@@ -149,7 +149,7 @@ const SpeakingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/30min"
+              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
               className="button__main"
               target="_blank"
             >
