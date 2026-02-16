@@ -1,14 +1,14 @@
-import { ImageList, ImageListItem } from "@mui/material";
-import photo1 from "../../assets/photo-grid/dennis-photogrid-1.jpg";
-import photo2 from "../../assets/photo-grid/dennis-photogrid-2.jpg";
-import photo3 from "../../assets/photo-grid/dennis-photogrid-3.jpg";
-import photo4 from "../../assets/photo-grid/dennis-photogrid-4.jpg";
-import photo5 from "../../assets/photo-grid/dennis-photogrid-5.jpg";
-import photo6 from "../../assets/photo-grid/students.jpg";
+import { ImageList, ImageListItem } from '@mui/material';
+import photo1 from '../../assets/photo-grid/dennis-photogrid-1.jpg';
+import photo2 from '../../assets/photo-grid/dennis-photogrid-2.jpg';
+import photo3 from '../../assets/photo-grid/dennis-photogrid-3.jpg';
+import photo4 from '../../assets/photo-grid/dennis-photogrid-4.jpg';
+import photo5 from '../../assets/photo-grid/dennis-photogrid-5.jpg';
+import photo6 from '../../assets/photo-grid/students.jpg';
 
-import "./PhotoGrid.scss";
+import './PhotoGrid.scss';
 
-const PhotoGrid = () => {
+const PhotoGrid = (): JSX.Element => {
   return (
     <ImageList variant="masonry" cols={2} gap={16} className="photo-grid">
       <ImageListItem>

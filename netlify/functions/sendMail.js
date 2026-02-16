@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.VITE_RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function handler(event, context) {
   try {
@@ -8,8 +8,8 @@ export async function handler(event, context) {
     // console.log(formObj);
     const forwardEmail = 'ivylevelspeaking@gmail.com';
     await resend.emails.send({
-      from: 'Ivy Level Speaking Contact Form <contact@ivylevelspeaking.com>',
-      to: [forwardEmail, 'kirk@arroyastudio.com'],
+      from: 'Ivy Level Speaking Contact Form <contact@contact.ivylevelspeaking.com>',
+      to: ['kirk@arroyastudio.com'],
       replyTo: [formObj.email],
       subject: `${formObj.name} - Ivy Level Speaking Inquiry`,
       html: `
@@ -21,10 +21,10 @@ export async function handler(event, context) {
         <strong>Email:</strong> <a href="mailto:${
           formObj.email
         }?subject=Re:%20${encodeURIComponent(
-        'Your Ivy Level Speaking Inquiry'
-      )}&body=${encodeURIComponent(
-        'Hello ' + formObj.name + ',\n\nThank you for connecting.'
-      )}" style="color: #1a73e8;">${formObj.email}</a>
+          'Your Ivy Level Speaking Inquiry',
+        )}&body=${encodeURIComponent(
+          'Hello ' + formObj.name + ',\n\nThank you for connecting.',
+        )}" style="color: #1a73e8;">${formObj.email}</a>
       </p>
 
       <p style="font-size: 16px; line-height: 1.5;">
@@ -36,7 +36,7 @@ export async function handler(event, context) {
           .map((service) =>
             service === 'Other'
               ? `<li style="margin-bottom: 10px;">Other: ${formObj.other}</li>`
-              : `<li style="margin-bottom: 10px;">${service}</li>`
+              : `<li style="margin-bottom: 10px;">${service}</li>`,
           )
           .join('')}
       </ul>
@@ -47,12 +47,12 @@ export async function handler(event, context) {
 
       <h2 style="color: #333;">
         Reply to ${formObj.name} in a new email thread with <a href="mailto:${
-        formObj.email
-      }?subject=Re:%20${encodeURIComponent(
-        'Your Ivy Level Speaking Inquiry'
-      )}&body=${encodeURIComponent(
-        'Hello ' + formObj.name + ',\n\nThank you for connecting.'
-      )}" style="color: #1a73e8;">${formObj.email}</a>
+          formObj.email
+        }?subject=Re:%20${encodeURIComponent(
+          'Your Ivy Level Speaking Inquiry',
+        )}&body=${encodeURIComponent(
+          'Hello ' + formObj.name + ',\n\nThank you for connecting.',
+        )}" style="color: #1a73e8;">${formObj.email}</a>
       </h2>
     </div>
   `,

@@ -1,32 +1,33 @@
-import "./NewsletterModal.scss";
-import ilsLogo from "../../assets/ils-logo-bl.png";
-import { CircularProgress, TextField } from "@mui/material";
-import { useRef, useState, useEffect, useCallback } from "react";
-import axios from "axios";
-import { Cancel } from "@mui/icons-material";
+import './NewsletterModal.scss';
+import ilsLogo from '../../assets/ils-logo-bl.png';
+import { CircularProgress, TextField } from '@mui/material';
+import { useRef, useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
+import { Cancel } from '@mui/icons-material';
+import { ChangeEvent, FormEvent } from 'react';
 
-const NewsletterModal = () => {
+const NewsletterModal = (): JSX.Element => {
   const [hasError, setHasError] = useState({
     name: false,
     email: false,
     submit: false,
   });
   const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
+    name: '',
+    email: '',
     newsletter: true,
     sending: false,
     submit: false,
   });
 
   const [showModal, setShowModal] = useState(false);
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
-  const joinNewsletter = async (formObj) => {
+  const joinNewsletter = async (formObj: typeof formValues) => {
     try {
       await axios.post(`${import.meta.env.VITE_NEWSLETTER_URL}`, formObj, {
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       });
       // if form previously had an error, change errors values to false
@@ -44,7 +45,7 @@ const NewsletterModal = () => {
     }
   };
 
-  const handleFormChange = (e) => {
+  const handleFormChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormValues((prevValues) => {
       return { ...prevValues, [name]: value };
@@ -56,7 +57,7 @@ const NewsletterModal = () => {
     return;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     displayProgress();
     joinNewsletter(formValues);
@@ -64,41 +65,46 @@ const NewsletterModal = () => {
 
   const closeModal = useCallback(() => {
     localStorage.setItem(
-      "newsletterToken",
-      JSON.stringify(new Date().toISOString().split("T")[0])
+      'newsletterToken',
+      JSON.stringify(new Date().toISOString().split('T')[0]),
     );
 
     setShowModal(false);
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: Event) => {
       // Check if the clicked target is outside the modal content
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(event.target as Node)
+      ) {
         closeModal(); // Close the modal
       }
     };
 
     // Add event listener when modal is open
     if (showModal) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
     }
 
     // Clean up event listener when modal is closed or unmounted
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [showModal]);
+  }, [showModal, closeModal]);
 
   useEffect(() => {
-    const newsletterToken = localStorage.getItem("newsletterToken");
+    const newsletterToken = localStorage.getItem('newsletterToken');
     // check local storage to see if visitor has seen newsletter modal previously
     if (!newsletterToken) {
       const timer = setTimeout(() => {
-        setShowModal(true);
+        // newsletter popup currently DISABLED till we decide what to do with it.
+        setShowModal(false);
       }, 3000);
       return () => clearTimeout(timer);
     }
+    return;
   }, []);
 
   return (
@@ -162,7 +168,7 @@ const NewsletterModal = () => {
                       error={hasError.email}
                       value={formValues.email}
                       onChange={handleFormChange}
-                      helperText={hasError.email ? "Email is required." : ""}
+                      helperText={hasError.email ? 'Email is required.' : ''}
                     />
                   </div>
                   <button className="modal__button modal__close" type="submit">

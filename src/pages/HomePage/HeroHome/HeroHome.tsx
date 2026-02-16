@@ -1,4 +1,4 @@
-import "../../Hero.scss";
+import '../../Hero.scss';
 
 const Hero = () => {
   return (
@@ -10,6 +10,13 @@ const Hero = () => {
             Master the art of public speaking and elevate your presence with
             Dennis Kenney, an award-winning coach, educator, and storyteller.
           </p>
+          <a
+            href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+            className="button__main button__main--lr-zero-margin"
+            target="_blank"
+          >
+            Level up your communication now
+          </a>
         </aside>
       </div>
     </>

@@ -4,26 +4,14 @@ import PhotoGrid from '../../components/PhotoGrid/PhotoGrid';
 import Featured from '../../components/Featured/Featured';
 import Video from '../../components/Video/Video';
 import Footer from '../../components/Footer/Footer';
-import { useRef } from 'react';
+import FixedQuote from '../../components/FixedQuote/FixedQuote';
+import BookPromo from '../../components/BookPromo/BookPromo';
 import './HomePage.scss';
 import NewsletterModal from '../../components/NewsletterModal/NewsletterModal';
 
 const newsletterToken = localStorage.getItem('newsletterToken');
 
-const HomePage = () => {
-  const gradientRef = useRef(null);
-
-  const handleMouseMove = (event) => {
-    if (gradientRef.current) {
-      const { left, top } = gradientRef.current.getBoundingClientRect(); // Get element's position
-      const x = event.clientX - left; // Adjust X position relative to the element
-      const y = event.clientY - top; // Adjust Y position relative to the element
-
-      gradientRef.current.style.setProperty('--x', `${x}px`);
-      gradientRef.current.style.setProperty('--y', `${y}px`);
-    }
-  };
-
+const HomePage = (): JSX.Element => {
   return (
     <>
       <div className="top-section top-section__home">
@@ -68,26 +56,14 @@ const HomePage = () => {
           </div>
         </section>
       </main>
-      <article
-        className="quote"
-        onMouseMove={handleMouseMove}
-        ref={gradientRef}
-      >
-        <div className="quote__text">
-          <h2>Project Your Presence</h2>
-          <h3>
-            "Your voice is your greatest tool for influence—when you speak with
-            authenticity and purpose, you don’t just tell a story, you create an
-            impact that lasts."
-          </h3>
-          <p>— Dennis Kenney</p>
-        </div>
-      </article>
+
+      <BookPromo />
       <Featured />
       <Video
-        url={'https://www.youtube.com/embed/rvU8HPB6paQ'}
-        title={'Dennis Kenney Ted Talk'}
+        url={'https://www.youtube.com/embed/xJx5DyRn0wk'}
+        title={'Dennis Kenney'}
       />
+      <FixedQuote />
       <NewsletterModal />
       <Footer />
     </>

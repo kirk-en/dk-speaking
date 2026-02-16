@@ -1,10 +1,10 @@
-import Navigation from "../Navigation/Navigation";
-import dkLogo from "../../assets/ils-logo.png";
-import SocialIcons from "../SocialIcons/SocialIcons";
-import { Link } from "react-router-dom";
-import "./Footer.scss";
+import Navigation from '../Navigation/Navigation';
+import dkLogo from '../../assets/ils-logo.png';
+import SocialIcons from '../SocialIcons/SocialIcons';
+import { Link } from 'react-router-dom';
+import './Footer.scss';
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <footer className="footer">
       <div className="footer__element footer__element--nav">
@@ -18,7 +18,7 @@ const Footer = () => {
         />
       </Link>
       <div className="footer__element">
-        <SocialIcons className="footer__element--social" />
+        <SocialIcons />
       </div>
     </footer>
   );
