@@ -1,11 +1,11 @@
-import Header from "../../components/Header/Header";
-import HeroTestimonials from "./HeroTestimonials/HeroTestimonials";
-import Footer from "../../components/Footer/Footer";
-import "./TestimonialsPage.scss";
-import quoteData from "../../assets/testimonials.json";
-import Video from "../../components/Video/Video";
-import videoThumbnail from "../../assets/ted-stage.jpg";
-import TestimonialCard from "../../components/TestimonialCard/TestimonialCard";
+import Header from '../../components/Header/Header';
+import HeroTestimonials from './HeroTestimonials/HeroTestimonials';
+import Footer from '../../components/Footer/Footer';
+import './TestimonialsPage.scss';
+import quoteData from '../../assets/testimonials.json';
+import Video from '../../components/Video/Video';
+import videoThumbnail from '../../assets/ted-stage.jpg';
+import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 const TestimonialsPage = () => {
   return (
     <>
@@ -21,8 +21,8 @@ const TestimonialsPage = () => {
         })}
       </section>
       <Video
-        url={"https://www.youtube.com/embed/zuG3YXpt4PI?si=D8EUEo0OheEyf0LL"}
-        title={"Dennis Kenney | TEDx"}
+        url={'https://www.youtube.com/embed/zuG3YXpt4PI?si=D8EUEo0OheEyf0LL'}
+        title={'Dennis Kenney | TEDx'}
         videoThumbnail={videoThumbnail}
       />
       <Footer />

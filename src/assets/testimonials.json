@@ -3,6 +3,7 @@
     "name": "Nataliya Langburd Wright",
     "title": "Assistant Professor",
     "company": "Columbia Business School",
+    "logo": "logos/Columbia-Business-School-Logo-FC-2.png",
     "quote": "Dennis’s clear communication, empathy, and expertise significantly enhanced my public speaking abilities, ultimately helping me secure a highly coveted position. His teaching approach is empathetic and personalized, ensuring my speaking style was authentic and resonant.",
     "headline": "Authenticity and Success"
   },
@@ -10,6 +11,7 @@
     "name": "Stefan Hanuska",
     "title": "Senior Manager, Deals Transformation",
     "company": "PwC",
+    "logo": "testimonial-logos/pwc.png",
     "quote": "Dennis has been instrumental in helping me navigate the complexities of communication within the US market, elevating my confidence and effectiveness. His tailored coaching has had a profoundly positive impact on my professional relationships and led to my recommendation for promotion.",
     "headline": "Confidence and Career Growth"
   },
@@ -17,6 +19,7 @@
     "name": "Maren Hoff",
     "title": "PhD Candidate",
     "company": "Columbia Business School",
+    "logo": "logos/Columbia-Business-School-Logo-FC-2.png",
     "quote": "Dennis helped me stay true to myself while refining my public speaking. His guidance supported me in delivering authentic and confident presentations, ultimately helping me secure flyouts to my dream schools. Dennis’ attention to detail — from gestures and movements to visuals — is exceptional. I’m so grateful for his expert coaching.",
     "headline": "Authenticity and Impact"
   },
@@ -24,6 +27,7 @@
     "name": "Kunal Sangani",
     "title": "PhD Candidate",
     "company": "Harvard Business School",
+    "logo": "logos/HBS-styleguide-primary-logo-3-1024x507.png",
     "quote": "Dennis has deep expertise in everything related to public speaking, which is visible in his teaching style through modeling gestures, movement, and tone. He is a remarkable person—empathic, caring, and supportive, offering tailored advice and guidance.",
     "headline": "Expert Guidance and Support"
   },
@@ -31,6 +35,7 @@
     "name": "Marais Canali Young",
     "title": "Associate Director",
     "company": "Harvard Business School Doctoral Programs",
+    "logo": "logos/HBS-styleguide-primary-logo-3-1024x507.png",
     "quote": "Dennis’s sessions with our students were incredibly successful, helping them manage performance anxiety and enhance their public speaking skills. His tailored approach to coaching Ph.D. students and helping them refine their messaging was highly effective and transformative. Our students greatly benefit from both his workshops and one-on-one coaching.",
     "headline": "Managing Anxiety and Refining Skills"
   },
@@ -38,7 +43,8 @@
     "name": "Martin Aragoneses",
     "title": "Assistant Professor",
     "company": "INSEAD",
-    "quote": "Dennis’s coaching transformed my approach to public speaking. His practical insights on how to captivate an audience and deliver complex ideas clearly were invaluable. Thanks to his guidance, I now present with confidence, whether in the classroom or at international conferences.",
+    "logo": "testimonial-logos/insead.webp",
+    "quote": "Dennis's coaching transformed my approach to public speaking. His practical insights on how to captivate an audience and deliver complex ideas clearly were invaluable. Thanks to his guidance, I now present with confidence, whether in the classroom or at international conferences.",
     "headline": "Confidence and Clarity"
   }
 ]

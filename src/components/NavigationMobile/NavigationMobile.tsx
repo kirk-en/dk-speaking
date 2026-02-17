@@ -1,11 +1,11 @@
-import { Menu } from "@mui/icons-material";
-import { useState } from "react";
-import "./NavigationMobile.scss";
-import { Drawer } from "@mui/material";
-import { Link } from "react-router-dom";
-import SocialIcons from "../SocialIcons/SocialIcons";
+import { Menu } from '@mui/icons-material';
+import { useState } from 'react';
+import './NavigationMobile.scss';
+import { Drawer } from '@mui/material';
+import { Link } from 'react-router-dom';
+import SocialIcons from '../SocialIcons/SocialIcons';
 
-const NavigationMobile = () => {
+const NavigationMobile = (): JSX.Element => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -51,7 +51,7 @@ const NavigationMobile = () => {
           </li>
         </ul>
         <div className="mobile-nav__social">
-          <SocialIcons altColor={"rgb(51, 51, 51)"} />
+          <SocialIcons altColor={'rgb(51, 51, 51)'} />
         </div>
       </Drawer>
     </>

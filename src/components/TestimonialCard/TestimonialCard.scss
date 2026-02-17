@@ -1,5 +1,5 @@
-@use "../../styles/partials/variables.scss" as *;
-@use "../../styles/partials/mixins.scss" as *;
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
 
 .testimonials {
   &__card {
@@ -24,10 +24,11 @@
   &__attribution {
     font-weight: 600;
     width: 90%;
+    & i {
+      font-weight: 400;
+    }
   }
   &__icon {
-    position: absolute;
-    bottom: 20%;
-    right: 10%;
+    height: 2.5rem;
   }
 }

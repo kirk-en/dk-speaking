@@ -1,11 +1,17 @@
 import { useRef, useState, useEffect } from 'react';
 import './Video.scss';
 
-const Video = ({ url, title, videoThumbnail }) => {
+interface VideoProps {
+  url: string;
+  title: string;
+  videoThumbnail?: string;
+}
+
+const Video = ({ url, title, videoThumbnail }: VideoProps): JSX.Element => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [scriptLoaded, setScriptLoaded] = useState(false); // Track if the script is loaded
-  const playerRef = useRef(null);
-  const playerInstanceRef = useRef(null);
+  const playerRef = useRef<HTMLDivElement>(null);
+  const playerInstanceRef = useRef<YT.Player | null>(null);
 
   // Load the YouTube IFrame API script
   useEffect(() => {
@@ -13,7 +19,9 @@ const Video = ({ url, title, videoThumbnail }) => {
       const tag = document.createElement('script');
       tag.src = 'https://www.youtube.com/iframe_api';
       const firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      if (firstScriptTag && firstScriptTag.parentNode) {
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      }
 
       // When the script loads, set scriptLoaded to true
       tag.onload = () => setScriptLoaded(true);
@@ -24,15 +32,25 @@ const Video = ({ url, title, videoThumbnail }) => {
 
   // Initialize the player
   useEffect(() => {
-    if (scriptLoaded && isPlaying && !playerInstanceRef.current) {
-      playerInstanceRef.current = new window.YT.Player(playerRef.current, {
-        videoId: extractVideoId(url),
-        events: {
-          onReady: (event) => {
-            event.target.playVideo(); // Start playing when ready
+    if (
+      scriptLoaded &&
+      isPlaying &&
+      !playerInstanceRef.current &&
+      playerRef.current
+    ) {
+      const videoId = extractVideoId(url);
+
+      // Add this guard - only create player if videoId exists
+      if (videoId) {
+        playerInstanceRef.current = new window.YT.Player(playerRef.current, {
+          videoId: videoId,
+          events: {
+            onReady: (event: YT.PlayerEvent) => {
+              event.target.playVideo(); // Start playing when ready
+            },
           },
-        },
-      });
+        });
+      }
     }
 
     // Cleanup on component unmount
@@ -45,7 +63,7 @@ const Video = ({ url, title, videoThumbnail }) => {
   }, [scriptLoaded, isPlaying, url]);
 
   // Helper function to extract the video ID from the URL
-  const extractVideoId = (url) => {
+  const extractVideoId = (url: string): string | null => {
     const regExp =
       /(?:https?:\/\/)?(?:www\.)?youtube\.com\/embed\/([a-zA-Z0-9_-]+)/;
     const match = url.match(regExp);
@@ -55,7 +73,9 @@ const Video = ({ url, title, videoThumbnail }) => {
   return (
     <div
       className="video__wrapper"
-      onClick={!isPlaying && videoThumbnail ? () => setIsPlaying(true) : null}
+      onClick={
+        !isPlaying && videoThumbnail ? () => setIsPlaying(true) : undefined
+      }
     >
       {videoThumbnail ? (
         isPlaying ? (
