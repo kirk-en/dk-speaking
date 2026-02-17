@@ -4,7 +4,7 @@ import './FixedQuote.scss';
 const FixedQuote = (): JSX.Element => {
   const gradientRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseMove = (event: MouseEvent) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (gradientRef.current) {
       const { left, top } = gradientRef.current.getBoundingClientRect(); // Get element's position
       const x = event.clientX - left; // Adjust X position relative to the element

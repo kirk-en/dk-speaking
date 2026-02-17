@@ -1,7 +1,17 @@
 import './TestimonialCard.scss';
 import { Box } from '@mui/material';
 
-const TestimonialCard = ({ quote }): JSX.Element => {
+interface TestimonialCardProps {
+  quote: {
+    quote: string;
+    name: string;
+    title: string;
+    company: string;
+    logo?: string;
+  };
+}
+
+const TestimonialCard = ({ quote }: TestimonialCardProps): JSX.Element => {
   return (
     <article className="testimonials__card">
       <p>{quote.quote}</p>

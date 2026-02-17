@@ -6,7 +6,7 @@ import axios from 'axios';
 import { Cancel } from '@mui/icons-material';
 import { ChangeEvent, FormEvent } from 'react';
 
-const NewsletterModal = (): JSX.Element => {
+const NewsletterModal = (): JSX.Element | null => {
   const [hasError, setHasError] = useState({
     name: false,
     email: false,
@@ -107,81 +107,79 @@ const NewsletterModal = (): JSX.Element => {
     return;
   }, []);
 
-  return (
-    showModal && (
-      <article className="modal">
-        <div className="modal__content" ref={modalRef}>
-          <div className="modal__exit">
-            <Cancel className="modal__exit-btn" onClick={closeModal} />
-          </div>
-          <img
-            src={ilsLogo}
-            alt="a crest with student, brain, and speaking podium icons"
-            className="modal__logo"
-          />
-          {formValues.sending && !formValues.submit && <CircularProgress />}
-
-          {formValues.submit ? (
-            <>
-              <h2 className="modal__main modal__main--title">
-                Submission Received, Thank you!
-              </h2>
-              <p>This window will close shortly</p>
-            </>
-          ) : (
-            <div>
-              <h2 className="modal__main modal__main--title">
-                Subscribe to the Ivy Level Speaking newsletter.
-              </h2>
-              {hasError.submit ? (
-                <p className="modal__main modal__terms modal__terms--red">
-                  Our apologies! There was an error submitting, please try again
-                  later.
-                </p>
-              ) : (
-                <p className="modal__main modal__terms">
-                  Join now for expert tips, exclusive content, and the latest
-                  updates to help you enhance your public speaking skills. 📫
-                </p>
-              )}
-              <div>
-                <form onSubmit={handleSubmit} className="modal__form-container">
-                  <div className="form__dual-field">
-                    <TextField
-                      className="form__small-field form__field"
-                      label="Name"
-                      id="name"
-                      name="name"
-                      error={hasError.name}
-                      value={formValues.name}
-                      onChange={handleFormChange}
-                      required
-                    />
-                    <TextField
-                      className="form__small-field form__field"
-                      label="Email"
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      aria-required="true"
-                      error={hasError.email}
-                      value={formValues.email}
-                      onChange={handleFormChange}
-                      helperText={hasError.email ? 'Email is required.' : ''}
-                    />
-                  </div>
-                  <button className="modal__button modal__close" type="submit">
-                    Submit
-                  </button>
-                </form>
-              </div>
-            </div>
-          )}
+  return showModal ? (
+    <article className="modal">
+      <div className="modal__content" ref={modalRef}>
+        <div className="modal__exit">
+          <Cancel className="modal__exit-btn" onClick={closeModal} />
         </div>
-      </article>
-    )
-  );
+        <img
+          src={ilsLogo}
+          alt="a crest with student, brain, and speaking podium icons"
+          className="modal__logo"
+        />
+        {formValues.sending && !formValues.submit && <CircularProgress />}
+
+        {formValues.submit ? (
+          <>
+            <h2 className="modal__main modal__main--title">
+              Submission Received, Thank you!
+            </h2>
+            <p>This window will close shortly</p>
+          </>
+        ) : (
+          <div>
+            <h2 className="modal__main modal__main--title">
+              Subscribe to the Ivy Level Speaking newsletter.
+            </h2>
+            {hasError.submit ? (
+              <p className="modal__main modal__terms modal__terms--red">
+                Our apologies! There was an error submitting, please try again
+                later.
+              </p>
+            ) : (
+              <p className="modal__main modal__terms">
+                Join now for expert tips, exclusive content, and the latest
+                updates to help you enhance your public speaking skills. 📫
+              </p>
+            )}
+            <div>
+              <form onSubmit={handleSubmit} className="modal__form-container">
+                <div className="form__dual-field">
+                  <TextField
+                    className="form__small-field form__field"
+                    label="Name"
+                    id="name"
+                    name="name"
+                    error={hasError.name}
+                    value={formValues.name}
+                    onChange={handleFormChange}
+                    required
+                  />
+                  <TextField
+                    className="form__small-field form__field"
+                    label="Email"
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    aria-required="true"
+                    error={hasError.email}
+                    value={formValues.email}
+                    onChange={handleFormChange}
+                    helperText={hasError.email ? 'Email is required.' : ''}
+                  />
+                </div>
+                <button className="modal__button modal__close" type="submit">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+      </div>
+    </article>
+  ) : null;
 };
 
 export default NewsletterModal;

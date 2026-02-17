@@ -27,7 +27,7 @@ const logoFiles = [
 ];
 
 const Featured = (): JSX.Element => {
-  const doubleLogos = [...logoFiles, ...logoFiles];
+  // const doubleLogos = [...logoFiles, ...logoFiles];
 
   return (
     <section className="featured">
