@@ -11,10 +11,18 @@ const BookPromo = (): JSX.Element => {
           crafting compelling narratives to commanding the stage with
           confidence.
         </p>
-        <p>
-          Whether you're a seasoned professional or just starting your speaking
-          journey, these insights will help you make an impact that resonates.
-        </p>
+      </div>
+      <div className="book-items">
+        <div className="main-book-wrap">
+          <div className="book-cover">
+            <div className="book-inside"></div>
+            <div className="book-image">
+              <img src="/book-cover.png" alt="Book Cover" />
+              <div className="effect"></div>
+              <div className="light"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
