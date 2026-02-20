@@ -1,7 +1,7 @@
 import Header from '../../components/Header/Header';
 import HeroBook from './HeroBook/HeroBook';
 import Footer from '../../components/Footer/Footer';
-import dennisPhoto from '../../assets/dennis-side-profile.jpg';
+import dennisPhoto from '../../assets/side-book.jpg';
 import '../../components/BookPromo/BookPromo.scss';
 import './BookPage.scss';
 
