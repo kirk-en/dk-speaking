@@ -1,18 +1,18 @@
-@use "../../styles/partials/variables.scss" as *;
-@use "../../styles/partials/mixins.scss" as *;
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
 
 .top-section {
   @include site-margins;
   &__speaking {
-    background-image: url("../../assets/on-stage.jpg");
+    background-image: url('../../assets/org.jpg');
     min-height: 66vh;
 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     position: relative;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -111,23 +111,23 @@
       height: 15rem;
     }
     &--exec {
-      background-image: url("../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg");
+      background-image: url('../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg');
       // background-position-y: -300px;
     }
     &--story {
-      background-image: url("../../assets/podium.JPG");
+      background-image: url('../../assets/podium.JPG');
       background-position-y: center;
     }
     &--fashion {
-      background-image: url("../../assets/mannequins-in-a-store-in-milan.jpg");
+      background-image: url('../../assets/mannequins-in-a-store-in-milan.jpg');
       // background-position-y: -40px;
     }
     &--interview {
-      background-image: url("../../assets/interview.jpg");
+      background-image: url('../../assets/interview.jpg');
       background-position-y: center;
     }
     &--diversity {
-      background-image: url("../../assets/diversity.jpg");
+      background-image: url('../../assets/diversity.jpg');
     }
   }
 }

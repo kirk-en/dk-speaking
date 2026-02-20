@@ -40,6 +40,11 @@ const NavigationMobile = (): JSX.Element => {
             </Link>
           </li>
           <li className="mobile-nav__list-item">
+            <Link to="/book" className="mobile-nav__link">
+              my book
+            </Link>
+          </li>
+          <li className="mobile-nav__list-item">
             <Link to="/testimonials" className="mobile-nav__link">
               testimonials
             </Link>

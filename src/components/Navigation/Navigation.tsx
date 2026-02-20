@@ -21,7 +21,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="nav__list-item">
-          <Link to="/speaking" className="nav__link">
+          <Link to="/book" className="nav__link">
             my book
           </Link>
         </li>
