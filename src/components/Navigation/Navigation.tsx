@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import "./Navigation.scss";
+import { Link } from 'react-router-dom';
+import './Navigation.scss';
 
 const Navigation = () => {
   return (
@@ -17,7 +17,12 @@ const Navigation = () => {
         </li>
         <li className="nav__list-item">
           <Link to="/speaking" className="nav__link">
-            speaking
+            for organizations
+          </Link>
+        </li>
+        <li className="nav__list-item">
+          <Link to="/book" className="nav__link">
+            my book
           </Link>
         </li>
         <li className="nav__list-item">

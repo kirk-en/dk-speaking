@@ -1,5 +1,5 @@
-@use "../../styles/partials/variables.scss" as *;
-@use "../../styles/partials/mixins.scss" as *;
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
 
 .nav {
   &__list {
@@ -13,8 +13,12 @@
     @include desktop {
       gap: 2rem;
     }
+    @media (max-width: 1009px) and (min-width: 810px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     // Fix for the footer menu on mobile
-    @media (max-width: 450px) {
+    @media (max-width: 650px) {
       flex-wrap: wrap;
       justify-content: space-around;
     }
@@ -22,6 +26,10 @@
   &__list-item {
     text-transform: capitalize;
     min-width: 2rem;
+    @media (max-width: 750px) {
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
   }
   &__link {
     color: $text-light;
