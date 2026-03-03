@@ -12,7 +12,7 @@ const SocialIcons = ({ altColor }: SocialIconsProps): JSX.Element => {
   return (
     <section className="social">
       <a
-        href="https://www.instagram.com/ivylevelspeaking/"
+        href="https://www.instagram.com/stylewithden/"
         target="_blank"
         className="social__icon"
       >
