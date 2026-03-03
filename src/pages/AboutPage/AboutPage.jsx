@@ -24,6 +24,54 @@ const AboutPage = () => {
 
   const isMidViewport = windowWidth <= 1100 && windowWidth >= 810;
 
+  const openingCopy = (
+    <>
+      <span className="about__content-text--opening">
+        A Unique Blend of Drama, Communication, and Leadership...
+      </span>
+      <br />
+      With a Drama degree from Carnegie Mellon University, a Master’s in
+      Communication from Northwestern University, and ongoing doctoral studies
+      in Leadership from The Johns Hopkins University, my journey has been
+      anything but ordinary. I have built a career that blends expertise across
+      theater, communication, and leadership, allowing me to offer an
+      unparalleled coaching experience. I’ve worked with top-tier institutions
+      like Harvard, Columbia, and Fortune 500 companies, helping individuals at
+      all levels elevate their communication skills and personal presence.
+      <br />
+      <br />
+      What sets me apart is the variety and depth of my experiences. I’ve been
+      the head stylist for Good Morning America and a creative director for
+      major fashion brands, transforming how celebrities present themselves on
+      national television. I’ve led public speaking workshops at Harvard
+      Business School, empowering PhD candidates to deliver compelling academic
+      presentations, and I’ve worked with tenured professors to further refine
+      their authority in the classroom. I’ve also helped corporate executives
+      reshape their professional image, guiding them to make lasting impressions
+      in the boardroom.
+    </>
+  );
+
+  const closingCopy = (
+    <>
+      This breadth of experience means I approach coaching with a unique
+      perspective, combining the discipline of academic rigor, the creative
+      flair of theatrical performance, and the strategic insight of brand
+      development. My goal is not just to teach you how to speak effectively,
+      but to help you own your voice and presence in a way that’s authentically
+      yours.
+      <br />
+      <br />
+      Whether you&apos;re stepping onto a stage, leading a team, or navigating
+      professional challenges, I bring a personalized, strategic approach that
+      will help you shine. With over 20 years of varied experience, I can help
+      you not only deliver with confidence and clarity but also elevate your
+      personal brand and reshape how you are perceived by others. Let’s work
+      together to unlock the power of your story and voice, ensuring you leave
+      a lasting impact.
+    </>
+  );
+
   const handleMouseMove = (event) => {
     if (gradientRef.current) {
       const { left, top } = gradientRef.current.getBoundingClientRect(); // Get element's position
@@ -41,114 +89,34 @@ const AboutPage = () => {
         <Header />
         <HeroAbout />
       </div>
-      {isMidViewport ? (
-        <main className="about about--mid-viewport">
-          <h1 className="about__headline">My Story:</h1>
-          <section className="about__content">
-            <article className="about__content-text">
-              <p>
-                <span className="about__content-text--opening">
-                  A Unique Blend of Drama, Communication, and Leadership...
-                </span>
-                <br />
-                With a Drama degree from Carnegie Mellon University, a Master’s
-                in Communication from Northwestern University, and ongoing
-                doctoral studies in Leadership from The Johns Hopkins
-                University, my journey has been anything but ordinary. I have
-                built a career that blends expertise across theater,
-                communication, and leadership, allowing me to offer an
-                unparalleled coaching experience. I’ve worked with top-tier
-                institutions like Harvard, Columbia, and Fortune 500 companies,
-                helping individuals at all levels elevate their communication
-                skills and personal presence.
-                <br />
-                <br />
-                What sets me apart is the variety and depth of my experiences.
-                I’ve been the head stylist for Good Morning America and a
-                creative director for major fashion brands, transforming how
-                celebrities present themselves on national television. I’ve led
-                public speaking workshops at Harvard Business School, empowering
-                PhD candidates to deliver compelling academic presentations, and
-                I’ve worked with tenured professors to further refine their
-                authority in the classroom. I’ve also helped corporate
-                executives reshape their professional image, guiding them to
-                make lasting impressions in the boardroom.
-              </p>
-            </article>
-            <div className="about__content-gallery">
-              <img
-                src={dennisPhoto}
-                alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
-                className="about__single-photo--tall"
-              />
+      <main className={`about ${isMidViewport ? 'about--mid-viewport' : ''}`}>
+        <h1 className="about__headline">My Story:</h1>
+        <section className="about__content">
+          <article className="about__content-text">
+            <p>{openingCopy}</p>
+          </article>
+          <div className="about__content-gallery">
+            <img
+              src={dennisPhoto}
+              alt="Dennis Kenney in his speaking class at Harvard Business School"
+              className="about__single-photo--tall"
+            />
 
+            {isMidViewport && (
               <img
                 src={hbsPhoto}
                 alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
                 className="about__single-photo"
               />
-            </div>
-          </section>
+            )}
+          </div>
+        </section>
+
+        {isMidViewport ? (
           <section className="about__content-text about__content-text--full-width">
-            This breadth of experience means I approach coaching with a unique
-            perspective, combining the discipline of academic rigor, the
-            creative flair of theatrical performance, and the strategic insight
-            of brand development. My goal is not just to teach you how to speak
-            effectively, but to help you own your voice and presence in a way
-            that’s authentically yours.
-            <br />
-            <br />
-            Whether you&apos;re stepping onto a stage, leading a team, or
-            navigating professional challenges, I bring a personalized,
-            strategic approach that will help you shine. With over 20 years of
-            varied experience, I can help you not only deliver with confidence
-            and clarity but also elevate your personal brand and reshape how you
-            are perceived by others. Let’s work together to unlock the power of
-            your story and voice, ensuring you leave a lasting impact.
+            <p>{closingCopy}</p>
           </section>
-        </main>
-      ) : (
-        <main className="about">
-          <h1 className="about__headline">My Story:</h1>
-          <section className="about__content">
-            <article className="about__content-text">
-              <p>
-                <span className="about__content-text--opening">
-                  A Unique Blend of Drama, Communication, and Leadership...
-                </span>
-                <br />
-                With a Drama degree from Carnegie Mellon University, a Master’s
-                in Communication from Northwestern University, and ongoing
-                doctoral studies in Leadership from The Johns Hopkins
-                University, my journey has been anything but ordinary. I have
-                built a career that blends expertise across theater,
-                communication, and leadership, allowing me to offer an
-                unparalleled coaching experience. I’ve worked with top-tier
-                institutions like Harvard, Columbia, and Fortune 500 companies,
-                helping individuals at all levels elevate their communication
-                skills and personal presence.
-                <br />
-                <br />
-                What sets me apart is the variety and depth of my experiences.
-                I’ve been the head stylist for Good Morning America and a
-                creative director for major fashion brands, transforming how
-                celebrities present themselves on national television. I’ve led
-                public speaking workshops at Harvard Business School, empowering
-                PhD candidates to deliver compelling academic presentations, and
-                I’ve worked with tenured professors to further refine their
-                authority in the classroom. I’ve also helped corporate
-                executives reshape their professional image, guiding them to
-                make lasting impressions in the boardroom.
-              </p>
-            </article>
-            <div className="about__content-gallery">
-              <img
-                src={dennisPhoto}
-                alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
-                className="about__single-photo--tall"
-              />
-            </div>
-          </section>
+        ) : (
           <section className="about__content">
             <div className="about__content-gallery">
               <img
@@ -158,28 +126,11 @@ const AboutPage = () => {
               />
             </div>
             <article className="about__content-text">
-              <p>
-                This breadth of experience means I approach coaching with a
-                unique perspective, combining the discipline of academic rigor,
-                the creative flair of theatrical performance, and the strategic
-                insight of brand development. My goal is not just to teach you
-                how to speak effectively, but to help you own your voice and
-                presence in a way that’s authentically yours.
-                <br />
-                <br />
-                Whether you&apos;re stepping onto a stage, leading a team, or
-                navigating professional challenges, I bring a personalized,
-                strategic approach that will help you shine. With over 20 years
-                of varied experience, I can help you not only deliver with
-                confidence and clarity but also elevate your personal brand and
-                reshape how you are perceived by others. Let’s work together to
-                unlock the power of your story and voice, ensuring you leave a
-                lasting impact.
-              </p>
+              <p>{closingCopy}</p>
             </article>
           </section>
-        </main>
-      )}
+        )}
+      </main>
       <article
         className="quote"
         onMouseMove={handleMouseMove}
