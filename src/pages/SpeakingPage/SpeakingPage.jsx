@@ -1,10 +1,7 @@
 import Header from '../../components/Header/Header';
 import HeroSpeaking from './HeroSpeaking/HeroSpeaking';
 import Footer from '../../components/Footer/Footer';
-import hbsPhoto from '../../assets/photo-grid/harvard.jpg';
 import { useRef } from 'react';
-import Why from '../../components/Why/Why';
-import execPhoto from '../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg';
 import DynamicQuote from '../../components/DynamicQuote/DynamicQuote';
 import './SpeakingPage.scss';
 
@@ -48,10 +45,9 @@ const SpeakingPage = () => {
           ></div>
           <h2>Authentic Leadership Communication</h2>
           <p>
-            Master the art of leading with confidence and authenticity. This
-            keynote focuses on enhancing communication strategies for leaders,
-            helping them inspire and connect with their teams through genuine
-            and impactful speech.
+            Develop executive presence and command authority when the stakes are
+            highest. Equip leaders to communicate with precision, credibility,
+            and influence across teams, clients, and stakeholders.
           </p>
           <div>
             <a
@@ -72,10 +68,9 @@ const SpeakingPage = () => {
           ></div>
           <h2>Storytelling for Impact</h2>
           <p>
-            In today’s world, stories move audiences and shape brands. Learn how
-            to craft compelling narratives that captivate listeners and make
-            your message unforgettable, whether you're speaking in the boardroom
-            or on the stage.
+            Build a narrative strategy that moves decisions, not just emotions.
+            Learn how to shape high-value messages that align audiences,
+            strengthen buy-in, and position your ideas for lasting influence.
           </p>
           <div>
             <a
@@ -96,10 +91,9 @@ const SpeakingPage = () => {
           ></div>
           <h2>The Confident Presenter</h2>
           <p>
-            Conquer presentation anxiety and step into the spotlight with
-            confidence. This keynote offers practical tools and strategies to
-            overcome nerves, command attention, and deliver presentations that
-            leave lasting impressions.
+            Perform under pressure with poise and persuasive delivery. Learn my
+            practical techniques to sharpen clarity, sustain composure, and
+            command attention in mission-critical presentations.
           </p>
           <div>
             <a
@@ -115,14 +109,14 @@ const SpeakingPage = () => {
           <div
             className="outline-sp__banner outline-sp__banner--diversity"
             role="img"
-            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+            aria-label="A mix of colors and shapes on a canvas representing diversity and inclusion in communication"
           ></div>
           <h2>Equity, Diversity, and Inclusion in Communication</h2>
           <p>
-            Explore how to communicate with sensitivity, respect, and
-            inclusivity in diverse environments. This session helps speakers
-            navigate complex topics and foster open, meaningful dialogue that
-            embraces a wide range of perspectives.
+            Navigate complex conversations with clarity, composure, and respect.
+            This session helps leaders communicate across differences, address
+            sensitive topics thoughtfully, and foster meaningful dialogue in
+            diverse environments.
           </p>
           <div>
             <a
@@ -138,14 +132,14 @@ const SpeakingPage = () => {
           <div
             className="outline-sp__banner outline-sp__banner--interview"
             role="img"
-            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+            aria-label="A professional setting with individuals preparing for interviews and presentations"
           ></div>
-          <h2>Job Market & Interview Mastery</h2>
+          <h2>Strategic Interview & Presentation Command</h2>
           <p>
-            Perfect for students and professionals preparing for job interviews
-            or academic flyouts, this session focuses on refining your pitch,
-            handling tough questions, and delivering a polished, confident
-            performance tailored to your career path. 😎
+            Designed for professionals preparing for executive interviews, board
+            presentations and academic defenses. This session sharpens your
+            message, strengthens response strategy, and elevates your delivery
+            under pressure.
           </p>
           <div>
             <a
