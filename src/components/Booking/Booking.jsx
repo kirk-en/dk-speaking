@@ -12,7 +12,7 @@ const Booking = () => {
         impactful communication.
       </p>
       <a
-        href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+        href="https://calendly.com/ivylevelspeaking/consultation"
         className="button__main"
         target="_blank"
       >

@@ -69,7 +69,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+              href="https://calendly.com/ivylevelspeaking/consultation"
               className="button__main"
               target="_blank"
             >
@@ -94,7 +94,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+              href="https://calendly.com/ivylevelspeaking/consultation"
               className="button__main"
               target="_blank"
             >
@@ -119,7 +119,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+              href="https://calendly.com/ivylevelspeaking/consultation"
               className="button__main"
               target="_blank"
             >
@@ -146,7 +146,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+              href="https://calendly.com/ivylevelspeaking/consultation"
               className="button__main"
               target="_blank"
             >
@@ -173,7 +173,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+              href="https://calendly.com/ivylevelspeaking/consultation"
               className="button__main"
               target="_blank"
             >
@@ -199,7 +199,7 @@ const CoachingPage = () => {
           </p>
           <div>
             <a
-              href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+              href="https://calendly.com/ivylevelspeaking/consultation"
               className="button__main"
               target="_blank"
             >

@@ -10,7 +10,7 @@ const HeroAbout = () => {
             Public Speaking and Communications Expert.
           </p>
           <a
-            href="https://calendly.com/ivylevelspeaking/coaching-consultation"
+            href="https://calendly.com/ivylevelspeaking/consultation"
             className="button__main button__main--lr-zero-margin"
             target="_blank"
           >
