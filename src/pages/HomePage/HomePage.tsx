@@ -60,7 +60,7 @@ const HomePage = (): JSX.Element => {
       <BookPromo />
       <Featured />
       <Video
-        url={'https://www.youtube.com/embed/xJx5DyRn0wk'}
+        url={'https://www.youtube.com/embed/h8VRiK9IjRM'}
         title={'Dennis Kenney'}
       />
       <FixedQuote />
