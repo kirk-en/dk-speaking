@@ -5,17 +5,19 @@ const Hero = () => {
     <>
       <div className="hero">
         <aside className="hero__right">
-          <h2 className="hero__headline">Unlock the Power of Your Voice</h2>
+          <h2 className="hero__headline">Helping Voices Rise. Guiding Ideas to Land.</h2>
           <p className="hero__text">
-            Master the art of public speaking and elevate your presence with
-            Dennis Kenney, an award-winning coach, educator, and storyteller.
+            Executive communication coaching, keynotes, and brand strategy from
+            Dennis Kenney. Professor at NYU Stern. Coach at Harvard Business
+            School. Bestselling author. Available in person and virtually,
+            worldwide.
           </p>
           <a
             href="https://calendly.com/ivylevelspeaking/consultation"
             className="button__main button__main--lr-zero-margin"
             target="_blank"
           >
-            Level up your communication now
+            Book a Free 15 Minute Consultation
           </a>
         </aside>
       </div>
