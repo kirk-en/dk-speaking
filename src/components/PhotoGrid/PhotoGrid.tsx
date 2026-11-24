@@ -1,7 +1,9 @@
 import { ImageList, ImageListItem } from '@mui/material';
-import photo1 from '../../assets/photo-grid/dennis-photogrid-1.jpg';
+import photo1 from '../../assets/photo-grid/cvision-closeup.jpg';
 import photo2 from '../../assets/photo-grid/dennis-photogrid-2.jpg';
-import photo3 from '../../assets/photo-grid/dennis-photogrid-3.jpg';
+import photo3 from '../../assets/photo-grid/cvision-stage.jpg';
+import photo8 from '../../assets/photo-grid/dennis-photogrid-3.jpg';
+import photo7 from '../../assets/photo-grid/cvision-podium.jpg';
 import photo4 from '../../assets/photo-grid/dennis-photogrid-4.jpg';
 import photo5 from '../../assets/photo-grid/dennis-photogrid-5.jpg';
 import photo6 from '../../assets/photo-grid/students.jpg';
@@ -15,7 +17,7 @@ const PhotoGrid = (): JSX.Element => {
         <img
           src={photo1}
           className="photo-grid__image photo-grid__image--pos1"
-          alt="Dennis Kenney on the set of dancing with the stars"
+          alt="Dennis Kenney presenting on stage at the C-Vision National Summit in New York"
         />
       </ImageListItem>
       <ImageListItem>
@@ -29,7 +31,7 @@ const PhotoGrid = (): JSX.Element => {
         <img
           src={photo3}
           className="photo-grid__image "
-          alt="Dennis Kenney on the TV show Good Morning America appearing as a guest"
+          alt="Dennis Kenney delivering his talk Make Your Message Land: The Power of Executive Presence at the C-Vision National Summit"
         />
       </ImageListItem>
       <ImageListItem>
@@ -37,6 +39,20 @@ const PhotoGrid = (): JSX.Element => {
           src={photo6}
           className="photo-grid__image photo-grid__image--pos1"
           alt="Dennis Kenney at Harvard Business School with his students"
+        />
+      </ImageListItem>
+      <ImageListItem>
+        <img
+          src={photo7}
+          className="photo-grid__image"
+          alt="Dennis Kenney speaking from the stage to a live audience"
+        />
+      </ImageListItem>
+      <ImageListItem>
+        <img
+          src={photo8}
+          className="photo-grid__image"
+          alt="Dennis Kenney on the TV show Good Morning America appearing as a guest"
         />
       </ImageListItem>
       <ImageListItem>
