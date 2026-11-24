@@ -27,48 +27,56 @@ const AboutPage = () => {
   const openingCopy = (
     <>
       <span className="about__content-text--opening">
-        A Unique Blend of Drama, Communication, and Leadership...
+        From the stage to the boardroom...
       </span>
       <br />
-      With a Drama degree from Carnegie Mellon University, a Master’s in
-      Communication from Northwestern University, and ongoing doctoral studies
-      in Leadership from The Johns Hopkins University, my journey has been
-      anything but ordinary. I have built a career that blends expertise across
-      theater, communication, and leadership, allowing me to offer an
-      unparalleled coaching experience. I’ve worked with top-tier institutions
-      like Harvard, Columbia, and Fortune 500 companies, helping individuals at
-      all levels elevate their communication skills and personal presence.
+      I started on stage. I earned a BFA in Drama with honors from Carnegie
+      Mellon University, where I learned that an audience decides in seconds
+      whether to trust you. I’ve spent my career studying why.
       <br />
       <br />
-      What sets me apart is the variety and depth of my experiences. I’ve been
-      the head stylist for Good Morning America and a creative director for
-      major fashion brands, transforming how celebrities present themselves on
-      national television. I’ve led public speaking workshops at Harvard
-      Business School, empowering PhD candidates to deliver compelling academic
-      presentations, and I’ve worked with tenured professors to further refine
-      their authority in the classroom. I’ve also helped corporate executives
-      reshape their professional image, guiding them to make lasting impressions
-      in the boardroom.
+      That question took me to Northwestern University, where I earned a Master
+      of Science in Communication with honors, and now to Johns Hopkins
+      University, where my doctoral research examines public speaking
+      excellence and equity in doctoral education: who gets prepared for the
+      highest stakes speaking moments of an academic career, and how to prepare
+      everyone better.
+      <br />
+      <br />
+      For four years I was a branding consultant and on air contributor at Good
+      Morning America, shaping how some of the most recognized people in
+      television present themselves to millions. I’ve appeared as an on air
+      expert for ABC News and QVC, and my work has been featured in The New
+      York Times, Forbes, and Yahoo Finance.
+      <br />
+      <br />
+      Today I’m a professor of Strategic Communication at NYU Stern and the
+      founder of Ivy Level Speaking. At Harvard Business School, I’ve led
+      workshops for doctoral candidates and research fellows from more than 70
+      countries. At Columbia Business School, I prepare MBA and doctoral
+      students for interviews and dissertation defenses. At the Harvard
+      Graduate School of Design, I coach each class of Loeb Fellows.
     </>
   );
 
   const closingCopy = (
     <>
-      This breadth of experience means I approach coaching with a unique
-      perspective, combining the discipline of academic rigor, the creative
-      flair of theatrical performance, and the strategic insight of brand
-      development. My goal is not just to teach you how to speak effectively,
-      but to help you own your voice and presence in a way that’s authentically
-      yours.
+      I’m a TEDx speaker, I’ve served as head speaking director for
+      TEDxHarvard, and in 2026 I presented “Make Your Message Land: The Power
+      of Executive Presence” at the C-Vision National Summit in New York. My
+      book, The Unexpected Stage, is an Amazon bestseller.
       <br />
       <br />
-      Whether you&apos;re stepping onto a stage, leading a team, or navigating
-      professional challenges, I bring a personalized, strategic approach that
-      will help you shine. With over 20 years of varied experience, I can help
-      you not only deliver with confidence and clarity but also elevate your
-      personal brand and reshape how you are perceived by others. Let’s work
-      together to unlock the power of your story and voice, ensuring you leave
-      a lasting impact.
+      I also coach the next generation. I work privately with middle school and
+      high school students on public speaking, competitive debate, and
+      admissions interviews, giving families a personal alternative to large
+      coaching companies.
+      <br />
+      <br />
+      Whether we work together in person or virtually, my approach is the same:
+      the discipline of the theater, the rigor of the classroom, and the
+      strategy of the boardroom. I won’t hand you a script or a persona. We’ll
+      build a way of speaking that is unmistakably yours.
     </>
   );
 
