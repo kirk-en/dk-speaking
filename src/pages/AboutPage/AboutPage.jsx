@@ -105,7 +105,7 @@ const AboutPage = () => {
             {isMidViewport && (
               <img
                 src={hbsPhoto}
-                alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
+                alt="Dennis Kenney in his speaking class at Harvard Business School"
                 className="about__single-photo"
               />
             )}
@@ -121,7 +121,7 @@ const AboutPage = () => {
             <div className="about__content-gallery">
               <img
                 src={hbsPhoto}
-                alt="Dennis Kenney in his speaking class at Harvard Business Schoool"
+                alt="Dennis Kenney in his speaking class at Harvard Business School"
                 className="about__single-photo"
               />
             </div>
