@@ -132,7 +132,7 @@ const CoachingPage = () => {
           <div
             className="outline__banner outline__banner--media"
             role="img"
-            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+            aria-label="Dennis Kenney being interviewed on an ABC News set"
           ></div>
           <h2>Media and On-Air Training</h2>
           <p>
@@ -159,7 +159,7 @@ const CoachingPage = () => {
           <div
             className="outline__banner outline__banner--corporate"
             role="img"
-            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+            aria-label="A group of colleagues applauding during a workshop"
           ></div>
           <h2>Corporate Workshops</h2>
           <p>
@@ -186,7 +186,7 @@ const CoachingPage = () => {
           <div
             className="outline__banner outline__banner--academic"
             role="img"
-            aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
+            aria-label="A wood paneled university lecture hall"
           ></div>
           <h2>Academic Presentations</h2>
           <p>
@@ -196,6 +196,33 @@ const CoachingPage = () => {
             refine your content, organize your ideas, and deliver with clarity
             and authority. My approach will ensure that your message is both
             engaging and intellectually impactful, no matter your audience.
+          </p>
+          <div>
+            <a
+              href="https://calendly.com/ivylevelspeaking/consultation"
+              className="button__main"
+              target="_blank"
+            >
+              Book Consultation
+            </a>
+          </div>
+        </article>
+        <article className="outline__entry">
+          {' '}
+          <div
+            className="outline__banner outline__banner--school"
+            role="img"
+            aria-label="an outdoor landscape photo looking through the arches of a prestigious ivy league school"
+          ></div>
+          <h2>Student Speaking, Debate, and Interview Coaching</h2>
+          <p>
+            The same methods I teach at Harvard and NYU, adapted for middle
+            school and high school students. I coach young speakers for
+            competitive speech and debate, school admissions interviews, college
+            interviews, class presentations, and TED style talks. Students learn
+            to organize their thinking, speak with confidence, and hold a room,
+            skills that serve them long after the tournament or the interview
+            is over. Sessions are available in person and virtually.
           </p>
           <div>
             <a
