@@ -7,14 +7,15 @@ const HeroAbout = () => {
         <aside className="hero__right">
           <h2 className="hero__headline">Meet Dennis Kenney</h2>
           <p className="hero__text">
-            Public Speaking and Communications Expert.
+            Executive communication coach, branding expert, professor, and
+            author.
           </p>
           <a
             href="https://calendly.com/ivylevelspeaking/consultation"
             className="button__main button__main--lr-zero-margin"
             target="_blank"
           >
-            Book a Free 15-Minute Consultation
+            Book a Free 15 Minute Consultation
           </a>
         </aside>
       </div>
