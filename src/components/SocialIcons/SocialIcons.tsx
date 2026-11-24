@@ -26,7 +26,7 @@ const SocialIcons = ({ altColor }: SocialIconsProps): JSX.Element => {
         <LinkedIn sx={{ fill: altColor, fontSize: ICON_SIZE }} />
       </a>
       <a
-        href="https://www.youtube.com/@IvyLevelSpeaking"
+        href="https://www.youtube.com/@TheDennisKenney"
         target="_blank"
         className="social__icon"
       >
@@ -34,7 +34,7 @@ const SocialIcons = ({ altColor }: SocialIconsProps): JSX.Element => {
       </a>
 
       <a
-        href="https://www.tiktok.com/@ivylevelspeak"
+        href="https://www.tiktok.com/@thedenniskenney"
         target="_blank"
         className="social__icon"
       >
