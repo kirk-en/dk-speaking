@@ -20,35 +20,39 @@ const HomePage = (): JSX.Element => {
       </div>
       <main className="main">
         <h1 className="main__headline">
-          Your Guide to Mastering Communication
+          In a World Run by AI, the Human Voice Wins
         </h1>
         <section className="main__content">
           <article className="main__content-text">
             <p>
-              With a career that spans the worlds of business, academia, and
-              media, I’ve had the privilege of coaching individuals and teams to
-              find their voice and communicate with impact. As a public speaking
-              expert, I’ve trained professionals across industries—from Fortune
-              500 corporations to leading universities like Harvard, Columbia,
-              and Northwestern. My approach blends years of experience in
-              theater, brand storytelling, and executive communication, allowing
-              me to offer a unique perspective on how to engage, persuade, and
-              leave a lasting impression. <br />
+              Anyone can generate polished words now. What can’t be generated is
+              presence: the ability to walk into a room, read it, and move the
+              people in it. That is what I teach. <br />
               <br />
-              I’ve helped leaders prepare for high-stakes presentations,
-              executives refine their presence in the boardroom, and teams
-              sharpen their communication to improve workplace collaboration.
-              Whether you're speaking at a major conference, leading a meeting,
-              or navigating everyday conversations at work, I can help you
-              master public speaking and communication techniques that inspire
-              confidence and command attention.
+              I’m a communication and branding expert who has spent more than
+              twenty years on stages, on national television, and in the
+              classrooms of the world’s leading business schools. I teach
+              Strategic Communication to MBA candidates at NYU Stern. Since 2021
+              I’ve trained more than 500 students, doctoral candidates, and
+              faculty at Harvard Business School. I coach at Columbia Business
+              School and the Harvard AI Institute, and I serve as Communications
+              Director for the Loeb Fellowship at the Harvard Graduate School of
+              Design. <br />
+              <br />
+              Outside the university, I work with C suite leaders and teams at
+              Fortune 500 companies including Sanofi and GE. They come to me
+              before the moments that decide things: the board presentation, the
+              keynote, the job talk, the media interview. <br />
+              <br />
+              I also coach middle school and high school students in speech,
+              debate, and admissions interviews.
             </p>
             <a
               href="https://calendly.com/ivylevelspeaking/consultation"
               className="button__main"
               target="_blank"
             >
-              Book a Free 15-Minute Consultation
+              Book a Free 15 Minute Consultation
             </a>
           </article>
           <div className="main__content-gallery">
