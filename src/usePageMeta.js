@@ -10,7 +10,7 @@ const usePageMeta = (title, description) => {
     if (canonical) {
       canonical.setAttribute(
         'href',
-        `https://www.ivylevelspeaking.com${window.location.pathname}`
+        `https://ivylevelspeaking.com${window.location.pathname}`
       );
     }
   }, [title, description]);
