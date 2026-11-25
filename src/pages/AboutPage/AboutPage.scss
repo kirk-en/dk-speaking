@@ -19,8 +19,25 @@
       width: 100%;
     }
     @include tablet {
-      background-position: 20% center;
+      // Fit the photo to the header height so his head is never cropped;
+      // the right side of the image is solid navy and blends into the fill.
+      // Mid widths: drop the photo below the menu row so the links
+      // do not run across his face; a short navy fade hides the seam.
+      background-image: linear-gradient(
+          to bottom,
+          #0e1d45 0,
+          #0e1d45 5rem,
+          rgba(14, 29, 70, 0) 6.5rem
+        ),
+        url('../../assets/about-hero.jpg');
+      background-size: 100% 100%, auto calc(100% - 5rem);
+      background-position: left top, left bottom;
       padding-bottom: 0;
+      @include desktop {
+        background-image: url('../../assets/about-hero.jpg');
+        background-size: auto 100%;
+        background-position: left top;
+      }
       .hero {
         margin-top: calc(0.25 * (66vh - 10rem));
       }
