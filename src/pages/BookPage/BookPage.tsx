@@ -9,27 +9,6 @@ import './BookPage.scss';
 const AMAZON_URL =
   'https://www.amazon.com/Unexpected-Stage-Reinvention-Authentic-Communication/dp/B0G1CMX1ZX';
 
-const reviews = [
-  {
-    quote:
-      'Dennis Kenney turns the spotlight on what it truly means to evolve with grace. His story bridges art, intellect, and emotion—reminding us that every setback can be the start of our greatest act.',
-    name: 'Marissa Lowe',
-    title: 'Editor',
-  },
-  {
-    quote:
-      "Few books blend performance and personal growth like this one. Kenney's voice feels like a coach, artist, and philosopher rolled into one—guiding readers toward authenticity with warmth and precision.",
-    name: 'Julian Reed',
-    title: 'Author',
-  },
-  {
-    quote:
-      'Kenney invites readers to rethink reinvention not as change, but as rediscovery. His lessons on communication and courage will stay with you long after you close the book.',
-    name: 'Dr. Karen Delaney',
-    title: 'Leadership Speaker & Communication Coach',
-  },
-];
-
 const BookPage = (): JSX.Element => {
   usePageMeta(
     'The Unexpected Stage by Dennis Kenney | Amazon Bestseller',
@@ -70,23 +49,22 @@ const BookPage = (): JSX.Element => {
           <article className="book-page__content-text">
             <p>
               <span className="book-page__content-text--opening">
-                A transformative journey through self-discovery, authenticity,
-                and courage...
+                From the ice rink to the stage to the classroom...
               </span>
               <br />
-              From the frozen rinks of competitive hockey to the bright lights
-              of theater and the classrooms of Harvard, Dennis Kenney's story
-              unfolds as a masterclass in resilience and personal evolution.
-              Through raw honesty and powerful storytelling, he reveals how
-              life's disruptions can become opportunities for growth and
-              purpose.
+              <em>The Unexpected Stage</em> is the story behind the coaching.
+              Dennis Kenney grew up on the frozen rinks of competitive hockey,
+              found his voice under the bright lights of the theater, and now
+              teaches in the classrooms of Harvard. In this book he shows how
+              the disruptions that knock us off course can become the moments
+              that define us.
             </p>
             <p>
-              Learn how to move from fear to freedom, from chaos to clarity, and
-              from performance to presence. Each chapter blends personal
-              storytelling with actionable insights, showing that reinvention is
-              not about becoming someone new. It's about reclaiming who you
-              truly are.
+              Each chapter pairs a personal story with practical tools you can
+              use right away. You'll learn to move from fear to freedom, from
+              chaos to clarity, and from performance to presence. Reinvention,
+              he argues, is not about becoming someone new. It's about
+              reclaiming who you truly are.
             </p>
             <p>
               <strong className="book-promo__badge">
@@ -103,17 +81,16 @@ const BookPage = (): JSX.Element => {
                 Who is this book for?
               </span>
               <br />
-              Whether you're facing a major life change, striving for
-              professional growth, or seeking to reconnect with your purpose,{' '}
-              <em>The Unexpected Stage</em> provides both inspiration and
+              Whether you're facing a major life change, stepping into a bigger
+              role, or trying to reconnect with your purpose,{' '}
+              <em>The Unexpected Stage</em> offers both inspiration and
               strategy for your own reinvention.
             </p>
             <p>
-              Drawing on decades of experience as a performer, educator, and
-              communication coach, Dennis shows readers how to build confidence,
-              embrace vulnerability, and communicate with authenticity in every
-              stage of life. This isn't just a memoir. It's a guide to
-              transforming disruption into your most powerful performance yet.
+              Drawing on more than twenty years as a performer, professor, and
+              executive communication coach, Dennis shows readers how to build
+              confidence, embrace vulnerability, and speak with authenticity at
+              every stage of life. It's a memoir and a field guide in one.
             </p>
             <p>
               Discover how authenticity can become your greatest strength, and
@@ -126,21 +103,6 @@ const BookPage = (): JSX.Element => {
               alt="Dennis Kenney, author, speaker, and communication expert"
               className="book-page__single-photo"
             />
-          </div>
-        </section>
-
-        <section className="book-page__reviews">
-          <h2 className="book-page__reviews-headline">
-            What People Are Saying
-          </h2>
-          <div className="book-page__reviews-grid">
-            {reviews.map((review, index) => (
-              <div className="book-page__review-card" key={index}>
-                <p className="book-page__review-quote">"{review.quote}"</p>
-                <p className="book-page__review-attribution">{review.name}</p>
-                <p className="book-page__review-title">{review.title}</p>
-              </div>
-            ))}
           </div>
         </section>
 
