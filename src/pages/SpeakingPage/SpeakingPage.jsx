@@ -1,11 +1,16 @@
 import Header from '../../components/Header/Header';
 import HeroSpeaking from './HeroSpeaking/HeroSpeaking';
+import usePageMeta from '../../usePageMeta';
 import Footer from '../../components/Footer/Footer';
 import { useRef } from 'react';
 import DynamicQuote from '../../components/DynamicQuote/DynamicQuote';
 import './SpeakingPage.scss';
 
 const SpeakingPage = () => {
+  usePageMeta(
+    'Keynote Speaker and Corporate Workshops | Dennis Kenney | Ivy Level Speaking',
+    'Keynotes and workshops on executive presence, leadership communication, and storytelling for organizations, conferences, and universities. In person or virtual.'
+  );
   const gradientRef = useRef(null);
 
   const handleMouseMove = (event) => {
@@ -29,14 +34,14 @@ const SpeakingPage = () => {
       {/* <Why /> */}
       <h1 className="speaking__headline">Speaking Topics:</h1>
       <section className="outline-sp">
-        {/* <p className="outline-sp__text">
-          Dennis Kenney is an internationally recognized speaker and
-          communication coach, known for helping professionals, academics, and
-          students unlock their full potential on stage and in presentations.
-          With a dynamic background in drama, business, and education, Dennis
-          brings a unique blend of storytelling, strategy, and
-          confidence-building techniques to each engagement.
-        </p> */}
+        <p className="outline-sp__text">
+          Dennis Kenney speaks to leadership teams, conferences, and
+          universities about what makes a message land. A professor at NYU
+          Stern and a coach at Harvard Business School, he recently presented
+          “Make Your Message Land: The Power of Executive Presence” at the
+          C-Vision National Summit in New York. Every keynote and workshop is
+          tailored to your audience and is available in person or virtually.
+        </p>
         <article className="outline-sp__entry">
           <div
             className="outline-sp__banner outline-sp__banner--exec"
