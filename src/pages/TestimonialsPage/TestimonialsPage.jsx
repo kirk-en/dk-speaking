@@ -7,6 +7,7 @@ import quoteData from '../../assets/testimonials.json';
 import Video from '../../components/Video/Video';
 import videoThumbnail from '../../assets/ted-stage.jpg';
 import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
+import Booking from '../../components/Booking/Booking';
 const TestimonialsPage = () => {
   usePageMeta(
     'Client Testimonials | Dennis Kenney | Ivy Level Speaking',
@@ -19,12 +20,18 @@ const TestimonialsPage = () => {
         <HeroTestimonials />
       </div>
 
-      <h1 className="testimonials__headline">Testimonials:</h1>
+      <h1 className="testimonials__headline">In Their Words</h1>
+      <p className="testimonials__intro">
+        The people below walked into high stakes rooms: job talks, client
+        pitches, conference stages, and classrooms. Here is how they describe
+        the work.
+      </p>
       <section className="testimonials__list">
         {quoteData.map((quote, index) => {
           return <TestimonialCard quote={quote} key={index} />;
         })}
       </section>
+      <Booking />
       <Video
         url={'https://www.youtube.com/embed/zuG3YXpt4PI?si=D8EUEo0OheEyf0LL'}
         title={'Dennis Kenney | TEDx'}

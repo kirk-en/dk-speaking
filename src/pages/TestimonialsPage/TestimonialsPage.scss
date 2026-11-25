@@ -10,6 +10,24 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0%;
+    // On phones, keep the text panel below the face and full width
+    .hero {
+      margin-top: 9.5rem;
+      @include tablet {
+        margin-top: calc(0.25 * (35vh - 10rem));
+      }
+    }
+    .hero__left {
+      width: 100%;
+      margin-bottom: 1.25rem;
+      @include tablet {
+        width: 42%;
+        margin-bottom: 2rem;
+      }
+    }
+    .hero__text {
+      margin-bottom: 0;
+    }
   }
 }
 .testimonials {
@@ -21,6 +39,16 @@
     @include tablet {
       font-size: 4rem;
       padding: 2rem 0;
+    }
+  }
+  &__intro {
+    @include site-margins;
+    text-align: center;
+    max-width: 44rem;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    @include tablet {
+      font-size: 1.125rem;
     }
   }
   &__list {
