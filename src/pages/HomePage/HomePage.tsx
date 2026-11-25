@@ -40,7 +40,7 @@ const HomePage = (): JSX.Element => {
               Strategic Communication to MBA candidates at NYU Stern. Since 2021
               I’ve trained more than 500 students, doctoral candidates, and
               faculty at Harvard Business School. I coach at Columbia Business
-              School and the Harvard AI Institute, and I serve as Communications
+              School, MIT, and the Harvard AI Institute, and I serve as Communications
               Director for the Loeb Fellowship at the Harvard Graduate School of
               Design. <br />
               <br />
