@@ -1,14 +1,19 @@
 import Header from '../../components/Header/Header';
 import HeroAbout from './HeroAbout/HeroAbout';
 import Footer from '../../components/Footer/Footer';
+import usePageMeta from '../../usePageMeta';
 import hbsPhoto from '../../assets/photo-grid/harvard.jpg';
-import dennisPhoto from '../../assets/my-story.webp';
+import dennisPhoto from '../../assets/about-portrait.jpg';
 import { useEffect, useRef, useState } from 'react';
 import './AboutPage.scss';
 import Booking from '../../components/Booking/Booking';
 import DynamicQuote from '../../components/DynamicQuote/DynamicQuote';
 
 const AboutPage = () => {
+  usePageMeta(
+    'About Dennis Kenney | Professor, Coach, and Branding Expert | Ivy Level Speaking',
+    'Dennis Kenney is a professor of Strategic Communication at NYU Stern, a coach at Harvard Business School, a TEDx speaker, and the bestselling author of The Unexpected Stage.'
+  );
   const gradientRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -106,7 +111,7 @@ const AboutPage = () => {
           <div className="about__content-gallery">
             <img
               src={dennisPhoto}
-              alt="Dennis Kenney in his speaking class at Harvard Business School"
+              alt="Portrait of Dennis Kenney in a navy suit"
               className="about__single-photo--tall"
             />
 
