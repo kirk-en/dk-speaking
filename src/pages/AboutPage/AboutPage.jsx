@@ -59,8 +59,9 @@ const AboutPage = () => {
       founder of Ivy Level Speaking. At Harvard Business School, I’ve led
       workshops for doctoral candidates and research fellows from more than 70
       countries. At Columbia Business School, I prepare MBA and doctoral
-      students for interviews and dissertation defenses. At the Harvard
-      Graduate School of Design, I coach each class of Loeb Fellows.
+      students for interviews and dissertation defenses. At MIT, I have
+      coached PhD candidates preparing to present their research. At the
+      Harvard Graduate School of Design, I coach each class of Loeb Fellows.
     </>
   );
 
