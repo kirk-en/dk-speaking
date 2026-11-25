@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 242 310" width="242" height="310">
+<path d="M0 0 H222 V178 C222 232 172 268 111 290 C50 268 0 232 0 178 Z" fill="#0E1D45"/><path d="M0 0 H222 V178 C222 232 172 268 111 290 C50 268 0 232 0 178 Z" fill="none" stroke="#D4AF4A" stroke-width="7" stroke-linejoin="round"/>
+<polygon points="34,86 186,46 180,74 41,98" fill="#D4AF4A"/>
+<path d="M62 104 H158 V116 Q140 118 137 130 V202 Q140 214 158 216 V230 H62 V216 Q80 214 83 202 V130 Q80 118 62 116 Z" fill="#D4AF4A"/>
+</svg>
