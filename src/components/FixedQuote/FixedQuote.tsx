@@ -20,11 +20,11 @@ const FixedQuote = (): JSX.Element => {
       <div className="quote__text">
         <h2>Project Your Presence</h2>
         <h3>
-          "Your voice is your greatest tool for influence—when you speak with
+          "Your voice is your greatest tool for influence. When you speak with
           authenticity and purpose, you don't just tell a story, you create an
           impact that lasts."
         </h3>
-        <p>— Dennis Kenney</p>
+        <p>Dennis Kenney</p>
       </div>
     </article>
   );
