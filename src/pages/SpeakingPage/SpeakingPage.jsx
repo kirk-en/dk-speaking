@@ -4,6 +4,7 @@ import usePageMeta from '../../usePageMeta';
 import Footer from '../../components/Footer/Footer';
 import { useRef } from 'react';
 import DynamicQuote from '../../components/DynamicQuote/DynamicQuote';
+import Video from '../../components/Video/Video';
 import './SpeakingPage.scss';
 
 const SpeakingPage = () => {
@@ -157,6 +158,11 @@ const SpeakingPage = () => {
           </div>
         </article>
       </section>
+      <h1 className="speaking__headline">Watch Dennis in Action:</h1>
+      <Video
+        url={'https://www.youtube.com/embed/h8VRiK9IjRM'}
+        title={'Dennis Kenney speaker reel'}
+      />
       <article
         className="quote"
         onMouseMove={handleMouseMove}
