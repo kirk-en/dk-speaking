@@ -1,6 +1,7 @@
 import Header from '../../components/Header/Header';
 import HeroBook from './HeroBook/HeroBook';
 import Footer from '../../components/Footer/Footer';
+import usePageMeta from '../../usePageMeta';
 import dennisPhoto from '../../assets/side-book.jpg';
 import '../../components/BookPromo/BookPromo.scss';
 import './BookPage.scss';
@@ -30,6 +31,10 @@ const reviews = [
 ];
 
 const BookPage = (): JSX.Element => {
+  usePageMeta(
+    'The Unexpected Stage by Dennis Kenney | Amazon Bestseller',
+    'The Unexpected Stage by Dennis Kenney is a guide to reinvention, authenticity, and communication, drawn from a career on stage, on television, and in the classroom.'
+  );
   return (
     <>
       <div className="top-section top-section__book">
@@ -80,7 +85,7 @@ const BookPage = (): JSX.Element => {
               Learn how to move from fear to freedom, from chaos to clarity, and
               from performance to presence. Each chapter blends personal
               storytelling with actionable insights, showing that reinvention is
-              not about becoming someone new — it's about reclaiming who you
+              not about becoming someone new. It's about reclaiming who you
               truly are.
             </p>
             <p>
@@ -107,7 +112,7 @@ const BookPage = (): JSX.Element => {
               Drawing on decades of experience as a performer, educator, and
               communication coach, Dennis shows readers how to build confidence,
               embrace vulnerability, and communicate with authenticity in every
-              stage of life. This isn't just a memoir — it's a guide to
+              stage of life. This isn't just a memoir. It's a guide to
               transforming disruption into your most powerful performance yet.
             </p>
             <p>
@@ -118,7 +123,7 @@ const BookPage = (): JSX.Element => {
           <div className="book-page__content-gallery">
             <img
               src={dennisPhoto}
-              alt="Dennis Kenney — author, speaker, and communication expert"
+              alt="Dennis Kenney, author, speaker, and communication expert"
               className="book-page__single-photo"
             />
           </div>
@@ -132,7 +137,7 @@ const BookPage = (): JSX.Element => {
             {reviews.map((review, index) => (
               <div className="book-page__review-card" key={index}>
                 <p className="book-page__review-quote">"{review.quote}"</p>
-                <p className="book-page__review-attribution">— {review.name}</p>
+                <p className="book-page__review-attribution">{review.name}</p>
                 <p className="book-page__review-title">{review.title}</p>
               </div>
             ))}
