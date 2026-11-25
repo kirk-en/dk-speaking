@@ -8,16 +8,37 @@
 .top-section {
   @include site-margins;
   &__home {
-    background-image: url('../../assets/dk-hero-lrg-2026.webp');
-    min-height: 66vh;
-    background-size: cover;
+    // Phone: photo on top, text below on solid navy
+    background-image: url('../../assets/hero-cvision-mobile.jpg');
+    background-color: #0e1d45;
+    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position-x: 40%;
-    @include tablet {
-      background-position-x: 58%;
+    background-position: top center;
+    min-height: 66vh;
+    padding-bottom: 2.5rem;
+    .hero {
+      margin-top: calc(75vw - 7rem);
+      @include tablet {
+        margin-top: calc(75vw - 12rem);
+      }
     }
-    @include desktop {
-      background-position-y: 30%;
+    .hero__right {
+      width: 100%;
+      text-align: left;
+    }
+    // Laptop and up: full width photo with text on the right
+    @media (min-width: 1024px) {
+      background-image: url('../../assets/hero-cvision.jpg');
+      background-size: cover;
+      background-position: 30% 18%;
+      padding-bottom: 2.5rem;
+      .hero {
+        margin-top: calc(0.25 * (66vh - 10rem));
+      }
+      .hero__right {
+        width: 42%;
+        text-align: right;
+      }
     }
   }
 }

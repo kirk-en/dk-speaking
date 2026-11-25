@@ -4,6 +4,7 @@ import PhotoGrid from '../../components/PhotoGrid/PhotoGrid';
 import Featured from '../../components/Featured/Featured';
 import Video from '../../components/Video/Video';
 import Footer from '../../components/Footer/Footer';
+import usePageMeta from '../../usePageMeta';
 import FixedQuote from '../../components/FixedQuote/FixedQuote';
 import BookPromo from '../../components/BookPromo/BookPromo';
 import './HomePage.scss';
@@ -12,6 +13,10 @@ import NewsletterModal from '../../components/NewsletterModal/NewsletterModal';
 // const newsletterToken = localStorage.getItem('newsletterToken');
 
 const HomePage = (): JSX.Element => {
+  usePageMeta(
+    'Dennis Kenney | Executive Communication Coach and Speaker | Ivy Level Speaking',
+    'Dennis Kenney is an executive communication coach, keynote speaker, and author of The Unexpected Stage. He coaches leaders at Harvard Business School, Columbia Business School, and Fortune 500 companies to speak with clarity and presence.'
+  );
   return (
     <>
       <div className="top-section top-section__home">
