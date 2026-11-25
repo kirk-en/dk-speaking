@@ -1,5 +1,6 @@
 import Header from '../../components/Header/Header';
 import HeroCoaching from './HeroCoaching/HeroCoaching';
+import usePageMeta from '../../usePageMeta';
 import Footer from '../../components/Footer/Footer';
 import hbsPhoto from '../../assets/photo-grid/harvard.jpg';
 import { useRef } from 'react';
@@ -9,6 +10,10 @@ import DynamicQuote from '../../components/DynamicQuote/DynamicQuote';
 import './CoachingPage.scss';
 
 const CoachingPage = () => {
+  usePageMeta(
+    'Executive Communication Coaching | Dennis Kenney | Ivy Level Speaking',
+    'One on one coaching in executive presence, interview and job talk preparation, media training, personal brand, academic presentations, and student speech and debate. In person or virtual.'
+  );
   const gradientRef = useRef(null);
 
   const handleMouseMove = (event) => {
@@ -31,12 +36,13 @@ const CoachingPage = () => {
       <main className="coaching">
         <article className="coaching__headline-text">
           <p>
-            I started Ivy Level Speaking to empower individuals with the skills
-            and confidence to communicate effectively. Our mission is to
-            transform aspiring speakers into impactful communicators, fostering
-            authentic connections. Through personalized coaching and engaging
-            workshops, we help clients refine their messages and captivate
-            audiences.
+            Ivy Level Speaking exists for the moments that decide things. I
+            coach executives, founders, scholars, and students to speak with
+            clarity, authority, and presence, using methods I teach at Harvard
+            Business School and NYU Stern. Every engagement is built around
+            you: your goals, your audience, and your voice. Coaching is
+            available in person in New York and Boston, and virtually anywhere
+            in the world.
           </p>
         </article>
       </main>
@@ -44,13 +50,11 @@ const CoachingPage = () => {
       <section className="outline">
         <h1 className="coaching__headline">Coaching:</h1>
         <p className="outline__text">
-          "Whether you’re preparing for a keynote, interview, academic
-          presentation, or looking to stand out in the job market, I’ll guide
-          you to deliver with confidence, clarity, and influence. Together,
-          we’ll uncover your unique voice, helping you communicate authentically
-          and connect powerfully with any audience. Ready to turn your words
-          into opportunities? Let’s craft a story that captivates, inspires, and
-          positions you for success in any setting."
+          Whether you’re preparing for a keynote, a board presentation, a
+          media interview, or a job talk, we’ll start with what you need to
+          accomplish and build backward from there. You’ll leave every session
+          with a sharper message, a stronger delivery, and specific things to
+          practice.
         </p>
         <article className="outline__entry">
           <div
@@ -60,12 +64,11 @@ const CoachingPage = () => {
           ></div>
           <h2>Executive Presence</h2>
           <p>
-            I specialize in executive speaking coaching designed to empower
-            leaders to communicate with confidence and impact. Whether it's
-            enhancing your presentation skills, mastering executive presence, or
-            navigating high-stakes conversations, together, we'll develop a
-            strategy that hones your unique voice and style, ensuring you
-            connect effectively.
+            Command the room when the stakes are highest. I work one on one with
+            executives and senior leaders on presence, message, and delivery
+            for board meetings, investor presentations, town halls, and
+            keynotes. We’ll build a way of speaking that sounds like you and
+            holds up under pressure.
           </p>
           <div>
             <a
@@ -86,11 +89,11 @@ const CoachingPage = () => {
           ></div>
           <h2>Interview & Job Market Preparation</h2>
           <p>
-            Stand out in interviews and job market presentations with coaching
-            that’s not cookie-cutter, but rather tailored to your unique
-            personality, strengths, and career goals. I’ll help you refine your
-            story, enhance your communication skills, and present yourself with
-            authenticity and confidence.
+            Stand out in executive interviews, MBA recruiting, and academic job
+            talks. I’ve prepared candidates at Harvard Business School and
+            Columbia Business School to tell their story, answer hard questions
+            with composure, and leave a lasting impression. Your coaching is
+            built around your strengths and the role you want.
           </p>
           <div>
             <a
@@ -109,13 +112,13 @@ const CoachingPage = () => {
             role="img"
             aria-label="3 mannequins showing high end mens suits through the window of a fashion shop in Milan, Italy"
           ></div>
-          <h2>Image</h2>
+          <h2>Personal Brand and Image</h2>
           <p>
-            Image coaching that’s as unique as you are—no one-size-fits-all
-            approach here. Together, we’ll craft a personal brand that aligns
-            with your goals, ensuring your wardrobe, body language, and presence
-            authentically reflect who you are and leave a lasting, confident
-            impression.
+            How you present yourself speaks before you do. Drawing on years as a
+            branding consultant for national television, I’ll help you shape a
+            personal brand where your message, your appearance, and your body
+            language all say the same thing. The result is a presence that is
+            consistent, credible, and yours.
           </p>
           <div>
             <a
@@ -134,15 +137,13 @@ const CoachingPage = () => {
             role="img"
             aria-label="Dennis Kenney being interviewed on an ABC News set"
           ></div>
-          <h2>Media and On-Air Training</h2>
+          <h2>Media and On Air Training</h2>
           <p>
-            Navigate the media landscape with confidence through tailored media
-            and on-air training. Whether you're preparing for a TV interview,
-            podcast appearance, or online panel, I’ll help you develop the
-            skills needed to communicate your message effectively and
-            professionally. From mastering concise sound bites to delivering
-            compelling narratives, you'll learn how to present yourself
-            confidently in high-visibility situations.
+            Prepare for television, podcasts, panels, and press interviews with a
+            coach who has been on air for ABC News, Good Morning America, and
+            QVC. You’ll learn to deliver concise sound bites, handle difficult
+            questions, and stay composed on camera, so your message lands the
+            way you intend.
           </p>
           <div>
             <a
@@ -163,13 +164,11 @@ const CoachingPage = () => {
           ></div>
           <h2>Corporate Workshops</h2>
           <p>
-            Elevate your team's communication skills with customized corporate
-            workshops. Whether it's for leadership development, enhancing
-            collaboration, or improving presentation techniques, my workshops
-            are designed to engage and empower participants. We’ll focus on
-            practical strategies that can be immediately applied, ensuring your
-            team is equipped to succeed in today’s fast-paced business
-            environment.
+            Raise the communication standard across your team. I design custom
+            workshops for Fortune 500 companies and growing organizations on
+            executive presence, presentation skills, and storytelling. Every
+            session is interactive and practical, so your team leaves with
+            skills they can use the same day. Available on site or virtually.
           </p>
           <div>
             <a
@@ -190,12 +189,12 @@ const CoachingPage = () => {
           ></div>
           <h2>Academic Presentations</h2>
           <p>
-            Ace your next academic presentation with coaching designed
-            specifically for scholars and students. Whether you're preparing for
-            a thesis defense, conference presentation, or lecture, I’ll help you
-            refine your content, organize your ideas, and deliver with clarity
-            and authority. My approach will ensure that your message is both
-            engaging and intellectually impactful, no matter your audience.
+            Present your research with clarity and authority. I coach doctoral
+            candidates, postdoctoral fellows, and faculty for job talks,
+            dissertation defenses, conference presentations, and lectures.
+            This is the work I do at Harvard Business School and Columbia
+            Business School, and it’s the focus of my own doctoral research at
+            Johns Hopkins.
           </p>
           <div>
             <a
