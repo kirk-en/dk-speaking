@@ -22,7 +22,7 @@ const ContactForm = () => {
     phone: "",
     message: "",
     other: "",
-    newsletter: true,
+    newsletter: false,
     services: [],
     submit: false,
   });
@@ -109,8 +109,8 @@ const ContactForm = () => {
     <div className="form">
       <h3>Success!</h3>
       <p>
-        Your message has been successfully sent, and we'll get back to you as
-        soon as possible.
+        Your message is on its way. I read every note myself and will get back
+        to you as soon as I can.
       </p>
     </div>
   ) : (
@@ -153,101 +153,101 @@ const ContactForm = () => {
         />
       </div>
       <FormGroup>
-        <span>Services You’re interested in:</span>
+        <span>What can I help you with?</span>
         <div className="form__services">
           <FormControlLabel
             control={
               <Checkbox
                 name="services"
-                value="Coaching"
-                checked={formValues.services.includes("Coaching")}
+                value="Executive Coaching"
+                checked={formValues.services.includes("Executive Coaching")}
                 onChange={handleFormChange}
               />
             }
-            label="Coaching"
+            label="Executive Coaching"
           />
           <FormControlLabel
             control={
               <Checkbox
                 name="services"
-                value="Speaking"
-                checked={formValues.services.includes("Speaking")}
+                value="Keynote Speaking"
+                checked={formValues.services.includes("Keynote Speaking")}
                 onChange={handleFormChange}
               />
             }
-            label="Speaking"
+            label="Keynote Speaking"
           />
           <FormControlLabel
             control={
               <Checkbox
                 name="services"
-                value="Workshop Facilitation"
-                checked={formValues.services.includes("Workshop Facilitation")}
+                value="Team Workshop"
+                checked={formValues.services.includes("Team Workshop")}
                 onChange={handleFormChange}
               />
             }
-            label="Workshop Facilitation"
+            label="Team Workshop"
           />
           <FormControlLabel
             control={
               <Checkbox
                 name="services"
-                value="One-on-One Coaching"
-                checked={formValues.services.includes("One-on-One Coaching")}
+                value="Personal Brand and Image"
+                checked={formValues.services.includes("Personal Brand and Image")}
                 onChange={handleFormChange}
               />
             }
-            label="One-on-One Coaching"
+            label="Personal Brand and Image"
           />
           <FormControlLabel
             control={
               <Checkbox
                 name="services"
-                value="Academic Presentation Prep"
+                value="Presentation or Pitch Prep"
                 checked={formValues.services.includes(
-                  "Academic Presentation Prep"
+                  "Presentation or Pitch Prep"
                 )}
                 onChange={handleFormChange}
               />
             }
-            label="Academic Presentation Prep"
+            label="Presentation or Pitch Prep"
           />
           <FormControlLabel
             control={
               <Checkbox
                 name="services"
-                value="Speechwriting Assistance"
+                value="Student Coaching, Debate, and Interviews"
                 checked={formValues.services.includes(
-                  "Speechwriting Assistance"
+                  "Student Coaching, Debate, and Interviews"
                 )}
                 onChange={handleFormChange}
               />
             }
-            label="Speechwriting Assistance"
+            label="Student Coaching, Debate, and Interviews"
           />
           <FormControlLabel
             control={
               <Checkbox
                 name="services"
-                value="Virtual Presentation Coaching"
+                value="Virtual Coaching"
                 checked={formValues.services.includes(
-                  "Virtual Presentation Coaching"
+                  "Virtual Coaching"
                 )}
                 onChange={handleFormChange}
               />
             }
-            label="Virtual Presentation Coaching"
+            label="Virtual Coaching"
           />
           <FormControlLabel
             control={
               <Checkbox
                 name="services"
-                value="Media Training"
-                checked={formValues.services.includes("Media Training")}
+                value="Media and On Air Training"
+                checked={formValues.services.includes("Media and On Air Training")}
                 onChange={handleFormChange}
               />
             }
-            label="Media Training"
+            label="Media and On Air Training"
           />
           <div>
             <FormControlLabel
@@ -287,7 +287,7 @@ const ContactForm = () => {
         error={hasError.message}
         value={formValues.message}
         onChange={handleFormChange}
-        helperText={hasError.email ? "Make sure to include a message!" : ""}
+        helperText={hasError.message ? "Make sure to include a message!" : ""}
         fullWidth
         className="form__field"
       />
