@@ -5,10 +5,10 @@ const HeroChoaching = () => {
     <>
       <div className="hero hero--left">
         <aside className="hero__left">
-          <h2 className="hero__headline">unlock the power of your voice</h2>
+          <h2 className="hero__headline">Coaching for the moments that matter</h2>
           <p className="hero__text">
-            Transform your speaking skills with personalized coaching from an
-            industry expert.
+            One on one coaching in executive presence, public speaking, and
+            personal brand. In person or virtual.
           </p>
         </aside>
       </div>
