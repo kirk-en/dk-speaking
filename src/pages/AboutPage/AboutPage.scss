@@ -4,11 +4,30 @@
 .top-section {
   @include site-margins;
   &__about {
-    background-image: url('../../assets/podium.JPG');
+    background-image: url('../../assets/about-hero.jpg');
+    background-color: #0e1d45;
     min-height: 66vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 24% center;
+    padding-bottom: 2rem;
+    // Phone: sit the text below his face
+    .hero {
+      margin-top: 40vh;
+    }
+    .hero__right {
+      width: 100%;
+    }
+    @include tablet {
+      background-position: 20% center;
+      padding-bottom: 0;
+      .hero {
+        margin-top: calc(0.25 * (66vh - 10rem));
+      }
+      .hero__right {
+        width: 42%;
+      }
+    }
   }
 }
 .about {
