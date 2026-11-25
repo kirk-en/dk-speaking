@@ -1,9 +1,10 @@
 import { ImageList, ImageListItem } from '@mui/material';
 import photo1 from '../../assets/photo-grid/cvision-closeup.jpg';
+import photoGsd from '../../assets/photo-grid/harvard-gsd-podium.jpg';
+import photoZemits from '../../assets/photo-grid/zemits-stage.jpg';
 import photo2 from '../../assets/photo-grid/dennis-photogrid-2.jpg';
 import photo3 from '../../assets/photo-grid/cvision-stage.jpg';
 import photo8 from '../../assets/photo-grid/dennis-photogrid-3.jpg';
-import photo7 from '../../assets/photo-grid/cvision-podium.jpg';
 import photo4 from '../../assets/photo-grid/dennis-photogrid-4.jpg';
 import photo5 from '../../assets/photo-grid/dennis-photogrid-5.jpg';
 import photo6 from '../../assets/photo-grid/students.jpg';
@@ -18,6 +19,20 @@ const PhotoGrid = (): JSX.Element => {
           src={photo1}
           className="photo-grid__image photo-grid__image--pos1"
           alt="Dennis Kenney presenting on stage at the C-Vision National Summit in New York"
+        />
+      </ImageListItem>
+      <ImageListItem>
+        <img
+          src={photoGsd}
+          className="photo-grid__image"
+          alt="Dennis Kenney at the podium of the Harvard University Graduate School of Design"
+        />
+      </ImageListItem>
+      <ImageListItem>
+        <img
+          src={photoZemits}
+          className="photo-grid__image"
+          alt="Dennis Kenney presenting on stage with a headset microphone at a Zemits event"
         />
       </ImageListItem>
       <ImageListItem>
@@ -39,13 +54,6 @@ const PhotoGrid = (): JSX.Element => {
           src={photo6}
           className="photo-grid__image photo-grid__image--pos1"
           alt="Dennis Kenney at Harvard Business School with his students"
-        />
-      </ImageListItem>
-      <ImageListItem>
-        <img
-          src={photo7}
-          className="photo-grid__image"
-          alt="Dennis Kenney speaking from the stage to a live audience"
         />
       </ImageListItem>
       <ImageListItem>
