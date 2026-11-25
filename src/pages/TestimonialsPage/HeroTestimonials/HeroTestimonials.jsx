@@ -7,8 +7,8 @@ const HeroTestimonials = () => {
         <aside className="hero__left hero--container-background">
           <h2 className="hero__headline">What Clients Are Saying</h2>
           <p className="hero__text">
-            Hear how Ivy Level Speaking has transformed voices and helped
-            individuals succeed in communication.
+            Leaders, faculty, and rising professionals on what changed after
+            working with Dennis.
           </p>
         </aside>
       </div>
