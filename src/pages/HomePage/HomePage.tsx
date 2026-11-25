@@ -68,9 +68,12 @@ const HomePage = (): JSX.Element => {
 
       <BookPromo />
       <Featured />
+      <h2 className="main__headline">
+        As Seen on Bloom: How to Command a Room
+      </h2>
       <Video
-        url={'https://www.youtube.com/embed/h8VRiK9IjRM'}
-        title={'Dennis Kenney'}
+        url={'https://www.youtube.com/embed/c4MzGrQ_yOI?start=20'}
+        title={'Dennis Kenney on Bloom: How to Command a Room in 5 Seconds'}
       />
       <FixedQuote />
       <NewsletterModal />
