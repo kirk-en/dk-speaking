@@ -12,7 +12,7 @@ const Header = (): JSX.Element => {
         <Link to="/">
           <img
             src={dkLogo}
-            alt='The initials "D" "K" inside a circle colored blue and grey'
+            alt="Ivy Level Speaking shield logo"
             className="header__logo"
           />
         </Link>
