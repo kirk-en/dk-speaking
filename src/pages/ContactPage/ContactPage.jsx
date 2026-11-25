@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import HeroContact from "./HeroContact/HeroContact";
 import Footer from "../../components/Footer/Footer";
+import usePageMeta from '../../usePageMeta';
 import hbsPhoto from "../../assets/photo-grid/harvard.jpg";
 import { useRef } from "react";
 import Why from "../../components/Why/Why";
@@ -10,6 +11,10 @@ import DynamicQuote from "../../components/DynamicQuote/DynamicQuote";
 import "./ContactPage.scss";
 
 const ContactPage = () => {
+  usePageMeta(
+    'Contact Dennis Kenney | Book a Free Consultation | Ivy Level Speaking',
+    'Book a free 15 minute consultation with executive communication coach Dennis Kenney, or send a message about coaching, keynotes, and workshops.'
+  );
   const gradientRef = useRef(null);
 
   const handleMouseMove = (event) => {
