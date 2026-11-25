@@ -88,6 +88,56 @@
     }
   }
 
+  &__intro {
+    @include tablet {
+      width: 45%;
+    }
+    &-title {
+      font-weight: 300;
+      font-size: 1.75rem;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+      @include tablet {
+        font-size: 2.25rem;
+      }
+    }
+    &-text {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      @include tablet {
+        font-size: 1.125rem;
+      }
+    }
+  }
+  &__steps {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    counter-reset: step;
+    li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 2.75rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      &::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: #0e1d45;
+        color: #d4af4a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+      }
+    }
+  }
+
   &__single-photo {
     width: 100%;
   }
