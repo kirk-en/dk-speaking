@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 30; // above hero text so the Coaching dropdown stays clickable
   &__logo {
     padding-top: 1rem;
     height: 5rem;
