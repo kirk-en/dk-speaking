@@ -1,0 +1,225 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+$navy: #0e1d45;
+$gold: #d4af4a;
+
+.top-section__svc {
+  @include site-margins;
+  background-color: $navy;
+  // Phone: photo on top, text below on solid navy
+  background-image: linear-gradient(
+      to bottom,
+      rgba(14, 29, 69, 0) 40%,
+      $navy 78%
+    ),
+    var(--hero-img);
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-bottom: 2rem;
+  @include tablet {
+    min-height: 66vh;
+    // Photo is pinned to the right at the header's height; the navy
+    // fade is measured in the same units so it always covers the seam.
+    background-image: linear-gradient(
+        to left,
+        rgba(14, 29, 69, 0) 0,
+        rgba(14, 29, 69, 0) calc(66vh * var(--hero-ratio) * 0.55),
+        $navy calc(66vh * var(--hero-ratio) * 0.98)
+      ),
+      var(--hero-img);
+    background-size: 100% 100%, auto 66vh;
+    background-position: right top, right top;
+  }
+}
+
+.svc__hero {
+  margin-top: min(86vw, calc(100vw / var(--hero-ratio) - 6rem));
+  @include tablet {
+    margin-top: calc(0.25 * (66vh - 10rem));
+  }
+}
+.svc__hero-text {
+  width: 100%;
+  @include tablet {
+    width: 46%;
+  }
+  .hero__headline {
+    text-transform: none;
+  }
+}
+
+.svc {
+  @include site-margins;
+  padding: 2rem 0 3rem;
+  line-height: 1.6;
+
+  &__intro {
+    max-width: 46rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    @include tablet {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__heading {
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__card {
+    border-top: 3px solid $gold;
+    background: #f6f7fa;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $navy;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__how,
+  &__who,
+  &__faq {
+    max-width: 46rem;
+    margin: 0 auto 3rem;
+  }
+
+  &__steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+    li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.25rem;
+      &::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: $navy;
+        color: $gold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__who p {
+    margin-bottom: 1rem;
+  }
+  &__link {
+    color: $navy;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  &__faq-item {
+    border-bottom: 1px solid #d9dce4;
+    padding: 1rem 0;
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: $navy;
+      font-size: 1.05rem;
+    }
+    p {
+      margin-top: 0.75rem;
+    }
+  }
+
+  &__cta {
+    background: $navy;
+    color: white;
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    h2 {
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+      @include tablet {
+        font-size: 2.25rem;
+      }
+    }
+    p {
+      max-width: 36rem;
+      margin: 0 auto 1.5rem;
+    }
+  }
+  &__cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.svc__example {
+  max-width: 46rem;
+  margin: 0 auto 3rem;
+  background: #fbf8ef;
+  border-left: 4px solid #d4af4a;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  &-label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #8a6d1d;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    color: #0e1d45;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  &-before {
+    color: #6b6f7b;
+    text-decoration: line-through;
+    margin-bottom: 0.5rem;
+  }
+  &-after {
+    font-weight: 600;
+    color: #0e1d45;
+    margin-bottom: 0.75rem;
+  }
+}
+.svc__related {
+  max-width: 46rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+  a {
+    color: #0e1d45;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
