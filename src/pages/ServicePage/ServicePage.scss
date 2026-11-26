@@ -47,6 +47,9 @@ $gold: #d4af4a;
     position: relative;
     z-index: 1;
   }
+  > .header {
+    z-index: 30;
+  }
 
 }
 
