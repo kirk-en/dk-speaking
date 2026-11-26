@@ -7,6 +7,7 @@ import Footer from '../../components/Footer/Footer';
 import usePageMeta from '../../usePageMeta';
 import FixedQuote from '../../components/FixedQuote/FixedQuote';
 import BookPromo from '../../components/BookPromo/BookPromo';
+import TeamWorkshops from '../../components/TeamWorkshops/TeamWorkshops';
 import './HomePage.scss';
 import NewsletterModal from '../../components/NewsletterModal/NewsletterModal';
 
@@ -40,9 +41,9 @@ const HomePage = (): JSX.Element => {
               Strategic Communication to MBA candidates at NYU Stern. Since 2021
               I’ve trained more than 500 students, doctoral candidates, and
               faculty at Harvard Business School. I coach at Columbia Business
-              School, MIT, and the Harvard AI Institute, and I serve as Communications
-              Director for the Loeb Fellowship at the Harvard Graduate School of
-              Design. <br />
+              School, MIT, and the Harvard AI Institute. For four years, I’ve served as
+              Communications Director for the Loeb Fellowship at the Harvard
+              Graduate School of Design. <br />
               <br />
               Outside the university, I work with C suite leaders and teams at
               Fortune 500 companies including Sanofi and GE. They come to me
@@ -66,6 +67,7 @@ const HomePage = (): JSX.Element => {
         </section>
       </main>
 
+      <TeamWorkshops />
       <BookPromo />
       <Featured />
       <h2 className="main__headline">
