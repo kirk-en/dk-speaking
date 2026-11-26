@@ -79,6 +79,7 @@ const AcademicPage = () => {
   return (
     <>
       <div className="top-section top-section__academic">
+        <div className="hero-photo" aria-hidden="true"></div>
         <Header />
         <div className="hero hero--left academic__hero">
           <aside className="hero__left academic__hero-text">
