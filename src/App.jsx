@@ -8,6 +8,8 @@ import ContactPage from './pages/ContactPage/ContactPage';
 import TestimonialsPage from './pages/TestimonialsPage/TestimonialsPage';
 import BookPage from './pages/BookPage/BookPage';
 import AcademicPage from './pages/AcademicPage/AcademicPage';
+import ServicePage from './pages/ServicePage/ServicePage';
+import { nyc, boston, presentations, students } from './pages/ServicePage/servicePages';
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/coaching" element={<CoachingPage />} />
           <Route path="/coaching/academic" element={<AcademicPage />} />
+          <Route path="/coaching/nyc" element={<ServicePage page={nyc} />} />
+          <Route path="/coaching/boston" element={<ServicePage page={boston} />} />
+          <Route path="/coaching/presentations" element={<ServicePage page={presentations} />} />
+          <Route path="/coaching/students" element={<ServicePage page={students} />} />
           <Route path="/speaking" element={<SpeakingPage />} />
           <Route path="/book" element={<BookPage />} />
           <Route path="/contact" element={<ContactPage />} />
