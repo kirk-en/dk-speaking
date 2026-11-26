@@ -18,7 +18,7 @@ const Header = (): JSX.Element => {
         </Link>
         <nav>
           <div className="header__nav--standard">
-            <Navigation />
+            <Navigation withDropdown />
           </div>
           <div className="header__nav--mobile">
             <NavigationMobile />
