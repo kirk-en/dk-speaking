@@ -4,6 +4,7 @@ import usePageMeta from '../../usePageMeta';
 import Footer from '../../components/Footer/Footer';
 import hbsPhoto from '../../assets/photo-grid/harvard.jpg';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Why from '../../components/Why/Why';
 import execPhoto from '../../assets/speaking-for-presentation-teaching-and-discussion-at-work.jpg';
 import DynamicQuote from '../../components/DynamicQuote/DynamicQuote';
@@ -93,7 +94,10 @@ const CoachingPage = () => {
             talks. I’ve prepared candidates at Harvard Business School and
             Columbia Business School to tell their story, answer hard questions
             with composure, and leave a lasting impression. Your coaching is
-            built around your strengths and the role you want.
+            built around your strengths and the role you want.{' '}
+            <Link to="/coaching/academic" className="outline__more">
+              Preparing a faculty job talk?
+            </Link>
           </p>
           <div>
             <a
@@ -194,7 +198,10 @@ const CoachingPage = () => {
             dissertation defenses, conference presentations, and lectures.
             This is the work I do at Harvard Business School and Columbia
             Business School, and it’s the focus of my own doctoral research at
-            Johns Hopkins.
+            Johns Hopkins.{' '}
+            <Link to="/coaching/academic" className="outline__more">
+              See academic job talk coaching
+            </Link>
           </p>
           <div>
             <a
