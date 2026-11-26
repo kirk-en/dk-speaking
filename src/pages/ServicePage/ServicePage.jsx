@@ -55,6 +55,7 @@ const ServicePage = ({ page }) => {
           '--hero-ratio': page.imageRatio,
         }}
       >
+        <div className="hero-photo" aria-hidden="true"></div>
         <Header />
         <div className="hero hero--left svc__hero">
           <aside className="hero__left svc__hero-text">
