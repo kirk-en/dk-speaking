@@ -61,7 +61,9 @@ const AboutPage = () => {
       countries. At Columbia Business School, I prepare MBA and doctoral
       students for interviews and dissertation defenses. At MIT, I have
       coached PhD candidates preparing to present their research. At the
-      Harvard Graduate School of Design, I coach each class of Loeb Fellows.
+      Harvard Graduate School of Design, I’ve coached each class of Loeb
+      Fellows for four years, shaping their material into talks, setting the
+      speaking order, and staging the evening.
     </>
   );
 
