@@ -7,6 +7,7 @@ import SpeakingPage from './pages/SpeakingPage/SpeakingPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import TestimonialsPage from './pages/TestimonialsPage/TestimonialsPage';
 import BookPage from './pages/BookPage/BookPage';
+import AcademicPage from './pages/AcademicPage/AcademicPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/coaching" element={<CoachingPage />} />
+          <Route path="/coaching/academic" element={<AcademicPage />} />
           <Route path="/speaking" element={<SpeakingPage />} />
           <Route path="/book" element={<BookPage />} />
           <Route path="/contact" element={<ContactPage />} />
