@@ -42,4 +42,56 @@
       color: rgb(206, 206, 206);
     }
   }
+
+  // Coaching dropdown in the header
+  &__list-item--has-menu {
+    position: relative;
+    &:hover .nav__menu,
+    &:focus-within .nav__menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0);
+    }
+  }
+  &__menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0.5rem);
+    margin-top: 0.75rem;
+    min-width: 15rem;
+    list-style: none;
+    padding: 0.5rem 0;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    border-top: 3px solid #d4af4a;
+    box-shadow: 0 12px 30px rgba(14, 29, 69, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+    z-index: 20;
+    text-transform: none;
+    // Invisible bridge so the menu stays open while the pointer moves down
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      right: 0;
+      height: 1rem;
+    }
+  }
+  &__menu-link {
+    display: block;
+    padding: 0.55rem 1.25rem;
+    color: #0e1d45;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    &:hover,
+    &:focus {
+      background: #f3f4f8;
+      color: #0e1d45;
+    }
+  }
 }
