@@ -4,6 +4,7 @@ import './NavigationMobile.scss';
 import { Drawer } from '@mui/material';
 import { Link } from 'react-router-dom';
 import SocialIcons from '../SocialIcons/SocialIcons';
+import { coachingLinks } from '../Navigation/Navigation';
 
 const NavigationMobile = (): JSX.Element => {
   const [open, setOpen] = useState(false);
@@ -33,10 +34,19 @@ const NavigationMobile = (): JSX.Element => {
             <Link to="/coaching" className="mobile-nav__link">
               coaching
             </Link>
+            <ul className="mobile-nav__sub">
+              {coachingLinks.slice(1).map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="mobile-nav__sub-link">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </li>
           <li className="mobile-nav__list-item">
             <Link to="/speaking" className="mobile-nav__link">
-              speaking
+              for organizations
             </Link>
           </li>
           <li className="mobile-nav__list-item">

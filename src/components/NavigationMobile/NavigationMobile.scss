@@ -45,3 +45,21 @@
     padding-bottom: 1.5rem;
   }
 }
+
+.mobile-nav__sub {
+  list-style: none;
+  padding: 0 1rem 1.25rem;
+  margin: -0.75rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.9rem;
+}
+.mobile-nav__sub-link {
+  font-size: 0.85rem;
+  color: #5a6075;
+  text-decoration: none;
+  text-transform: none;
+  display: inline-block;
+  padding: 0.3rem 0.2rem;
+}
