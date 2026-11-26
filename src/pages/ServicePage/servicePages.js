@@ -129,7 +129,7 @@ export const boston = {
     { b: 'Meet in person if it helps.', t: 'For a dress rehearsal, we can arrange a session at your location.' },
     { b: 'Walk in ready.', t: 'You leave with a clear opening, a tested answer to the hard question, and a plan to practice.' },
   ],
-  who: 'I am Dennis Kenney, an executive communication coach at Harvard Business School and the Harvard AI Institute, and the coach for the Loeb Fellowship at the Harvard Graduate School of Design. I teach Strategic Communication at NYU Stern and work with leaders across research, technology, and Fortune 500 companies on presenting complex work with clarity and authority.',
+  who: 'I am Dennis Kenney, an executive communication coach at Harvard Business School and the Harvard AI Institute, and, for the past four years, the coach for the Loeb Fellowship at the Harvard Graduate School of Design. I teach Strategic Communication at NYU Stern and work with leaders across research, technology, and Fortune 500 companies on presenting complex work with clarity and authority.',
   faqTitle: 'Questions from Boston clients',
   faqs: [
     {
