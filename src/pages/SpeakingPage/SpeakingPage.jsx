@@ -9,8 +9,8 @@ import './SpeakingPage.scss';
 
 const SpeakingPage = () => {
   usePageMeta(
-    'Keynote Speaker and Corporate Workshops | Dennis Kenney | Ivy Level Speaking',
-    'Keynotes and workshops on executive presence, leadership communication, and storytelling for organizations, conferences, and universities. In person or virtual.'
+    'Communication Workshops for Teams and Keynotes | Dennis Kenney | Ivy Level Speaking',
+    'Communication workshops for leadership, sales, and technical teams, plus keynotes on executive presence. Dennis Kenney comes to your organization in person or works with your team online.'
   );
   const gradientRef = useRef(null);
 
@@ -33,15 +33,58 @@ const SpeakingPage = () => {
       </div>
 
       {/* <Why /> */}
-      <h1 className="speaking__headline">Speaking Topics:</h1>
+      <section className="team-how" aria-labelledby="team-how-title">
+        <h1 id="team-how-title" className="speaking__headline">
+          Communication Workshops for Your Team
+        </h1>
+        <p className="team-how__intro">
+          I come to your organization and train your people to communicate
+          with clarity and presence. I work with leadership teams, sales and
+          client facing teams, and technical and research groups. I teach
+          Strategic Communication at NYU Stern and coach at Harvard Business
+          School, and I bring the same methods into companies, in person at
+          your office or online.
+        </p>
+        <h2 className="team-how__heading">How a team workshop works</h2>
+        <ol className="team-how__steps">
+          <li>
+            <strong>We talk first.</strong> A short call with you or your team
+            lead about the moments that matter most: client pitches, leadership
+            updates, board presentations, all hands meetings.
+          </li>
+          <li>
+            <strong>I build it around your work.</strong> Your team practices
+            on its own real presentations and messages, not generic exercises.
+          </li>
+          <li>
+            <strong>I come to you.</strong> At your office or online, as a
+            single session, a half or full day, or a series over several weeks.
+          </li>
+          <li>
+            <strong>Leaders get follow up.</strong> Optional one on one coaching
+            for the people carrying your highest stakes moments.
+          </li>
+        </ol>
+        <div className="team-how__cta">
+          <a
+            href="https://calendly.com/ivylevelspeaking/consultation"
+            className="button__main"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Book a Call About Your Team
+          </a>
+        </div>
+      </section>
+
+      <h2 className="speaking__headline">Workshop and Keynote Topics</h2>
       <section className="outline-sp">
         <p className="outline-sp__text">
-          Dennis Kenney speaks to leadership teams, conferences, and
-          universities about what makes a message land. A professor at NYU
-          Stern and a coach at Harvard Business School, he recently presented
+          Each topic runs as a hands on team workshop or as a keynote for an
+          offsite, conference, or company event. Dennis recently presented
           “Make Your Message Land: The Power of Executive Presence” at the
-          C-Vision National Summit in New York. Every keynote and workshop is
-          tailored to your audience and is available in person or virtually.
+          C-Vision National Summit in New York. Every session is tailored to
+          your audience and is available in person or virtually.
         </p>
         <article className="outline-sp__entry">
           <div
@@ -158,7 +201,7 @@ const SpeakingPage = () => {
           </div>
         </article>
       </section>
-      <h1 className="speaking__headline">Watch Dennis in Action:</h1>
+      <h2 className="speaking__headline">Watch Dennis in Action</h2>
       <Video
         url={'https://www.youtube.com/embed/h8VRiK9IjRM'}
         title={'Dennis Kenney speaker reel'}
