@@ -46,6 +46,16 @@ const CoachingPage = () => {
             in the world.
           </p>
         </article>
+        <nav className="coaching__paths" aria-label="Specialized coaching">
+          <p className="coaching__paths-title">Find the right coaching</p>
+          <div className="coaching__paths-list">
+            <Link to="/coaching/presentations">Executive presentations and pitches</Link>
+            <Link to="/coaching/academic">Academic job talks</Link>
+            <Link to="/coaching/nyc">Coaching in New York City</Link>
+            <Link to="/coaching/boston">Coaching in the Boston area</Link>
+            <Link to="/coaching/students">Students: speech, debate, and interviews</Link>
+          </div>
+        </nav>
       </main>
       <Why />
       <section className="outline">

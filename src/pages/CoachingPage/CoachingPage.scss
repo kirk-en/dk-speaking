@@ -56,6 +56,37 @@
       }
     }
   }
+  &__paths {
+    text-align: center;
+    margin: 0 auto 1rem;
+    max-width: 60rem;
+    &-title {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      a {
+        border: 1px solid #0e1d45;
+        color: #0e1d45;
+        border-radius: 999px;
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: background-color 0.2s, color 0.2s;
+        &:hover {
+          background-color: #0e1d45;
+          color: #fff;
+        }
+      }
+    }
+  }
   &__single-photo {
     width: 100%;
   }
