@@ -6,12 +6,12 @@ const HeroSpeaking = () => {
       <div className="hero hero--left">
         <aside className="hero__left hero--container-background">
           <h2 className="hero__headline">
-            High-Impact Keynotes for Modern Organizations
+            Communication Workshops and Keynotes for Your Team
           </h2>
           <p className="hero__text">
-            Equip your leaders and teams with communication strategies that
-            strengthen executive presence, align stakeholders, and drive
-            decisive action in high-stakes moments.
+            I come to your organization and train leaders and teams to present
+            with clarity, align the room, and speak with presence in the
+            moments that decide things.
           </p>
         </aside>
       </div>
